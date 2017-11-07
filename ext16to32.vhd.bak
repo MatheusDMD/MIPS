@@ -1,0 +1,12 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity ext16to32 is
+    Port ( A   : in  STD_LOGIC_VECTOR (15 downto 0) := (others => '0');
+           X   : out STD_LOGIC_VECTOR (31 downto 0) := (others => '0'));
+end ext16to32;
+
+architecture Behavioral of mux1 is
+begin
+    X <=(31 downto 17 => A(16), 1 => ‘1’, 16 downto 0 => A); 
+end Behavioral;
