@@ -1,6 +1,8 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-use ieee.numeric_std;
+use ieee.std_logic_arith.all;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
 entity add32 is
     generic (
         larguraDados : natural := 32

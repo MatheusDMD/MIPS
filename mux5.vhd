@@ -11,7 +11,7 @@ entity mux5 is
            X   : out STD_LOGIC_VECTOR (larguraDados-1 downto 0) := (others => '0'));
 end mux5;
 
-architecture Behavioral of mux1 is
+architecture Behavioral of mux5 is
 begin
     X <= A when (SEL = '0') else B;
 end Behavioral;

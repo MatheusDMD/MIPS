@@ -9,13 +9,13 @@ entity ULA is
 			  invB :  in  std_logic;
 				Sel :  in  std_logic_vector(1 downto 0);
 				RES :  out signed (std_logic_vector(31 downto 0));
-			  ZERO :  out std_logic_vector(31 downto 0);
+			  ZERO :  out std_logic_vector(31 downto 0)
    );
 end entity;
 
 architecture comportamento of ULA is
 	signal notA, notB, saidamuxA, saidamuxB, saidaAnd, saidaOr, somaSub, slt  : std_logic_vector(31 downto 0);
-	signal v: std_logic '0
+	signal v: std_logic := '0';
 	begin
 		Anot : entity work.not32
 				port map (A => A, X => notA);
