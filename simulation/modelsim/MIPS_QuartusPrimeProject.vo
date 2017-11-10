@@ -1,0 +1,336 @@
+// Copyright (C) 2017  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel MegaCore Function License Agreement, or other 
+// applicable license agreement, including, without limitation, 
+// that your use is for the sole purpose of programming logic 
+// devices manufactured by Intel and sold by Intel or its 
+// authorized distributors.  Please refer to the applicable 
+// agreement for further details.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus Prime"
+// VERSION "Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition"
+
+// DATE "11/10/2017 08:49:25"
+
+// 
+// Device: Altera EP4CE115F29C7 Package FBGA780
+// 
+
+// 
+// This Verilog file should be used for ModelSim-Altera (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module MIPS (
+	mux_PC,
+	Mux_RtRd,
+	habEscritaReg,
+	mux_RtIm,
+	ULAOPer,
+	mux_ULAMem,
+	BEQ,
+	habLeituraMEM,
+	habEscritaMEM,
+	OpCode);
+input 	mux_PC;
+input 	Mux_RtRd;
+input 	habEscritaReg;
+input 	mux_RtIm;
+input 	[1:0] ULAOPer;
+input 	mux_ULAMem;
+input 	BEQ;
+input 	habLeituraMEM;
+input 	habEscritaMEM;
+output 	[5:0] OpCode;
+
+// Design Ports Information
+// mux_PC	=>  Location: PIN_G10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// Mux_RtRd	=>  Location: PIN_AG4,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// habEscritaReg	=>  Location: PIN_AE7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// mux_RtIm	=>  Location: PIN_AD14,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ULAOPer[0]	=>  Location: PIN_U4,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ULAOPer[1]	=>  Location: PIN_A10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// mux_ULAMem	=>  Location: PIN_AG21,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// BEQ	=>  Location: PIN_U2,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// habLeituraMEM	=>  Location: PIN_G14,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// habEscritaMEM	=>  Location: PIN_AE20,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// OpCode[0]	=>  Location: PIN_M26,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// OpCode[1]	=>  Location: PIN_AE24,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// OpCode[2]	=>  Location: PIN_B7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// OpCode[3]	=>  Location: PIN_AE19,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// OpCode[4]	=>  Location: PIN_R26,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// OpCode[5]	=>  Location: PIN_A8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+// synopsys translate_off
+initial $sdf_annotate("MIPS_QuartusPrimeProject_v.sdo");
+// synopsys translate_on
+
+wire \mux_PC~input_o ;
+wire \Mux_RtRd~input_o ;
+wire \habEscritaReg~input_o ;
+wire \mux_RtIm~input_o ;
+wire \ULAOPer[0]~input_o ;
+wire \ULAOPer[1]~input_o ;
+wire \mux_ULAMem~input_o ;
+wire \BEQ~input_o ;
+wire \habLeituraMEM~input_o ;
+wire \habEscritaMEM~input_o ;
+wire \OpCode[0]~output_o ;
+wire \OpCode[1]~output_o ;
+wire \OpCode[2]~output_o ;
+wire \OpCode[3]~output_o ;
+wire \OpCode[4]~output_o ;
+wire \OpCode[5]~output_o ;
+
+
+hard_block auto_generated_inst(
+	.devpor(devpor),
+	.devclrn(devclrn),
+	.devoe(devoe));
+
+// Location: IOOBUF_X115_Y46_N2
+cycloneive_io_obuf \OpCode[0]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\OpCode[0]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \OpCode[0]~output .bus_hold = "false";
+defparam \OpCode[0]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X100_Y0_N16
+cycloneive_io_obuf \OpCode[1]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\OpCode[1]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \OpCode[1]~output .bus_hold = "false";
+defparam \OpCode[1]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X29_Y73_N9
+cycloneive_io_obuf \OpCode[2]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\OpCode[2]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \OpCode[2]~output .bus_hold = "false";
+defparam \OpCode[2]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X83_Y0_N23
+cycloneive_io_obuf \OpCode[3]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\OpCode[3]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \OpCode[3]~output .bus_hold = "false";
+defparam \OpCode[3]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X115_Y33_N9
+cycloneive_io_obuf \OpCode[4]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\OpCode[4]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \OpCode[4]~output .bus_hold = "false";
+defparam \OpCode[4]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X18_Y73_N23
+cycloneive_io_obuf \OpCode[5]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\OpCode[5]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \OpCode[5]~output .bus_hold = "false";
+defparam \OpCode[5]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOIBUF_X20_Y73_N8
+cycloneive_io_ibuf \mux_PC~input (
+	.i(mux_PC),
+	.ibar(gnd),
+	.o(\mux_PC~input_o ));
+// synopsys translate_off
+defparam \mux_PC~input .bus_hold = "false";
+defparam \mux_PC~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X9_Y0_N22
+cycloneive_io_ibuf \Mux_RtRd~input (
+	.i(Mux_RtRd),
+	.ibar(gnd),
+	.o(\Mux_RtRd~input_o ));
+// synopsys translate_off
+defparam \Mux_RtRd~input .bus_hold = "false";
+defparam \Mux_RtRd~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X20_Y0_N15
+cycloneive_io_ibuf \habEscritaReg~input (
+	.i(habEscritaReg),
+	.ibar(gnd),
+	.o(\habEscritaReg~input_o ));
+// synopsys translate_off
+defparam \habEscritaReg~input .bus_hold = "false";
+defparam \habEscritaReg~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X56_Y0_N15
+cycloneive_io_ibuf \mux_RtIm~input (
+	.i(mux_RtIm),
+	.ibar(gnd),
+	.o(\mux_RtIm~input_o ));
+// synopsys translate_off
+defparam \mux_RtIm~input .bus_hold = "false";
+defparam \mux_RtIm~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X0_Y34_N15
+cycloneive_io_ibuf \ULAOPer[0]~input (
+	.i(ULAOPer[0]),
+	.ibar(gnd),
+	.o(\ULAOPer[0]~input_o ));
+// synopsys translate_off
+defparam \ULAOPer[0]~input .bus_hold = "false";
+defparam \ULAOPer[0]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X38_Y73_N1
+cycloneive_io_ibuf \ULAOPer[1]~input (
+	.i(ULAOPer[1]),
+	.ibar(gnd),
+	.o(\ULAOPer[1]~input_o ));
+// synopsys translate_off
+defparam \ULAOPer[1]~input .bus_hold = "false";
+defparam \ULAOPer[1]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X74_Y0_N8
+cycloneive_io_ibuf \mux_ULAMem~input (
+	.i(mux_ULAMem),
+	.ibar(gnd),
+	.o(\mux_ULAMem~input_o ));
+// synopsys translate_off
+defparam \mux_ULAMem~input .bus_hold = "false";
+defparam \mux_ULAMem~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X0_Y30_N1
+cycloneive_io_ibuf \BEQ~input (
+	.i(BEQ),
+	.ibar(gnd),
+	.o(\BEQ~input_o ));
+// synopsys translate_off
+defparam \BEQ~input .bus_hold = "false";
+defparam \BEQ~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X47_Y73_N15
+cycloneive_io_ibuf \habLeituraMEM~input (
+	.i(habLeituraMEM),
+	.ibar(gnd),
+	.o(\habLeituraMEM~input_o ));
+// synopsys translate_off
+defparam \habLeituraMEM~input .bus_hold = "false";
+defparam \habLeituraMEM~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X85_Y0_N22
+cycloneive_io_ibuf \habEscritaMEM~input (
+	.i(habEscritaMEM),
+	.ibar(gnd),
+	.o(\habEscritaMEM~input_o ));
+// synopsys translate_off
+defparam \habEscritaMEM~input .bus_hold = "false";
+defparam \habEscritaMEM~input .simulate_z_as = "z";
+// synopsys translate_on
+
+assign OpCode[0] = \OpCode[0]~output_o ;
+
+assign OpCode[1] = \OpCode[1]~output_o ;
+
+assign OpCode[2] = \OpCode[2]~output_o ;
+
+assign OpCode[3] = \OpCode[3]~output_o ;
+
+assign OpCode[4] = \OpCode[4]~output_o ;
+
+assign OpCode[5] = \OpCode[5]~output_o ;
+
+endmodule
+
+module hard_block (
+
+	devpor,
+	devclrn,
+	devoe);
+
+// Design Ports Information
+// ~ALTERA_ASDO_DATA1~	=>  Location: PIN_F4,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ~ALTERA_FLASH_nCE_nCSO~	=>  Location: PIN_E2,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ~ALTERA_DCLK~	=>  Location: PIN_P3,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ~ALTERA_DATA0~	=>  Location: PIN_N7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ~ALTERA_nCEO~	=>  Location: PIN_P28,	 I/O Standard: 2.5 V,	 Current Strength: 8mA
+
+input 	devpor;
+input 	devclrn;
+input 	devoe;
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+wire \~ALTERA_ASDO_DATA1~~padout ;
+wire \~ALTERA_FLASH_nCE_nCSO~~padout ;
+wire \~ALTERA_DATA0~~padout ;
+wire \~ALTERA_ASDO_DATA1~~ibuf_o ;
+wire \~ALTERA_FLASH_nCE_nCSO~~ibuf_o ;
+wire \~ALTERA_DATA0~~ibuf_o ;
+
+
+endmodule

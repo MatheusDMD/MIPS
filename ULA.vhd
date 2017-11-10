@@ -1,27 +1,28 @@
 library IEEE;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
-
+use IEEE.std_logic_arith.all;
+use IEEE.std_logic_signed.all;
 entity ULA is
     Port ( 	  A :  in  std_logic_vector(31 downto 0);
 				  B :  in  std_logic_vector(31 downto 0);
 			  invA :  in  std_logic;
 			  invB :  in  std_logic;
 				Sel :  in  std_logic_vector(1 downto 0);
-				RES :  out signed (std_logic_vector(31 downto 0));
-			  ZERO :  out std_logic_vector(31 downto 0)
+				RES :  out std_logic_vector(31 downto 0);
+			  ZERO :  out std_logic := '0'
    );
 end entity;
 
 architecture comportamento of ULA is
-	signal notA, notB, saidamuxA, saidamuxB, saidaAnd, saidaOr, somaSub, slt  : std_logic_vector(31 downto 0);
-	signal v: std_logic := '0';
+	signal notA, notB, saidamuxA, saidamuxB, saidaAnd, saidaOr, somaSub, slt, Result: std_logic_vector(31 downto 0);
+	signal v, z: std_logic := '0';
 	begin
 		Anot : entity work.not32
 				port map (A => A, X => notA);
 				
 		Bnot : entity work.not32
-				port map (B=> B, X => notB);
+				port map (A=> B, X => notB);
 		
 		muxA : entity work.mux32
 				port map (A=>A, B=> notA, SEL=>invA, X=> saidamuxA);
@@ -33,7 +34,7 @@ architecture comportamento of ULA is
 				port map (A=> saidamuxA, B=> saidamuxB, X=> saidaAnd);
 		
 		orop: entity work.or32
-				port map (A=> saidamuxA, B=> saudamuxB, X=> saidaOr);
+				port map (A=> saidamuxA, B=> saidamuxB, X=> saidaOr);
 		
 		somaSub <= saidamuxA + saidamuxB;
 		
@@ -50,9 +51,12 @@ architecture comportamento of ULA is
 		end process;
 		
 		opmux: entity work.mux32_4
-				port map (A=> saindaAnd, B=> saidaOr, C=> somaSub, D=> slt, SEL => Sel, X=> RES);
+				port map (A=> saidaAnd, B=> saidaOr, C=> somaSub, D=> slt, SEL => Sel, X=> Result);
+		
+		RES <= Result;
 		
 		norZero: entity work.nor32
-				port map(A=> RES, O=> ZERO);
-				
+				port map(A=> Result, O=> z);
+		
+		ZERO <= z;
 end architecture;

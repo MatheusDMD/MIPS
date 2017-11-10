@@ -14,10 +14,10 @@ end overflow;
 architecture Behavioral of overflow is
 	signal saida_and1, saida_and2: std_logic;
 begin
-	and3_1 : entity work.and3
+	and3_1 : entity work.andoverf
 				port map (A => not(A(31)), B => not(B(31)), C => R(31), X => saida_and1);
 				
-	and3_2 : entity work.and3
+	and3_2 : entity work.andoverf
 				port map (A => A(31), B => B(31), C => not(R(31)), X => saida_and2);
 				
 	X<= saida_and1 or saida_and2;

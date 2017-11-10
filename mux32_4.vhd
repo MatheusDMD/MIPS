@@ -5,7 +5,7 @@ entity mux32_4 is
     generic (
         larguraDados : natural := 32
     );
-    Port ( SEL : in  STD_LOGIC := "00";
+    Port ( SEL : in  STD_LOGIC_VECTOR := "00";
            A   : in  STD_LOGIC_VECTOR (larguraDados-1 downto 0) := (others => '0');
            B   : in  STD_LOGIC_VECTOR (larguraDados-1 downto 0) := (others => '0');
 			  C   : in  STD_LOGIC_VECTOR (larguraDados-1 downto 0) := (others => '0');

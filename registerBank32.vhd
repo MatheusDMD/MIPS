@@ -11,7 +11,7 @@ entity registerBank32 is
     EndReg1     : in  std_logic_vector(4 downto 0);
     EndReg2     : in  std_logic_vector(4 downto 0);
     EndReg3 : in  std_logic_vector(4 downto 0);
-    clk         : in  std_logic
+    clk         : in  std_logic :='1'
     );
 end registerBank32;
 
