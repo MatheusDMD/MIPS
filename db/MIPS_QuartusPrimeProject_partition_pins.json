@@ -2,7 +2,176 @@
 	"partitions" : [
 		{
 			"name" : "Top",
-			"pins" : []
+			"pins" : [
+				{
+					"name" : "Escrita3[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Escrita3[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Escrita3[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Escrita3[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Escrita3[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Escrita3[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Escrita3[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Escrita3[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Escrita3[8]",
+					"strict" : false
+				},
+				{
+					"name" : "Escrita3[9]",
+					"strict" : false
+				},
+				{
+					"name" : "Escrita3[10]",
+					"strict" : false
+				},
+				{
+					"name" : "Escrita3[11]",
+					"strict" : false
+				},
+				{
+					"name" : "Escrita3[12]",
+					"strict" : false
+				},
+				{
+					"name" : "Escrita3[13]",
+					"strict" : false
+				},
+				{
+					"name" : "Escrita3[14]",
+					"strict" : false
+				},
+				{
+					"name" : "Escrita3[15]",
+					"strict" : false
+				},
+				{
+					"name" : "Escrita3[16]",
+					"strict" : false
+				},
+				{
+					"name" : "Escrita3[17]",
+					"strict" : false
+				},
+				{
+					"name" : "Escrita3[18]",
+					"strict" : false
+				},
+				{
+					"name" : "Escrita3[19]",
+					"strict" : false
+				},
+				{
+					"name" : "Escrita3[20]",
+					"strict" : false
+				},
+				{
+					"name" : "Escrita3[21]",
+					"strict" : false
+				},
+				{
+					"name" : "Escrita3[22]",
+					"strict" : false
+				},
+				{
+					"name" : "Escrita3[23]",
+					"strict" : false
+				},
+				{
+					"name" : "Escrita3[24]",
+					"strict" : false
+				},
+				{
+					"name" : "Escrita3[25]",
+					"strict" : false
+				},
+				{
+					"name" : "Escrita3[26]",
+					"strict" : false
+				},
+				{
+					"name" : "Escrita3[27]",
+					"strict" : false
+				},
+				{
+					"name" : "Escrita3[28]",
+					"strict" : false
+				},
+				{
+					"name" : "Escrita3[29]",
+					"strict" : false
+				},
+				{
+					"name" : "Escrita3[30]",
+					"strict" : false
+				},
+				{
+					"name" : "Escrita3[31]",
+					"strict" : false
+				},
+				{
+					"name" : "Address3[0]",
+					"strict" : false
+				},
+				{
+					"name" : "mux_RtIm",
+					"strict" : false
+				},
+				{
+					"name" : "mux_ULAMem",
+					"strict" : false
+				},
+				{
+					"name" : "habLeituraMEM",
+					"strict" : false
+				},
+				{
+					"name" : "Mux_RtRd",
+					"strict" : false
+				},
+				{
+					"name" : "CLK",
+					"strict" : false
+				},
+				{
+					"name" : "habEscritaMEM",
+					"strict" : false
+				},
+				{
+					"name" : "habEscritaReg",
+					"strict" : false
+				},
+				{
+					"name" : "ULAOPer[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ULAOPer[0]",
+					"strict" : false
+				}
+			]
 		}
 	]
 }

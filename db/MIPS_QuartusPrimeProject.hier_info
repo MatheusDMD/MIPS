@@ -1,4 +1,7 @@
-|MIPS
+|FluxoDeDados
+CLK => registrador:PC.CLK
+CLK => registerbank32:Banco_Regis.clk
+CLK => memory:Mem_dados.clk
 mux_PC => mux32:MuxProxPC.SEL
 Mux_RtRd => mux5:muxRt_Rd.SEL
 habEscritaReg => registerbank32:Banco_Regis.habEscritaReg
@@ -7,17 +10,54 @@ ULAOPer[0] => alucontrol:UC_ULA.ULAOp[0]
 ULAOPer[1] => alucontrol:UC_ULA.ULAOp[1]
 mux_ULAMem => mux32:muxDepoisULA.SEL
 BEQ => AndBEQ.IN1
-habLeituraMEM => datamemory:Mem_dados.memRead
-habEscritaMEM => datamemory:Mem_dados.memWrite
-OpCode[0] <= instructionmemory:Mem_Inst.instruction[26]
-OpCode[1] <= instructionmemory:Mem_Inst.instruction[27]
-OpCode[2] <= instructionmemory:Mem_Inst.instruction[28]
-OpCode[3] <= instructionmemory:Mem_Inst.instruction[29]
-OpCode[4] <= instructionmemory:Mem_Inst.instruction[30]
-OpCode[5] <= instructionmemory:Mem_Inst.instruction[31]
+habLeituraMEM => memory:Mem_dados.Ler
+habEscritaMEM => memory:Mem_dados.Escrever
+OpCode[0] <= instructionmemory:Mem_Inst.Dado[26]
+OpCode[1] <= instructionmemory:Mem_Inst.Dado[27]
+OpCode[2] <= instructionmemory:Mem_Inst.Dado[28]
+OpCode[3] <= instructionmemory:Mem_Inst.Dado[29]
+OpCode[4] <= instructionmemory:Mem_Inst.Dado[30]
+OpCode[5] <= instructionmemory:Mem_Inst.Dado[31]
+Escrita3[0] <= mux32:muxDepoisULA.X[0]
+Escrita3[1] <= mux32:muxDepoisULA.X[1]
+Escrita3[2] <= mux32:muxDepoisULA.X[2]
+Escrita3[3] <= mux32:muxDepoisULA.X[3]
+Escrita3[4] <= mux32:muxDepoisULA.X[4]
+Escrita3[5] <= mux32:muxDepoisULA.X[5]
+Escrita3[6] <= mux32:muxDepoisULA.X[6]
+Escrita3[7] <= mux32:muxDepoisULA.X[7]
+Escrita3[8] <= mux32:muxDepoisULA.X[8]
+Escrita3[9] <= mux32:muxDepoisULA.X[9]
+Escrita3[10] <= mux32:muxDepoisULA.X[10]
+Escrita3[11] <= mux32:muxDepoisULA.X[11]
+Escrita3[12] <= mux32:muxDepoisULA.X[12]
+Escrita3[13] <= mux32:muxDepoisULA.X[13]
+Escrita3[14] <= mux32:muxDepoisULA.X[14]
+Escrita3[15] <= mux32:muxDepoisULA.X[15]
+Escrita3[16] <= mux32:muxDepoisULA.X[16]
+Escrita3[17] <= mux32:muxDepoisULA.X[17]
+Escrita3[18] <= mux32:muxDepoisULA.X[18]
+Escrita3[19] <= mux32:muxDepoisULA.X[19]
+Escrita3[20] <= mux32:muxDepoisULA.X[20]
+Escrita3[21] <= mux32:muxDepoisULA.X[21]
+Escrita3[22] <= mux32:muxDepoisULA.X[22]
+Escrita3[23] <= mux32:muxDepoisULA.X[23]
+Escrita3[24] <= mux32:muxDepoisULA.X[24]
+Escrita3[25] <= mux32:muxDepoisULA.X[25]
+Escrita3[26] <= mux32:muxDepoisULA.X[26]
+Escrita3[27] <= mux32:muxDepoisULA.X[27]
+Escrita3[28] <= mux32:muxDepoisULA.X[28]
+Escrita3[29] <= mux32:muxDepoisULA.X[29]
+Escrita3[30] <= mux32:muxDepoisULA.X[30]
+Escrita3[31] <= mux32:muxDepoisULA.X[31]
+Address3[0] <= mux5:muxRt_Rd.X[0]
+Address3[1] <= mux5:muxRt_Rd.X[1]
+Address3[2] <= mux5:muxRt_Rd.X[2]
+Address3[3] <= mux5:muxRt_Rd.X[3]
+Address3[4] <= mux5:muxRt_Rd.X[4]
 
 
-|MIPS|registrador:PC
+|FluxoDeDados|registrador:PC
 DIN[0] => DOUT[0]~reg0.DATAIN
 DIN[1] => DOUT[1]~reg0.DATAIN
 DIN[2] => DOUT[2]~reg0.DATAIN
@@ -180,105 +220,74 @@ RST => DOUT[30]~reg0.ACLR
 RST => DOUT[31]~reg0.ACLR
 
 
-|MIPS|instructionMemory:Mem_Inst
-readAddress[0] => WideOr0.IN0
-readAddress[0] => Equal0.IN31
-readAddress[1] => WideOr0.IN1
-readAddress[1] => Equal0.IN30
-readAddress[2] => Add1.IN60
-readAddress[2] => Equal0.IN19
-readAddress[3] => Add1.IN59
-readAddress[3] => Equal0.IN18
-readAddress[4] => Add1.IN58
-readAddress[4] => Equal0.IN17
-readAddress[5] => Add1.IN57
-readAddress[5] => Equal0.IN16
-readAddress[6] => Add1.IN56
-readAddress[6] => Equal0.IN15
-readAddress[7] => Add1.IN55
-readAddress[7] => Equal0.IN14
-readAddress[8] => Add1.IN54
-readAddress[8] => Equal0.IN13
-readAddress[9] => Add1.IN53
-readAddress[9] => Equal0.IN12
-readAddress[10] => Add1.IN52
-readAddress[10] => Equal0.IN11
-readAddress[11] => Add1.IN51
-readAddress[11] => Equal0.IN10
-readAddress[12] => Add1.IN50
-readAddress[12] => Equal0.IN9
-readAddress[13] => Add1.IN49
-readAddress[13] => Equal0.IN8
-readAddress[14] => Add1.IN48
-readAddress[14] => Equal0.IN7
-readAddress[15] => Add1.IN47
-readAddress[15] => Equal0.IN6
-readAddress[16] => Add1.IN46
-readAddress[16] => Equal0.IN5
-readAddress[17] => Add1.IN45
-readAddress[17] => Equal0.IN4
-readAddress[18] => Add1.IN44
-readAddress[18] => Equal0.IN3
-readAddress[19] => Add1.IN43
-readAddress[19] => Equal0.IN2
-readAddress[20] => Add1.IN42
-readAddress[20] => Equal0.IN1
-readAddress[21] => Add1.IN41
-readAddress[21] => Equal0.IN0
-readAddress[22] => Add0.IN18
-readAddress[22] => Equal0.IN29
-readAddress[23] => Add0.IN17
-readAddress[23] => Equal0.IN28
-readAddress[24] => Add0.IN16
-readAddress[24] => Equal0.IN27
-readAddress[25] => Add0.IN15
-readAddress[25] => Equal0.IN26
-readAddress[26] => Add0.IN14
-readAddress[26] => Equal0.IN25
-readAddress[27] => Add0.IN13
-readAddress[27] => Equal0.IN24
-readAddress[28] => Add0.IN12
-readAddress[28] => Equal0.IN23
-readAddress[29] => Add0.IN11
-readAddress[29] => Equal0.IN22
-readAddress[30] => Add0.IN10
-readAddress[30] => Equal0.IN21
-readAddress[31] => Equal0.IN20
-instruction[0] <= instruction.DB_MAX_OUTPUT_PORT_TYPE
-instruction[1] <= instruction.DB_MAX_OUTPUT_PORT_TYPE
-instruction[2] <= instruction.DB_MAX_OUTPUT_PORT_TYPE
-instruction[3] <= instruction.DB_MAX_OUTPUT_PORT_TYPE
-instruction[4] <= instruction.DB_MAX_OUTPUT_PORT_TYPE
-instruction[5] <= instruction.DB_MAX_OUTPUT_PORT_TYPE
-instruction[6] <= instruction.DB_MAX_OUTPUT_PORT_TYPE
-instruction[7] <= instruction.DB_MAX_OUTPUT_PORT_TYPE
-instruction[8] <= instruction.DB_MAX_OUTPUT_PORT_TYPE
-instruction[9] <= instruction.DB_MAX_OUTPUT_PORT_TYPE
-instruction[10] <= instruction.DB_MAX_OUTPUT_PORT_TYPE
-instruction[11] <= instruction.DB_MAX_OUTPUT_PORT_TYPE
-instruction[12] <= instruction.DB_MAX_OUTPUT_PORT_TYPE
-instruction[13] <= instruction.DB_MAX_OUTPUT_PORT_TYPE
-instruction[14] <= instruction.DB_MAX_OUTPUT_PORT_TYPE
-instruction[15] <= instruction.DB_MAX_OUTPUT_PORT_TYPE
-instruction[16] <= instruction.DB_MAX_OUTPUT_PORT_TYPE
-instruction[17] <= instruction.DB_MAX_OUTPUT_PORT_TYPE
-instruction[18] <= instruction.DB_MAX_OUTPUT_PORT_TYPE
-instruction[19] <= instruction.DB_MAX_OUTPUT_PORT_TYPE
-instruction[20] <= instruction.DB_MAX_OUTPUT_PORT_TYPE
-instruction[21] <= instruction.DB_MAX_OUTPUT_PORT_TYPE
-instruction[22] <= instruction.DB_MAX_OUTPUT_PORT_TYPE
-instruction[23] <= instruction.DB_MAX_OUTPUT_PORT_TYPE
-instruction[24] <= instruction.DB_MAX_OUTPUT_PORT_TYPE
-instruction[25] <= instruction.DB_MAX_OUTPUT_PORT_TYPE
-instruction[26] <= instruction.DB_MAX_OUTPUT_PORT_TYPE
-instruction[27] <= instruction.DB_MAX_OUTPUT_PORT_TYPE
-instruction[28] <= instruction.DB_MAX_OUTPUT_PORT_TYPE
-instruction[29] <= instruction.DB_MAX_OUTPUT_PORT_TYPE
-instruction[30] <= instruction.DB_MAX_OUTPUT_PORT_TYPE
-instruction[31] <= instruction.DB_MAX_OUTPUT_PORT_TYPE
+|FluxoDeDados|InstructionMemory:Mem_Inst
+Endereco[0] => ~NO_FANOUT~
+Endereco[1] => ~NO_FANOUT~
+Endereco[2] => MemoriaDeInstrucao.RADDR
+Endereco[3] => MemoriaDeInstrucao.RADDR1
+Endereco[4] => MemoriaDeInstrucao.RADDR2
+Endereco[5] => MemoriaDeInstrucao.RADDR3
+Endereco[6] => ~NO_FANOUT~
+Endereco[7] => ~NO_FANOUT~
+Endereco[8] => ~NO_FANOUT~
+Endereco[9] => ~NO_FANOUT~
+Endereco[10] => ~NO_FANOUT~
+Endereco[11] => ~NO_FANOUT~
+Endereco[12] => ~NO_FANOUT~
+Endereco[13] => ~NO_FANOUT~
+Endereco[14] => ~NO_FANOUT~
+Endereco[15] => ~NO_FANOUT~
+Endereco[16] => ~NO_FANOUT~
+Endereco[17] => ~NO_FANOUT~
+Endereco[18] => ~NO_FANOUT~
+Endereco[19] => ~NO_FANOUT~
+Endereco[20] => ~NO_FANOUT~
+Endereco[21] => ~NO_FANOUT~
+Endereco[22] => ~NO_FANOUT~
+Endereco[23] => ~NO_FANOUT~
+Endereco[24] => ~NO_FANOUT~
+Endereco[25] => ~NO_FANOUT~
+Endereco[26] => ~NO_FANOUT~
+Endereco[27] => ~NO_FANOUT~
+Endereco[28] => ~NO_FANOUT~
+Endereco[29] => ~NO_FANOUT~
+Endereco[30] => ~NO_FANOUT~
+Endereco[31] => ~NO_FANOUT~
+Dado[0] <= MemoriaDeInstrucao.DATAOUT
+Dado[1] <= MemoriaDeInstrucao.DATAOUT1
+Dado[2] <= MemoriaDeInstrucao.DATAOUT2
+Dado[3] <= MemoriaDeInstrucao.DATAOUT3
+Dado[4] <= MemoriaDeInstrucao.DATAOUT4
+Dado[5] <= MemoriaDeInstrucao.DATAOUT5
+Dado[6] <= MemoriaDeInstrucao.DATAOUT6
+Dado[7] <= MemoriaDeInstrucao.DATAOUT7
+Dado[8] <= MemoriaDeInstrucao.DATAOUT8
+Dado[9] <= MemoriaDeInstrucao.DATAOUT9
+Dado[10] <= MemoriaDeInstrucao.DATAOUT10
+Dado[11] <= MemoriaDeInstrucao.DATAOUT11
+Dado[12] <= MemoriaDeInstrucao.DATAOUT12
+Dado[13] <= MemoriaDeInstrucao.DATAOUT13
+Dado[14] <= MemoriaDeInstrucao.DATAOUT14
+Dado[15] <= MemoriaDeInstrucao.DATAOUT15
+Dado[16] <= MemoriaDeInstrucao.DATAOUT16
+Dado[17] <= MemoriaDeInstrucao.DATAOUT17
+Dado[18] <= MemoriaDeInstrucao.DATAOUT18
+Dado[19] <= MemoriaDeInstrucao.DATAOUT19
+Dado[20] <= MemoriaDeInstrucao.DATAOUT20
+Dado[21] <= MemoriaDeInstrucao.DATAOUT21
+Dado[22] <= MemoriaDeInstrucao.DATAOUT22
+Dado[23] <= MemoriaDeInstrucao.DATAOUT23
+Dado[24] <= MemoriaDeInstrucao.DATAOUT24
+Dado[25] <= MemoriaDeInstrucao.DATAOUT25
+Dado[26] <= MemoriaDeInstrucao.DATAOUT26
+Dado[27] <= MemoriaDeInstrucao.DATAOUT27
+Dado[28] <= MemoriaDeInstrucao.DATAOUT28
+Dado[29] <= MemoriaDeInstrucao.DATAOUT29
+Dado[30] <= MemoriaDeInstrucao.DATAOUT30
+Dado[31] <= MemoriaDeInstrucao.DATAOUT31
 
 
-|MIPS|mux5:muxRt_Rd
+|FluxoDeDados|mux5:muxRt_Rd
 SEL => X.OUTPUTSELECT
 SEL => X.OUTPUTSELECT
 SEL => X.OUTPUTSELECT
@@ -301,7 +310,7 @@ X[3] <= X.DB_MAX_OUTPUT_PORT_TYPE
 X[4] <= X.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MIPS|registerBank32:Banco_Regis
+|FluxoDeDados|registerBank32:Banco_Regis
 DadoLidoReg1[0] <= DadoLidoReg1[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 DadoLidoReg1[1] <= DadoLidoReg1[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 DadoLidoReg1[2] <= DadoLidoReg1[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -366,238 +375,90 @@ DadoLidoReg2[28] <= DadoLidoReg2[28]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 DadoLidoReg2[29] <= DadoLidoReg2[29]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 DadoLidoReg2[30] <= DadoLidoReg2[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 DadoLidoReg2[31] <= DadoLidoReg2[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-DadoEscritoReg3[0] => DadoLidoReg1.DATAB
-DadoEscritoReg3[0] => DadoLidoReg2.DATAB
 DadoEscritoReg3[0] => registers~36.DATAIN
 DadoEscritoReg3[0] => registers.DATAIN
-DadoEscritoReg3[1] => DadoLidoReg1.DATAB
-DadoEscritoReg3[1] => DadoLidoReg2.DATAB
 DadoEscritoReg3[1] => registers~35.DATAIN
 DadoEscritoReg3[1] => registers.DATAIN1
-DadoEscritoReg3[2] => DadoLidoReg1.DATAB
-DadoEscritoReg3[2] => DadoLidoReg2.DATAB
 DadoEscritoReg3[2] => registers~34.DATAIN
 DadoEscritoReg3[2] => registers.DATAIN2
-DadoEscritoReg3[3] => DadoLidoReg1.DATAB
-DadoEscritoReg3[3] => DadoLidoReg2.DATAB
 DadoEscritoReg3[3] => registers~33.DATAIN
 DadoEscritoReg3[3] => registers.DATAIN3
-DadoEscritoReg3[4] => DadoLidoReg1.DATAB
-DadoEscritoReg3[4] => DadoLidoReg2.DATAB
 DadoEscritoReg3[4] => registers~32.DATAIN
 DadoEscritoReg3[4] => registers.DATAIN4
-DadoEscritoReg3[5] => DadoLidoReg1.DATAB
-DadoEscritoReg3[5] => DadoLidoReg2.DATAB
 DadoEscritoReg3[5] => registers~31.DATAIN
 DadoEscritoReg3[5] => registers.DATAIN5
-DadoEscritoReg3[6] => DadoLidoReg1.DATAB
-DadoEscritoReg3[6] => DadoLidoReg2.DATAB
 DadoEscritoReg3[6] => registers~30.DATAIN
 DadoEscritoReg3[6] => registers.DATAIN6
-DadoEscritoReg3[7] => DadoLidoReg1.DATAB
-DadoEscritoReg3[7] => DadoLidoReg2.DATAB
 DadoEscritoReg3[7] => registers~29.DATAIN
 DadoEscritoReg3[7] => registers.DATAIN7
-DadoEscritoReg3[8] => DadoLidoReg1.DATAB
-DadoEscritoReg3[8] => DadoLidoReg2.DATAB
 DadoEscritoReg3[8] => registers~28.DATAIN
 DadoEscritoReg3[8] => registers.DATAIN8
-DadoEscritoReg3[9] => DadoLidoReg1.DATAB
-DadoEscritoReg3[9] => DadoLidoReg2.DATAB
 DadoEscritoReg3[9] => registers~27.DATAIN
 DadoEscritoReg3[9] => registers.DATAIN9
-DadoEscritoReg3[10] => DadoLidoReg1.DATAB
-DadoEscritoReg3[10] => DadoLidoReg2.DATAB
 DadoEscritoReg3[10] => registers~26.DATAIN
 DadoEscritoReg3[10] => registers.DATAIN10
-DadoEscritoReg3[11] => DadoLidoReg1.DATAB
-DadoEscritoReg3[11] => DadoLidoReg2.DATAB
 DadoEscritoReg3[11] => registers~25.DATAIN
 DadoEscritoReg3[11] => registers.DATAIN11
-DadoEscritoReg3[12] => DadoLidoReg1.DATAB
-DadoEscritoReg3[12] => DadoLidoReg2.DATAB
 DadoEscritoReg3[12] => registers~24.DATAIN
 DadoEscritoReg3[12] => registers.DATAIN12
-DadoEscritoReg3[13] => DadoLidoReg1.DATAB
-DadoEscritoReg3[13] => DadoLidoReg2.DATAB
 DadoEscritoReg3[13] => registers~23.DATAIN
 DadoEscritoReg3[13] => registers.DATAIN13
-DadoEscritoReg3[14] => DadoLidoReg1.DATAB
-DadoEscritoReg3[14] => DadoLidoReg2.DATAB
 DadoEscritoReg3[14] => registers~22.DATAIN
 DadoEscritoReg3[14] => registers.DATAIN14
-DadoEscritoReg3[15] => DadoLidoReg1.DATAB
-DadoEscritoReg3[15] => DadoLidoReg2.DATAB
 DadoEscritoReg3[15] => registers~21.DATAIN
 DadoEscritoReg3[15] => registers.DATAIN15
-DadoEscritoReg3[16] => DadoLidoReg1.DATAB
-DadoEscritoReg3[16] => DadoLidoReg2.DATAB
 DadoEscritoReg3[16] => registers~20.DATAIN
 DadoEscritoReg3[16] => registers.DATAIN16
-DadoEscritoReg3[17] => DadoLidoReg1.DATAB
-DadoEscritoReg3[17] => DadoLidoReg2.DATAB
 DadoEscritoReg3[17] => registers~19.DATAIN
 DadoEscritoReg3[17] => registers.DATAIN17
-DadoEscritoReg3[18] => DadoLidoReg1.DATAB
-DadoEscritoReg3[18] => DadoLidoReg2.DATAB
 DadoEscritoReg3[18] => registers~18.DATAIN
 DadoEscritoReg3[18] => registers.DATAIN18
-DadoEscritoReg3[19] => DadoLidoReg1.DATAB
-DadoEscritoReg3[19] => DadoLidoReg2.DATAB
 DadoEscritoReg3[19] => registers~17.DATAIN
 DadoEscritoReg3[19] => registers.DATAIN19
-DadoEscritoReg3[20] => DadoLidoReg1.DATAB
-DadoEscritoReg3[20] => DadoLidoReg2.DATAB
 DadoEscritoReg3[20] => registers~16.DATAIN
 DadoEscritoReg3[20] => registers.DATAIN20
-DadoEscritoReg3[21] => DadoLidoReg1.DATAB
-DadoEscritoReg3[21] => DadoLidoReg2.DATAB
 DadoEscritoReg3[21] => registers~15.DATAIN
 DadoEscritoReg3[21] => registers.DATAIN21
-DadoEscritoReg3[22] => DadoLidoReg1.DATAB
-DadoEscritoReg3[22] => DadoLidoReg2.DATAB
 DadoEscritoReg3[22] => registers~14.DATAIN
 DadoEscritoReg3[22] => registers.DATAIN22
-DadoEscritoReg3[23] => DadoLidoReg1.DATAB
-DadoEscritoReg3[23] => DadoLidoReg2.DATAB
 DadoEscritoReg3[23] => registers~13.DATAIN
 DadoEscritoReg3[23] => registers.DATAIN23
-DadoEscritoReg3[24] => DadoLidoReg1.DATAB
-DadoEscritoReg3[24] => DadoLidoReg2.DATAB
 DadoEscritoReg3[24] => registers~12.DATAIN
 DadoEscritoReg3[24] => registers.DATAIN24
-DadoEscritoReg3[25] => DadoLidoReg1.DATAB
-DadoEscritoReg3[25] => DadoLidoReg2.DATAB
 DadoEscritoReg3[25] => registers~11.DATAIN
 DadoEscritoReg3[25] => registers.DATAIN25
-DadoEscritoReg3[26] => DadoLidoReg1.DATAB
-DadoEscritoReg3[26] => DadoLidoReg2.DATAB
 DadoEscritoReg3[26] => registers~10.DATAIN
 DadoEscritoReg3[26] => registers.DATAIN26
-DadoEscritoReg3[27] => DadoLidoReg1.DATAB
-DadoEscritoReg3[27] => DadoLidoReg2.DATAB
 DadoEscritoReg3[27] => registers~9.DATAIN
 DadoEscritoReg3[27] => registers.DATAIN27
-DadoEscritoReg3[28] => DadoLidoReg1.DATAB
-DadoEscritoReg3[28] => DadoLidoReg2.DATAB
 DadoEscritoReg3[28] => registers~8.DATAIN
 DadoEscritoReg3[28] => registers.DATAIN28
-DadoEscritoReg3[29] => DadoLidoReg1.DATAB
-DadoEscritoReg3[29] => DadoLidoReg2.DATAB
 DadoEscritoReg3[29] => registers~7.DATAIN
 DadoEscritoReg3[29] => registers.DATAIN29
-DadoEscritoReg3[30] => DadoLidoReg1.DATAB
-DadoEscritoReg3[30] => DadoLidoReg2.DATAB
 DadoEscritoReg3[30] => registers~6.DATAIN
 DadoEscritoReg3[30] => registers.DATAIN30
-DadoEscritoReg3[31] => DadoLidoReg1.DATAB
-DadoEscritoReg3[31] => DadoLidoReg2.DATAB
 DadoEscritoReg3[31] => registers~5.DATAIN
 DadoEscritoReg3[31] => registers.DATAIN31
-habEscritaReg => DadoLidoReg1.OUTPUTSELECT
-habEscritaReg => DadoLidoReg1.OUTPUTSELECT
-habEscritaReg => DadoLidoReg1.OUTPUTSELECT
-habEscritaReg => DadoLidoReg1.OUTPUTSELECT
-habEscritaReg => DadoLidoReg1.OUTPUTSELECT
-habEscritaReg => DadoLidoReg1.OUTPUTSELECT
-habEscritaReg => DadoLidoReg1.OUTPUTSELECT
-habEscritaReg => DadoLidoReg1.OUTPUTSELECT
-habEscritaReg => DadoLidoReg1.OUTPUTSELECT
-habEscritaReg => DadoLidoReg1.OUTPUTSELECT
-habEscritaReg => DadoLidoReg1.OUTPUTSELECT
-habEscritaReg => DadoLidoReg1.OUTPUTSELECT
-habEscritaReg => DadoLidoReg1.OUTPUTSELECT
-habEscritaReg => DadoLidoReg1.OUTPUTSELECT
-habEscritaReg => DadoLidoReg1.OUTPUTSELECT
-habEscritaReg => DadoLidoReg1.OUTPUTSELECT
-habEscritaReg => DadoLidoReg1.OUTPUTSELECT
-habEscritaReg => DadoLidoReg1.OUTPUTSELECT
-habEscritaReg => DadoLidoReg1.OUTPUTSELECT
-habEscritaReg => DadoLidoReg1.OUTPUTSELECT
-habEscritaReg => DadoLidoReg1.OUTPUTSELECT
-habEscritaReg => DadoLidoReg1.OUTPUTSELECT
-habEscritaReg => DadoLidoReg1.OUTPUTSELECT
-habEscritaReg => DadoLidoReg1.OUTPUTSELECT
-habEscritaReg => DadoLidoReg1.OUTPUTSELECT
-habEscritaReg => DadoLidoReg1.OUTPUTSELECT
-habEscritaReg => DadoLidoReg1.OUTPUTSELECT
-habEscritaReg => DadoLidoReg1.OUTPUTSELECT
-habEscritaReg => DadoLidoReg1.OUTPUTSELECT
-habEscritaReg => DadoLidoReg1.OUTPUTSELECT
-habEscritaReg => DadoLidoReg1.OUTPUTSELECT
-habEscritaReg => DadoLidoReg1.OUTPUTSELECT
-habEscritaReg => DadoLidoReg2.OUTPUTSELECT
-habEscritaReg => DadoLidoReg2.OUTPUTSELECT
-habEscritaReg => DadoLidoReg2.OUTPUTSELECT
-habEscritaReg => DadoLidoReg2.OUTPUTSELECT
-habEscritaReg => DadoLidoReg2.OUTPUTSELECT
-habEscritaReg => DadoLidoReg2.OUTPUTSELECT
-habEscritaReg => DadoLidoReg2.OUTPUTSELECT
-habEscritaReg => DadoLidoReg2.OUTPUTSELECT
-habEscritaReg => DadoLidoReg2.OUTPUTSELECT
-habEscritaReg => DadoLidoReg2.OUTPUTSELECT
-habEscritaReg => DadoLidoReg2.OUTPUTSELECT
-habEscritaReg => DadoLidoReg2.OUTPUTSELECT
-habEscritaReg => DadoLidoReg2.OUTPUTSELECT
-habEscritaReg => DadoLidoReg2.OUTPUTSELECT
-habEscritaReg => DadoLidoReg2.OUTPUTSELECT
-habEscritaReg => DadoLidoReg2.OUTPUTSELECT
-habEscritaReg => DadoLidoReg2.OUTPUTSELECT
-habEscritaReg => DadoLidoReg2.OUTPUTSELECT
-habEscritaReg => DadoLidoReg2.OUTPUTSELECT
-habEscritaReg => DadoLidoReg2.OUTPUTSELECT
-habEscritaReg => DadoLidoReg2.OUTPUTSELECT
-habEscritaReg => DadoLidoReg2.OUTPUTSELECT
-habEscritaReg => DadoLidoReg2.OUTPUTSELECT
-habEscritaReg => DadoLidoReg2.OUTPUTSELECT
-habEscritaReg => DadoLidoReg2.OUTPUTSELECT
-habEscritaReg => DadoLidoReg2.OUTPUTSELECT
-habEscritaReg => DadoLidoReg2.OUTPUTSELECT
-habEscritaReg => DadoLidoReg2.OUTPUTSELECT
-habEscritaReg => DadoLidoReg2.OUTPUTSELECT
-habEscritaReg => DadoLidoReg2.OUTPUTSELECT
-habEscritaReg => DadoLidoReg2.OUTPUTSELECT
-habEscritaReg => DadoLidoReg2.OUTPUTSELECT
 habEscritaReg => registers~37.DATAIN
 habEscritaReg => registers.WE
-EndReg1[0] => Equal0.IN9
 EndReg1[0] => registers.RADDR
-EndReg1[1] => Equal0.IN8
 EndReg1[1] => registers.RADDR1
-EndReg1[2] => Equal0.IN7
 EndReg1[2] => registers.RADDR2
-EndReg1[3] => Equal0.IN6
 EndReg1[3] => registers.RADDR3
-EndReg1[4] => Equal0.IN5
 EndReg1[4] => registers.RADDR4
-EndReg2[0] => Equal1.IN9
 EndReg2[0] => registers.PORTBRADDR
-EndReg2[1] => Equal1.IN8
 EndReg2[1] => registers.PORTBRADDR1
-EndReg2[2] => Equal1.IN7
 EndReg2[2] => registers.PORTBRADDR2
-EndReg2[3] => Equal1.IN6
 EndReg2[3] => registers.PORTBRADDR3
-EndReg2[4] => Equal1.IN5
 EndReg2[4] => registers.PORTBRADDR4
-EndReg3[0] => Equal0.IN4
-EndReg3[0] => Equal1.IN4
 EndReg3[0] => registers~4.DATAIN
 EndReg3[0] => registers.WADDR
-EndReg3[1] => Equal0.IN3
-EndReg3[1] => Equal1.IN3
 EndReg3[1] => registers~3.DATAIN
 EndReg3[1] => registers.WADDR1
-EndReg3[2] => Equal0.IN2
-EndReg3[2] => Equal1.IN2
 EndReg3[2] => registers~2.DATAIN
 EndReg3[2] => registers.WADDR2
-EndReg3[3] => Equal0.IN1
-EndReg3[3] => Equal1.IN1
 EndReg3[3] => registers~1.DATAIN
 EndReg3[3] => registers.WADDR3
-EndReg3[4] => Equal0.IN0
-EndReg3[4] => Equal1.IN0
 EndReg3[4] => registers~0.DATAIN
 EndReg3[4] => registers.WADDR4
 clk => registers~37.CLK
@@ -705,7 +566,7 @@ clk => DadoLidoReg1[31]~reg0.CLK
 clk => registers.CLK0
 
 
-|MIPS|ext16to32:Esten_Sinal
+|FluxoDeDados|ext16to32:Esten_Sinal
 A[0] => X[0].DATAIN
 A[1] => X[1].DATAIN
 A[2] => X[2].DATAIN
@@ -772,7 +633,7 @@ X[30] <= A[15].DB_MAX_OUTPUT_PORT_TYPE
 X[31] <= A[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MIPS|mux32:muxAntesULA
+|FluxoDeDados|mux32:muxAntesULA
 SEL => X.OUTPUTSELECT
 SEL => X.OUTPUTSELECT
 SEL => X.OUTPUTSELECT
@@ -903,7 +764,7 @@ X[30] <= X.DB_MAX_OUTPUT_PORT_TYPE
 X[31] <= X.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MIPS|ALUControl:UC_ULA
+|FluxoDeDados|ALUControl:UC_ULA
 ULAOp[0] => Equal0.IN1
 ULAOp[0] => Equal1.IN1
 ULAOp[0] => Equal2.IN0
@@ -946,7 +807,7 @@ ULActrl[2] <= ULActrl[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
 ULActrl[3] <= <GND>
 
 
-|MIPS|ULA:ALU
+|FluxoDeDados|ULA:ALU
 A[0] => not32:Anot.A[0]
 A[0] => mux32:muxA.A[0]
 A[0] => mux32:muxB.A[0]
@@ -1114,7 +975,7 @@ RES[31] <= mux32_4:opmux.X[31]
 ZERO <= nor32:norZero.O
 
 
-|MIPS|ULA:ALU|not32:Anot
+|FluxoDeDados|ULA:ALU|not32:Anot
 A[0] => X[0].DATAIN
 A[1] => X[1].DATAIN
 A[2] => X[2].DATAIN
@@ -1181,7 +1042,7 @@ X[30] <= A[30].DB_MAX_OUTPUT_PORT_TYPE
 X[31] <= A[31].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MIPS|ULA:ALU|not32:Bnot
+|FluxoDeDados|ULA:ALU|not32:Bnot
 A[0] => X[0].DATAIN
 A[1] => X[1].DATAIN
 A[2] => X[2].DATAIN
@@ -1248,7 +1109,7 @@ X[30] <= A[30].DB_MAX_OUTPUT_PORT_TYPE
 X[31] <= A[31].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MIPS|ULA:ALU|mux32:muxA
+|FluxoDeDados|ULA:ALU|mux32:muxA
 SEL => X.OUTPUTSELECT
 SEL => X.OUTPUTSELECT
 SEL => X.OUTPUTSELECT
@@ -1379,7 +1240,7 @@ X[30] <= X.DB_MAX_OUTPUT_PORT_TYPE
 X[31] <= X.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MIPS|ULA:ALU|mux32:muxB
+|FluxoDeDados|ULA:ALU|mux32:muxB
 SEL => X.OUTPUTSELECT
 SEL => X.OUTPUTSELECT
 SEL => X.OUTPUTSELECT
@@ -1510,7 +1371,7 @@ X[30] <= X.DB_MAX_OUTPUT_PORT_TYPE
 X[31] <= X.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MIPS|ULA:ALU|and32:andop
+|FluxoDeDados|ULA:ALU|and32:andop
 A[0] => X.IN0
 A[1] => X.IN0
 A[2] => X.IN0
@@ -1609,7 +1470,7 @@ X[30] <= X.DB_MAX_OUTPUT_PORT_TYPE
 X[31] <= X.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MIPS|ULA:ALU|or32:orop
+|FluxoDeDados|ULA:ALU|or32:orop
 A[0] => X.IN0
 A[1] => X.IN0
 A[2] => X.IN0
@@ -1708,7 +1569,7 @@ X[30] <= X.DB_MAX_OUTPUT_PORT_TYPE
 X[31] <= X.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MIPS|ULA:ALU|overflow:overf
+|FluxoDeDados|ULA:ALU|overflow:overf
 A[0] => ~NO_FANOUT~
 A[1] => ~NO_FANOUT~
 A[2] => ~NO_FANOUT~
@@ -1811,21 +1672,21 @@ R[31] => andoverf:and3_2.C
 X <= X.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MIPS|ULA:ALU|overflow:overf|andoverf:and3_1
+|FluxoDeDados|ULA:ALU|overflow:overf|andoverf:and3_1
 A => process_0.IN0
 B => process_0.IN1
 C => process_0.IN1
 X <= process_0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MIPS|ULA:ALU|overflow:overf|andoverf:and3_2
+|FluxoDeDados|ULA:ALU|overflow:overf|andoverf:and3_2
 A => process_0.IN0
 B => process_0.IN1
 C => process_0.IN1
 X <= process_0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MIPS|ULA:ALU|mux32_4:opmux
+|FluxoDeDados|ULA:ALU|mux32_4:opmux
 SEL[0] => Equal0.IN0
 SEL[0] => Equal1.IN1
 SEL[0] => Equal2.IN1
@@ -1994,7 +1855,7 @@ X[30] <= X.DB_MAX_OUTPUT_PORT_TYPE
 X[31] <= X.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MIPS|ULA:ALU|nor32:norZero
+|FluxoDeDados|ULA:ALU|nor32:norZero
 A[0] => ~NO_FANOUT~
 A[1] => ~NO_FANOUT~
 A[2] => ~NO_FANOUT~
@@ -2030,153 +1891,221 @@ A[31] => ~NO_FANOUT~
 O <= <GND>
 
 
-|MIPS|dataMemory:Mem_dados
-address[0] => WideOr0.IN0
-address[1] => WideOr0.IN1
-address[2] => Add1.IN60
-address[2] => Add2.IN60
-address[3] => Add1.IN59
-address[3] => Add2.IN59
-address[4] => Add1.IN58
-address[4] => Add2.IN58
-address[5] => Add1.IN57
-address[5] => Add2.IN57
-address[6] => Add1.IN56
-address[6] => Add2.IN56
-address[7] => Add1.IN55
-address[7] => Add2.IN55
-address[8] => Add1.IN54
-address[8] => Add2.IN54
-address[9] => Add1.IN53
-address[9] => Add2.IN53
-address[10] => Add1.IN52
-address[10] => Add2.IN52
-address[11] => Add1.IN51
-address[11] => Add2.IN51
-address[12] => Add1.IN50
-address[12] => Add2.IN50
-address[13] => Add1.IN49
-address[13] => Add2.IN49
-address[14] => Add1.IN48
-address[14] => Add2.IN48
-address[15] => Add1.IN47
-address[15] => Add2.IN47
-address[16] => Add0.IN30
-address[17] => Add0.IN29
-address[18] => Add0.IN28
-address[19] => Add0.IN27
-address[20] => Add0.IN26
-address[21] => Add0.IN25
-address[22] => Add0.IN24
-address[23] => Add0.IN23
-address[24] => Add0.IN22
-address[25] => Add0.IN21
-address[26] => Add0.IN20
-address[27] => Add0.IN19
-address[28] => Add0.IN18
-address[29] => Add0.IN17
-address[30] => Add0.IN16
-address[31] => ~NO_FANOUT~
-writeData[0] => DM.DATAIN
-writeData[1] => DM.DATAIN1
-writeData[2] => DM.DATAIN2
-writeData[3] => DM.DATAIN3
-writeData[4] => DM.DATAIN4
-writeData[5] => DM.DATAIN5
-writeData[6] => DM.DATAIN6
-writeData[7] => DM.DATAIN7
-writeData[8] => DM.DATAIN8
-writeData[9] => DM.DATAIN9
-writeData[10] => DM.DATAIN10
-writeData[11] => DM.DATAIN11
-writeData[12] => DM.DATAIN12
-writeData[13] => DM.DATAIN13
-writeData[14] => DM.DATAIN14
-writeData[15] => DM.DATAIN15
-writeData[16] => DM.DATAIN16
-writeData[17] => DM.DATAIN17
-writeData[18] => DM.DATAIN18
-writeData[19] => DM.DATAIN19
-writeData[20] => DM.DATAIN20
-writeData[21] => DM.DATAIN21
-writeData[22] => DM.DATAIN22
-writeData[23] => DM.DATAIN23
-writeData[24] => DM.DATAIN24
-writeData[25] => DM.DATAIN25
-writeData[26] => DM.DATAIN26
-writeData[27] => DM.DATAIN27
-writeData[28] => DM.DATAIN28
-writeData[29] => DM.DATAIN29
-writeData[30] => DM.DATAIN30
-writeData[31] => DM.DATAIN31
-memRead => readData[0]$latch.LATCH_ENABLE
-memRead => readData[1]$latch.LATCH_ENABLE
-memRead => readData[2]$latch.LATCH_ENABLE
-memRead => readData[3]$latch.LATCH_ENABLE
-memRead => readData[4]$latch.LATCH_ENABLE
-memRead => readData[5]$latch.LATCH_ENABLE
-memRead => readData[6]$latch.LATCH_ENABLE
-memRead => readData[7]$latch.LATCH_ENABLE
-memRead => readData[8]$latch.LATCH_ENABLE
-memRead => readData[9]$latch.LATCH_ENABLE
-memRead => readData[10]$latch.LATCH_ENABLE
-memRead => readData[11]$latch.LATCH_ENABLE
-memRead => readData[12]$latch.LATCH_ENABLE
-memRead => readData[13]$latch.LATCH_ENABLE
-memRead => readData[14]$latch.LATCH_ENABLE
-memRead => readData[15]$latch.LATCH_ENABLE
-memRead => readData[16]$latch.LATCH_ENABLE
-memRead => readData[17]$latch.LATCH_ENABLE
-memRead => readData[18]$latch.LATCH_ENABLE
-memRead => readData[19]$latch.LATCH_ENABLE
-memRead => readData[20]$latch.LATCH_ENABLE
-memRead => readData[21]$latch.LATCH_ENABLE
-memRead => readData[22]$latch.LATCH_ENABLE
-memRead => readData[23]$latch.LATCH_ENABLE
-memRead => readData[24]$latch.LATCH_ENABLE
-memRead => readData[25]$latch.LATCH_ENABLE
-memRead => readData[26]$latch.LATCH_ENABLE
-memRead => readData[27]$latch.LATCH_ENABLE
-memRead => readData[28]$latch.LATCH_ENABLE
-memRead => readData[29]$latch.LATCH_ENABLE
-memRead => readData[30]$latch.LATCH_ENABLE
-memRead => readData[31]$latch.LATCH_ENABLE
-memWrite => DM.WE
-readData[0] <= readData[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
-readData[1] <= readData[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
-readData[2] <= readData[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
-readData[3] <= readData[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
-readData[4] <= readData[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
-readData[5] <= readData[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
-readData[6] <= readData[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
-readData[7] <= readData[7]$latch.DB_MAX_OUTPUT_PORT_TYPE
-readData[8] <= readData[8]$latch.DB_MAX_OUTPUT_PORT_TYPE
-readData[9] <= readData[9]$latch.DB_MAX_OUTPUT_PORT_TYPE
-readData[10] <= readData[10]$latch.DB_MAX_OUTPUT_PORT_TYPE
-readData[11] <= readData[11]$latch.DB_MAX_OUTPUT_PORT_TYPE
-readData[12] <= readData[12]$latch.DB_MAX_OUTPUT_PORT_TYPE
-readData[13] <= readData[13]$latch.DB_MAX_OUTPUT_PORT_TYPE
-readData[14] <= readData[14]$latch.DB_MAX_OUTPUT_PORT_TYPE
-readData[15] <= readData[15]$latch.DB_MAX_OUTPUT_PORT_TYPE
-readData[16] <= readData[16]$latch.DB_MAX_OUTPUT_PORT_TYPE
-readData[17] <= readData[17]$latch.DB_MAX_OUTPUT_PORT_TYPE
-readData[18] <= readData[18]$latch.DB_MAX_OUTPUT_PORT_TYPE
-readData[19] <= readData[19]$latch.DB_MAX_OUTPUT_PORT_TYPE
-readData[20] <= readData[20]$latch.DB_MAX_OUTPUT_PORT_TYPE
-readData[21] <= readData[21]$latch.DB_MAX_OUTPUT_PORT_TYPE
-readData[22] <= readData[22]$latch.DB_MAX_OUTPUT_PORT_TYPE
-readData[23] <= readData[23]$latch.DB_MAX_OUTPUT_PORT_TYPE
-readData[24] <= readData[24]$latch.DB_MAX_OUTPUT_PORT_TYPE
-readData[25] <= readData[25]$latch.DB_MAX_OUTPUT_PORT_TYPE
-readData[26] <= readData[26]$latch.DB_MAX_OUTPUT_PORT_TYPE
-readData[27] <= readData[27]$latch.DB_MAX_OUTPUT_PORT_TYPE
-readData[28] <= readData[28]$latch.DB_MAX_OUTPUT_PORT_TYPE
-readData[29] <= readData[29]$latch.DB_MAX_OUTPUT_PORT_TYPE
-readData[30] <= readData[30]$latch.DB_MAX_OUTPUT_PORT_TYPE
-readData[31] <= readData[31]$latch.DB_MAX_OUTPUT_PORT_TYPE
+|FluxoDeDados|memory:Mem_dados
+Endereco[0] => ~NO_FANOUT~
+Endereco[1] => ~NO_FANOUT~
+Endereco[2] => Memoria~4.DATAIN
+Endereco[2] => Memoria.WADDR
+Endereco[2] => Memoria.RADDR
+Endereco[3] => Memoria~3.DATAIN
+Endereco[3] => Memoria.WADDR1
+Endereco[3] => Memoria.RADDR1
+Endereco[4] => Memoria~2.DATAIN
+Endereco[4] => Memoria.WADDR2
+Endereco[4] => Memoria.RADDR2
+Endereco[5] => Memoria~1.DATAIN
+Endereco[5] => Memoria.WADDR3
+Endereco[5] => Memoria.RADDR3
+Endereco[6] => Memoria~0.DATAIN
+Endereco[6] => Memoria.WADDR4
+Endereco[6] => Memoria.RADDR4
+Endereco[7] => ~NO_FANOUT~
+Endereco[8] => ~NO_FANOUT~
+Endereco[9] => ~NO_FANOUT~
+Endereco[10] => ~NO_FANOUT~
+Endereco[11] => ~NO_FANOUT~
+Endereco[12] => ~NO_FANOUT~
+Endereco[13] => ~NO_FANOUT~
+Endereco[14] => ~NO_FANOUT~
+Endereco[15] => ~NO_FANOUT~
+Endereco[16] => ~NO_FANOUT~
+Endereco[17] => ~NO_FANOUT~
+Endereco[18] => ~NO_FANOUT~
+Endereco[19] => ~NO_FANOUT~
+Endereco[20] => ~NO_FANOUT~
+Endereco[21] => ~NO_FANOUT~
+Endereco[22] => ~NO_FANOUT~
+Endereco[23] => ~NO_FANOUT~
+Endereco[24] => ~NO_FANOUT~
+Endereco[25] => ~NO_FANOUT~
+Endereco[26] => ~NO_FANOUT~
+Endereco[27] => ~NO_FANOUT~
+Endereco[28] => ~NO_FANOUT~
+Endereco[29] => ~NO_FANOUT~
+Endereco[30] => ~NO_FANOUT~
+Endereco[31] => ~NO_FANOUT~
+DadoASeEscritos[0] => Memoria~36.DATAIN
+DadoASeEscritos[0] => Memoria.DATAIN
+DadoASeEscritos[1] => Memoria~35.DATAIN
+DadoASeEscritos[1] => Memoria.DATAIN1
+DadoASeEscritos[2] => Memoria~34.DATAIN
+DadoASeEscritos[2] => Memoria.DATAIN2
+DadoASeEscritos[3] => Memoria~33.DATAIN
+DadoASeEscritos[3] => Memoria.DATAIN3
+DadoASeEscritos[4] => Memoria~32.DATAIN
+DadoASeEscritos[4] => Memoria.DATAIN4
+DadoASeEscritos[5] => Memoria~31.DATAIN
+DadoASeEscritos[5] => Memoria.DATAIN5
+DadoASeEscritos[6] => Memoria~30.DATAIN
+DadoASeEscritos[6] => Memoria.DATAIN6
+DadoASeEscritos[7] => Memoria~29.DATAIN
+DadoASeEscritos[7] => Memoria.DATAIN7
+DadoASeEscritos[8] => Memoria~28.DATAIN
+DadoASeEscritos[8] => Memoria.DATAIN8
+DadoASeEscritos[9] => Memoria~27.DATAIN
+DadoASeEscritos[9] => Memoria.DATAIN9
+DadoASeEscritos[10] => Memoria~26.DATAIN
+DadoASeEscritos[10] => Memoria.DATAIN10
+DadoASeEscritos[11] => Memoria~25.DATAIN
+DadoASeEscritos[11] => Memoria.DATAIN11
+DadoASeEscritos[12] => Memoria~24.DATAIN
+DadoASeEscritos[12] => Memoria.DATAIN12
+DadoASeEscritos[13] => Memoria~23.DATAIN
+DadoASeEscritos[13] => Memoria.DATAIN13
+DadoASeEscritos[14] => Memoria~22.DATAIN
+DadoASeEscritos[14] => Memoria.DATAIN14
+DadoASeEscritos[15] => Memoria~21.DATAIN
+DadoASeEscritos[15] => Memoria.DATAIN15
+DadoASeEscritos[16] => Memoria~20.DATAIN
+DadoASeEscritos[16] => Memoria.DATAIN16
+DadoASeEscritos[17] => Memoria~19.DATAIN
+DadoASeEscritos[17] => Memoria.DATAIN17
+DadoASeEscritos[18] => Memoria~18.DATAIN
+DadoASeEscritos[18] => Memoria.DATAIN18
+DadoASeEscritos[19] => Memoria~17.DATAIN
+DadoASeEscritos[19] => Memoria.DATAIN19
+DadoASeEscritos[20] => Memoria~16.DATAIN
+DadoASeEscritos[20] => Memoria.DATAIN20
+DadoASeEscritos[21] => Memoria~15.DATAIN
+DadoASeEscritos[21] => Memoria.DATAIN21
+DadoASeEscritos[22] => Memoria~14.DATAIN
+DadoASeEscritos[22] => Memoria.DATAIN22
+DadoASeEscritos[23] => Memoria~13.DATAIN
+DadoASeEscritos[23] => Memoria.DATAIN23
+DadoASeEscritos[24] => Memoria~12.DATAIN
+DadoASeEscritos[24] => Memoria.DATAIN24
+DadoASeEscritos[25] => Memoria~11.DATAIN
+DadoASeEscritos[25] => Memoria.DATAIN25
+DadoASeEscritos[26] => Memoria~10.DATAIN
+DadoASeEscritos[26] => Memoria.DATAIN26
+DadoASeEscritos[27] => Memoria~9.DATAIN
+DadoASeEscritos[27] => Memoria.DATAIN27
+DadoASeEscritos[28] => Memoria~8.DATAIN
+DadoASeEscritos[28] => Memoria.DATAIN28
+DadoASeEscritos[29] => Memoria~7.DATAIN
+DadoASeEscritos[29] => Memoria.DATAIN29
+DadoASeEscritos[30] => Memoria~6.DATAIN
+DadoASeEscritos[30] => Memoria.DATAIN30
+DadoASeEscritos[31] => Memoria~5.DATAIN
+DadoASeEscritos[31] => Memoria.DATAIN31
+Ler => DadoLido.OUTPUTSELECT
+Ler => DadoLido.OUTPUTSELECT
+Ler => DadoLido.OUTPUTSELECT
+Ler => DadoLido.OUTPUTSELECT
+Ler => DadoLido.OUTPUTSELECT
+Ler => DadoLido.OUTPUTSELECT
+Ler => DadoLido.OUTPUTSELECT
+Ler => DadoLido.OUTPUTSELECT
+Ler => DadoLido.OUTPUTSELECT
+Ler => DadoLido.OUTPUTSELECT
+Ler => DadoLido.OUTPUTSELECT
+Ler => DadoLido.OUTPUTSELECT
+Ler => DadoLido.OUTPUTSELECT
+Ler => DadoLido.OUTPUTSELECT
+Ler => DadoLido.OUTPUTSELECT
+Ler => DadoLido.OUTPUTSELECT
+Ler => DadoLido.OUTPUTSELECT
+Ler => DadoLido.OUTPUTSELECT
+Ler => DadoLido.OUTPUTSELECT
+Ler => DadoLido.OUTPUTSELECT
+Ler => DadoLido.OUTPUTSELECT
+Ler => DadoLido.OUTPUTSELECT
+Ler => DadoLido.OUTPUTSELECT
+Ler => DadoLido.OUTPUTSELECT
+Ler => DadoLido.OUTPUTSELECT
+Ler => DadoLido.OUTPUTSELECT
+Ler => DadoLido.OUTPUTSELECT
+Ler => DadoLido.OUTPUTSELECT
+Ler => DadoLido.OUTPUTSELECT
+Ler => DadoLido.OUTPUTSELECT
+Ler => DadoLido.OUTPUTSELECT
+Ler => DadoLido.OUTPUTSELECT
+Escrever => Memoria~37.DATAIN
+Escrever => Memoria.WE
+clk => Memoria~37.CLK
+clk => Memoria~0.CLK
+clk => Memoria~1.CLK
+clk => Memoria~2.CLK
+clk => Memoria~3.CLK
+clk => Memoria~4.CLK
+clk => Memoria~5.CLK
+clk => Memoria~6.CLK
+clk => Memoria~7.CLK
+clk => Memoria~8.CLK
+clk => Memoria~9.CLK
+clk => Memoria~10.CLK
+clk => Memoria~11.CLK
+clk => Memoria~12.CLK
+clk => Memoria~13.CLK
+clk => Memoria~14.CLK
+clk => Memoria~15.CLK
+clk => Memoria~16.CLK
+clk => Memoria~17.CLK
+clk => Memoria~18.CLK
+clk => Memoria~19.CLK
+clk => Memoria~20.CLK
+clk => Memoria~21.CLK
+clk => Memoria~22.CLK
+clk => Memoria~23.CLK
+clk => Memoria~24.CLK
+clk => Memoria~25.CLK
+clk => Memoria~26.CLK
+clk => Memoria~27.CLK
+clk => Memoria~28.CLK
+clk => Memoria~29.CLK
+clk => Memoria~30.CLK
+clk => Memoria~31.CLK
+clk => Memoria~32.CLK
+clk => Memoria~33.CLK
+clk => Memoria~34.CLK
+clk => Memoria~35.CLK
+clk => Memoria~36.CLK
+clk => Memoria.CLK0
+DadoLido[0] <= DadoLido.DB_MAX_OUTPUT_PORT_TYPE
+DadoLido[1] <= DadoLido.DB_MAX_OUTPUT_PORT_TYPE
+DadoLido[2] <= DadoLido.DB_MAX_OUTPUT_PORT_TYPE
+DadoLido[3] <= DadoLido.DB_MAX_OUTPUT_PORT_TYPE
+DadoLido[4] <= DadoLido.DB_MAX_OUTPUT_PORT_TYPE
+DadoLido[5] <= DadoLido.DB_MAX_OUTPUT_PORT_TYPE
+DadoLido[6] <= DadoLido.DB_MAX_OUTPUT_PORT_TYPE
+DadoLido[7] <= DadoLido.DB_MAX_OUTPUT_PORT_TYPE
+DadoLido[8] <= DadoLido.DB_MAX_OUTPUT_PORT_TYPE
+DadoLido[9] <= DadoLido.DB_MAX_OUTPUT_PORT_TYPE
+DadoLido[10] <= DadoLido.DB_MAX_OUTPUT_PORT_TYPE
+DadoLido[11] <= DadoLido.DB_MAX_OUTPUT_PORT_TYPE
+DadoLido[12] <= DadoLido.DB_MAX_OUTPUT_PORT_TYPE
+DadoLido[13] <= DadoLido.DB_MAX_OUTPUT_PORT_TYPE
+DadoLido[14] <= DadoLido.DB_MAX_OUTPUT_PORT_TYPE
+DadoLido[15] <= DadoLido.DB_MAX_OUTPUT_PORT_TYPE
+DadoLido[16] <= DadoLido.DB_MAX_OUTPUT_PORT_TYPE
+DadoLido[17] <= DadoLido.DB_MAX_OUTPUT_PORT_TYPE
+DadoLido[18] <= DadoLido.DB_MAX_OUTPUT_PORT_TYPE
+DadoLido[19] <= DadoLido.DB_MAX_OUTPUT_PORT_TYPE
+DadoLido[20] <= DadoLido.DB_MAX_OUTPUT_PORT_TYPE
+DadoLido[21] <= DadoLido.DB_MAX_OUTPUT_PORT_TYPE
+DadoLido[22] <= DadoLido.DB_MAX_OUTPUT_PORT_TYPE
+DadoLido[23] <= DadoLido.DB_MAX_OUTPUT_PORT_TYPE
+DadoLido[24] <= DadoLido.DB_MAX_OUTPUT_PORT_TYPE
+DadoLido[25] <= DadoLido.DB_MAX_OUTPUT_PORT_TYPE
+DadoLido[26] <= DadoLido.DB_MAX_OUTPUT_PORT_TYPE
+DadoLido[27] <= DadoLido.DB_MAX_OUTPUT_PORT_TYPE
+DadoLido[28] <= DadoLido.DB_MAX_OUTPUT_PORT_TYPE
+DadoLido[29] <= DadoLido.DB_MAX_OUTPUT_PORT_TYPE
+DadoLido[30] <= DadoLido.DB_MAX_OUTPUT_PORT_TYPE
+DadoLido[31] <= DadoLido.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MIPS|mux32:muxDepoisULA
+|FluxoDeDados|mux32:muxDepoisULA
 SEL => X.OUTPUTSELECT
 SEL => X.OUTPUTSELECT
 SEL => X.OUTPUTSELECT
@@ -2307,7 +2236,7 @@ X[30] <= X.DB_MAX_OUTPUT_PORT_TYPE
 X[31] <= X.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MIPS|add32:add4toPC
+|FluxoDeDados|add32:add4toPC
 A[0] => Add0.IN32
 A[1] => Add0.IN31
 A[2] => Add0.IN30
@@ -2406,7 +2335,7 @@ X[30] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 X[31] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MIPS|shifter2_26to32:shifter26to32
+|FluxoDeDados|shifter2_26to32:shifter26to32
 A[0] => X[2].DATAIN
 A[1] => X[3].DATAIN
 A[2] => X[4].DATAIN
@@ -2463,7 +2392,7 @@ X[26] <= A[24].DB_MAX_OUTPUT_PORT_TYPE
 X[27] <= A[25].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MIPS|shifter2_32to32:shifter32to32
+|FluxoDeDados|shifter2_32to32:shifter32to32
 A[0] => X[2].DATAIN
 A[1] => X[3].DATAIN
 A[2] => X[4].DATAIN
@@ -2530,7 +2459,7 @@ X[30] <= A[28].DB_MAX_OUTPUT_PORT_TYPE
 X[31] <= A[29].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MIPS|add32:AddPC4andExtSin
+|FluxoDeDados|add32:AddPC4andExtSin
 A[0] => Add0.IN32
 A[1] => Add0.IN31
 A[2] => Add0.IN30
@@ -2629,7 +2558,7 @@ X[30] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 X[31] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MIPS|mux32:MuxBEQ
+|FluxoDeDados|mux32:MuxBEQ
 SEL => X.OUTPUTSELECT
 SEL => X.OUTPUTSELECT
 SEL => X.OUTPUTSELECT
@@ -2760,7 +2689,7 @@ X[30] <= X.DB_MAX_OUTPUT_PORT_TYPE
 X[31] <= X.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MIPS|mux32:MuxProxPC
+|FluxoDeDados|mux32:MuxProxPC
 SEL => X.OUTPUTSELECT
 SEL => X.OUTPUTSELECT
 SEL => X.OUTPUTSELECT

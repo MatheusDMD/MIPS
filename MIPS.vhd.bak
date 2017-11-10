@@ -1,27 +1,12 @@
-LIBRARY IEEE;
-USE IEEE.STD_LOGIC_1164.ALL;
-use IEEE.NUMERIC_STD.ALL;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
 
-ENTITY MIPS IS
-	PORT (
-		--CLK				 : IN STD_LOGIC;
-		--enablePC	    : IN STD_LOGIC;
-		mux_PC   		 : IN STD_LOGIC;
-		MUX_RtRd 		 : IN STD_LOGIC;
-		habEscritaReg   : IN STD_LOGIC;
-		mux_RtIm		    : IN STD_LOGIC;
-		ULAoP 		    : IN STD_LOGIC_VECTOR(1 downto 0);
-		mux_ULAMem		 : IN STD_LOGIC;
-		BEQ   		    : IN STD_LOGIC;
-		habLeituraMEM	 : IN STD_LOGIC;
-		habEscritaMEM	 : IN STD_LOGIC;
-		OpCode		    : OUT STD_LOGIC_VECTOR (5 DOWNTO 0)
-	);
-	
-ARCHITECTURE fluxo of MIPS is
-	singnal PROXpc, saidaPC: std_logic_vector(32 downto 0);
+ entity MIPS is
+
+      port ();
+
+ end entity;
+
+architecture comportamento of MIPS is
 begin
-	PC : entity work.registrador32
-		port map (DIN=> PROXpc, DOUT =>saidaPC);
-		
-END fluxo;
+end architecture;

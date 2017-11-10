@@ -1,43 +1,66 @@
-LIBRARY IEEE;
-USE IEEE.STD_LOGIC_1164.ALL;
-use IEEE.NUMERIC_STD.ALL;
-ENTITY dataMemory IS
-	PORT (
-		address   : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
-		writeData : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
-		memRead   : IN STD_LOGIC;
-		memWrite  : IN STD_LOGIC;
-		readData  : OUT STD_LOGIC_VECTOR (31 DOWNTO 0)
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+entity memory is
+	port (
+		Endereco, DadoASeEscritos: in STD_LOGIC_VECTOR (31 downto 0);
+		Ler, Escrever,clk: in STD_LOGIC;
+		DadoLido: out STD_LOGIC_VECTOR (31 downto 0)
 	);
-END dataMemory;
-ARCHITECTURE Behavioral OF dataMemory IS
-	TYPE RAM_16_x_32 IS ARRAY(0 TO 15) OF std_logic_vector(31 DOWNTO 0);
-	SIGNAL DM : RAM_16_x_32 := (
-		x"00000000", -- assume starts at 0x1000100000
-		x"00000000",
-		x"00000000",
-		x"00000000",
-		x"00000000",
-		x"00000000",
-		x"00000000",
-		x"00000000",
-		x"00000000",
-		x"00000000",
-		x"00000000",
-		x"00000000",
-		x"00000000",
-		x"00000000",
-		x"00000000",
-		x"00000000"
-	);
-BEGIN
-	PROCESS (memWrite, memRead) -- pulse on write
-	BEGIN
-		IF (memWrite = '1') THEN
-			DM((to_integer(unsigned(address)) - 268500992) / 4) <= writeData;
-		END IF;
-		IF (memRead = '1') THEN
-			readData <= DM((to_integer(unsigned(address)) - 268500992)/4);
-		END IF;
-	END PROCESS;
-END Behavioral;
+end memory;
+
+
+architecture behavioral of memory is	  
+
+type ArrayMemoria is array(0 to 31) of STD_LOGIC_VECTOR (31 downto 0);
+
+signal Memoria: ArrayMemoria := (
+    X"00000000",
+    X"00000000",
+    X"00000000",
+    X"00000000",
+    X"00000000",
+    X"00000000",
+    X"00000000",
+    X"00000000",
+    X"00000000",
+    X"00000000", 
+    X"00000000", 
+    X"00000000", 
+    X"00000000",
+    X"00000000",
+    X"00000000",
+    X"00000000",
+    X"00000000",
+    X"00000000",
+    X"00000000",
+    X"00000000",  
+    X"00000000",
+    X"00000000",
+    X"00000000",
+    X"00000000",
+    X"00000000", 
+    X"00000000",
+    X"00000000",
+    X"00000000",
+    X"00000000",
+    X"00000000", 
+    X"00000000", 
+    X"00000000");
+
+begin
+-- Leitura dos dados
+DadoLido <= Memoria(conv_integer(Endereco(6 downto 2))) when Ler = '1' else X"00000000";
+
+-- Escrita dos dados
+process(Endereco, DadoASeEscritos,clk)
+begin
+	if (rising_edge(clk)) then 
+		if (Escrever = '1') then
+			Memoria(conv_integer(Endereco(6 downto 2))) <= DadoASeEscritos;
+		end if;
+	end if;
+end process;
+
+end behavioral;

@@ -11,28 +11,56 @@ entity registerBank32 is
     EndReg1     : in  std_logic_vector(4 downto 0);
     EndReg2     : in  std_logic_vector(4 downto 0);
     EndReg3 : in  std_logic_vector(4 downto 0);
-    clk         : in  std_logic :='1'
+    clk         : in  std_logic
     );
 end registerBank32;
 
 
 architecture behavioral of registerBank32 is
-  type registerFile is array(0 to 31) of std_logic_vector(31 downto 0);
-  signal registers : registerFile;
+	
+	type registerFile is array(0 to 31) of std_logic_vector(31 downto 0);
+	signal registers : registerFile := (
+        "00000000000000000000000000000000", -- $zero
+        "00000000000000000000000000000000", -- mem 1
+        "00000000000000000000000000000000",
+        "00000000000000000000000000000000",
+        "00000000000000000000000000000000",
+        "00000000000000000000000000000000",
+        "00000000000000000000000000000000",
+        "00000000000000000000000000000000",
+        "00000000000000000000000000000000", -- t0
+        "00000000000000000000000000000110", -- t1
+        "00000000000000000000000000000001", -- t2 
+        "00000000000000000000000000000000", -- t3
+        "00000000000000000000000000000000", -- t4
+        "00000000000000000000000000000100", -- t5
+        "00000000000000000000000000000001", -- t6
+        "00000000000000000000000000000000", -- t7
+        "00000000000000000000000000000000",
+        "00000000000000000000000000000000",
+        "00000000000000000000000000000000",
+        "00000000000000000000000000000000",  
+        "00000000000000000000000000000000", -- mem 20
+        "00000000000000000000000000000000",
+        "00000000000000000000000000000000",
+        "00000000000000000000000000000000",
+        "00000000000000000000000000000000", 
+        "00000000000000000000000000000000",
+        "00000000000000000000000000000000",
+        "00000000000000000000000000000000",
+        "00000000000000000000000000000000",
+        "00000000000000000000000000000000", 
+        "00000000000000000000000000000000", -- mem 30
+        "00000000000000000000000000000000"
+    );
 begin
-  regFile : process (clk) is
+  process (clk) is
   begin
     if rising_edge(clk) then
       DadoLidoReg1 <= registers(to_integer(unsigned(EndReg1)));
       DadoLidoReg2 <= registers(to_integer(unsigned(EndReg2)));
       if habEscritaReg = '1' then
         registers(to_integer(unsigned(EndReg3))) <= DadoEscritoReg3;  -- Write
-        if EndReg1 = EndReg3 then
-          DadoLidoReg1 <= DadoEscritoReg3;
-        end if;
-        if EndReg2 = EndReg3 then
-          DadoLidoReg2 <= DadoEscritoReg3;
-        end if;
       end if;
     end if;
   end process;
