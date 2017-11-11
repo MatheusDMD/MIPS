@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MIPS_QuartusPrimeProject
-Fri Nov 10 17:08:00 2017
+Sat Nov 11 14:40:41 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -73,16 +73,16 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Nov 10 17:08:00 2017       ;
+; Analysis & Synthesis Status        ; Successful - Sat Nov 11 14:40:41 2017       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; MIPS_QuartusPrimeProject                    ;
 ; Top-level Entity Name              ; FluxoDeDados                                ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 1,837                                       ;
-;     Total combinational functions  ; 813                                         ;
+; Total logic elements               ; 1,872                                       ;
+;     Total combinational functions  ; 848                                         ;
 ;     Dedicated logic registers      ; 1,024                                       ;
 ; Total registers                    ; 1024                                        ;
-; Total pins                         ; 54                                          ;
+; Total pins                         ; 186                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 192                                         ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -181,15 +181,19 @@ agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 2           ;
-; Maximum allowed            ; 2           ;
+; Number detected on machine ; 6           ;
+; Maximum allowed            ; 6           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 2           ;
+; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
+;     Processor 5            ;   0.0%      ;
+;     Processor 6            ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -237,31 +241,31 @@ agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 1,837     ;
+; Estimated Total logic elements              ; 1,872     ;
 ;                                             ;           ;
-; Total combinational functions               ; 813       ;
+; Total combinational functions               ; 848       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 737       ;
-;     -- 3 input functions                    ; 71        ;
-;     -- <=2 input functions                  ; 5         ;
+;     -- 4 input functions                    ; 703       ;
+;     -- 3 input functions                    ; 108       ;
+;     -- <=2 input functions                  ; 37        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 782       ;
+;     -- normal mode                          ; 817       ;
 ;     -- arithmetic mode                      ; 31        ;
 ;                                             ;           ;
 ; Total registers                             ; 1024      ;
 ;     -- Dedicated logic registers            ; 1024      ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 54        ;
+; I/O pins                                    ; 186       ;
 ; Total memory bits                           ; 192       ;
 ;                                             ;           ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; CLK~input ;
 ; Maximum fan-out                             ; 1088      ;
-; Total fan-out                               ; 6648      ;
-; Average fan-out                             ; 3.31      ;
+; Total fan-out                               ; 6916      ;
+; Average fan-out                             ; 3.00      ;
 +---------------------------------------------+-----------+
 
 
@@ -270,11 +274,12 @@ agreement for further details.
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                ; Entity Name     ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |FluxoDeDados                             ; 813 (1)             ; 1024 (0)                  ; 192         ; 0            ; 0       ; 0         ; 54   ; 0            ; |FluxoDeDados                                                                                      ; FluxoDeDados    ; work         ;
+; |FluxoDeDados                             ; 848 (1)             ; 1024 (0)                  ; 192         ; 0            ; 0       ; 0         ; 186  ; 0            ; |FluxoDeDados                                                                                      ; FluxoDeDados    ; work         ;
 ;    |ALUControl:UC_ULA|                    ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FluxoDeDados|ALUControl:UC_ULA                                                                    ; ALUControl      ; work         ;
 ;    |ULA:ALU|                              ; 64 (32)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FluxoDeDados|ULA:ALU                                                                              ; ULA             ; work         ;
 ;       |mux32:muxB|                        ; 32 (32)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FluxoDeDados|ULA:ALU|mux32:muxB                                                                   ; mux32           ; work         ;
-;    |memory:Mem_dados|                     ; 678 (678)           ; 1024 (1024)               ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FluxoDeDados|memory:Mem_dados                                                                     ; memory          ; work         ;
+;    |memory:Mem_dados|                     ; 681 (681)           ; 1024 (1024)               ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FluxoDeDados|memory:Mem_dados                                                                     ; memory          ; work         ;
+;    |mux32:muxAntesULA|                    ; 32 (32)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FluxoDeDados|mux32:muxAntesULA                                                                    ; mux32           ; work         ;
 ;    |mux32:muxDepoisULA|                   ; 66 (66)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FluxoDeDados|mux32:muxDepoisULA                                                                   ; mux32           ; work         ;
 ;    |registerBank32:Banco_Regis|           ; 0 (0)               ; 0 (0)                     ; 192         ; 0            ; 0       ; 0         ; 0    ; 0            ; |FluxoDeDados|registerBank32:Banco_Regis                                                           ; registerBank32  ; work         ;
 ;       |altsyncram:registers_rtl_0|        ; 0 (0)               ; 0 (0)                     ; 128         ; 0            ; 0       ; 0         ; 0    ; 0            ; |FluxoDeDados|registerBank32:Banco_Regis|altsyncram:registers_rtl_0                                ; altsyncram      ; work         ;
@@ -341,14 +346,13 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +------------------------------------------------+--------------------------------------------+------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                       ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output             ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
-; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |FluxoDeDados|mux32:muxDepoisULA|X[16] ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |FluxoDeDados|ULA:ALU|mux32:muxB|X[15] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
+; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |FluxoDeDados|mux32:muxDepoisULA|X[0] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------+
@@ -727,21 +731,21 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 54                          ;
+; boundary_port         ; 186                         ;
 ; cycloneiii_ff         ; 1024                        ;
 ;     ENA               ; 1024                        ;
-; cycloneiii_lcell_comb ; 814                         ;
+; cycloneiii_lcell_comb ; 849                         ;
 ;     arith             ; 31                          ;
 ;         3 data inputs ; 31                          ;
-;     normal            ; 783                         ;
+;     normal            ; 818                         ;
 ;         0 data inputs ; 2                           ;
-;         2 data inputs ; 4                           ;
-;         3 data inputs ; 40                          ;
-;         4 data inputs ; 737                         ;
+;         2 data inputs ; 36                          ;
+;         3 data inputs ; 77                          ;
+;         4 data inputs ; 703                         ;
 ; cycloneiii_ram_block  ; 64                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 8.50                        ;
-; Average LUT depth     ; 5.73                        ;
+; Average LUT depth     ; 5.63                        ;
 +-----------------------+-----------------------------+
 
 
@@ -760,10 +764,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Fri Nov 10 17:07:43 2017
+    Info: Processing started: Sat Nov 11 14:40:29 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MIPS_QuartusPrimeProject -c MIPS_QuartusPrimeProject
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file registrador32.vhd
     Info (12022): Found design unit 1: registrador-comportamento File: /home/parallels/Documents/MIPS/registrador32.vhd Line: 15
     Info (12023): Found entity 1: registrador File: /home/parallels/Documents/MIPS/registrador32.vhd Line: 4
@@ -825,22 +829,22 @@ Info (12021): Found 2 design units, including 1 entities, in source file dataMem
     Info (12022): Found design unit 1: memory-behavioral File: /home/parallels/Documents/MIPS/dataMemory.vhd Line: 14
     Info (12023): Found entity 1: memory File: /home/parallels/Documents/MIPS/dataMemory.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file FluxoDeDados.vhd
-    Info (12022): Found design unit 1: FluxoDeDados-fluxo File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 22
+    Info (12022): Found design unit 1: FluxoDeDados-fluxo File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 27
     Info (12023): Found entity 1: FluxoDeDados File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 5
 Info (12127): Elaborating entity "FluxoDeDados" for the top level hierarchy
-Info (12128): Elaborating entity "registrador" for hierarchy "registrador:PC" File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 30
-Info (12128): Elaborating entity "InstructionMemory" for hierarchy "InstructionMemory:Mem_Inst" File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 33
-Info (12128): Elaborating entity "mux5" for hierarchy "mux5:muxRt_Rd" File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 36
-Info (12128): Elaborating entity "registerBank32" for hierarchy "registerBank32:Banco_Regis" File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 39
-Info (12128): Elaborating entity "ext16to32" for hierarchy "ext16to32:Esten_Sinal" File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 55
-Info (12128): Elaborating entity "mux32" for hierarchy "mux32:muxAntesULA" File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 58
-Info (12128): Elaborating entity "ALUControl" for hierarchy "ALUControl:UC_ULA" File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 62
+Info (12128): Elaborating entity "registrador" for hierarchy "registrador:PC" File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 35
+Info (12128): Elaborating entity "InstructionMemory" for hierarchy "InstructionMemory:Mem_Inst" File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 38
+Info (12128): Elaborating entity "mux5" for hierarchy "mux5:muxRt_Rd" File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 41
+Info (12128): Elaborating entity "registerBank32" for hierarchy "registerBank32:Banco_Regis" File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 44
+Info (12128): Elaborating entity "ext16to32" for hierarchy "ext16to32:Esten_Sinal" File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 60
+Info (12128): Elaborating entity "mux32" for hierarchy "mux32:muxAntesULA" File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 63
+Info (12128): Elaborating entity "ALUControl" for hierarchy "ALUControl:UC_ULA" File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 68
 Warning (10631): VHDL Process Statement warning at ALUControl.vhd(12): inferring latch(es) for signal or variable "ULActrl", which holds its previous value in one or more paths through the process File: /home/parallels/Documents/MIPS/ALUControl.vhd Line: 12
 Info (10041): Inferred latch for "ULActrl[0]" at ALUControl.vhd(12) File: /home/parallels/Documents/MIPS/ALUControl.vhd Line: 12
 Info (10041): Inferred latch for "ULActrl[1]" at ALUControl.vhd(12) File: /home/parallels/Documents/MIPS/ALUControl.vhd Line: 12
 Info (10041): Inferred latch for "ULActrl[2]" at ALUControl.vhd(12) File: /home/parallels/Documents/MIPS/ALUControl.vhd Line: 12
 Info (10041): Inferred latch for "ULActrl[3]" at ALUControl.vhd(12) File: /home/parallels/Documents/MIPS/ALUControl.vhd Line: 12
-Info (12128): Elaborating entity "ULA" for hierarchy "ULA:ALU" File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 65
+Info (12128): Elaborating entity "ULA" for hierarchy "ULA:ALU" File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 71
 Info (12128): Elaborating entity "not32" for hierarchy "ULA:ALU|not32:Anot" File: /home/parallels/Documents/MIPS/ULA.vhd Line: 21
 Info (12128): Elaborating entity "and32" for hierarchy "ULA:ALU|and32:andop" File: /home/parallels/Documents/MIPS/ULA.vhd Line: 33
 Info (12128): Elaborating entity "or32" for hierarchy "ULA:ALU|or32:orop" File: /home/parallels/Documents/MIPS/ULA.vhd Line: 36
@@ -850,10 +854,10 @@ Warning (10492): VHDL Process Statement warning at andoverf.vhd(16): signal "C" 
 Info (12128): Elaborating entity "mux32_4" for hierarchy "ULA:ALU|mux32_4:opmux" File: /home/parallels/Documents/MIPS/ULA.vhd Line: 53
 Info (12128): Elaborating entity "nor32" for hierarchy "ULA:ALU|nor32:norZero" File: /home/parallels/Documents/MIPS/ULA.vhd Line: 58
 Warning (10620): VHDL warning at nor32.vhd(15): comparison between unequal length operands always returns FALSE File: /home/parallels/Documents/MIPS/nor32.vhd Line: 15
-Info (12128): Elaborating entity "memory" for hierarchy "memory:Mem_dados" File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 68
-Info (12128): Elaborating entity "add32" for hierarchy "add32:add4toPC" File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 83
-Info (12128): Elaborating entity "shifter2_26to32" for hierarchy "shifter2_26to32:shifter26to32" File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 86
-Info (12128): Elaborating entity "shifter2_32to32" for hierarchy "shifter2_32to32:shifter32to32" File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 92
+Info (12128): Elaborating entity "memory" for hierarchy "memory:Mem_dados" File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 77
+Info (12128): Elaborating entity "add32" for hierarchy "add32:add4toPC" File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 92
+Info (12128): Elaborating entity "shifter2_26to32" for hierarchy "shifter2_26to32:shifter26to32" File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 95
+Info (12128): Elaborating entity "shifter2_32to32" for hierarchy "shifter2_32to32:shifter32to32" File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 101
 Info (276014): Found 2 instances of uninferred RAM logic
     Info (276004): RAM logic "InstructionMemory:Mem_Inst|MemoriaDeInstrucao" is uninferred due to inappropriate RAM size File: /home/parallels/Documents/MIPS/instructionMemory.vhd Line: 13
     Info (276007): RAM logic "memory:Mem_dados|Memoria" is uninferred due to asynchronous read logic File: /home/parallels/Documents/MIPS/dataMemory.vhd Line: 18
@@ -943,23 +947,58 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "Address3[2]" is stuck at GND File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 19
     Warning (13410): Pin "Address3[3]" is stuck at VCC File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 19
     Warning (13410): Pin "Address3[4]" is stuck at GND File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 19
+    Warning (13410): Pin "ULAOPERATIONOUT[0]" is stuck at GND File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 23
+    Warning (13410): Pin "ULAOPERATIONOUT[1]" is stuck at VCC File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 23
+    Warning (13410): Pin "ULAOPERATIONOUT[3]" is stuck at GND File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 23
+    Warning (13410): Pin "funct1[0]" is stuck at GND File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 24
+    Warning (13410): Pin "funct1[1]" is stuck at VCC File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 24
+    Warning (13410): Pin "funct1[2]" is stuck at GND File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 24
+    Warning (13410): Pin "funct1[3]" is stuck at GND File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 24
+    Warning (13410): Pin "funct1[4]" is stuck at GND File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 24
+    Warning (13410): Pin "funct1[5]" is stuck at VCC File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 24
+    Warning (13410): Pin "funct1[6]" is stuck at GND File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 24
+    Warning (13410): Pin "funct1[7]" is stuck at GND File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 24
+    Warning (13410): Pin "funct1[8]" is stuck at GND File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 24
+    Warning (13410): Pin "funct1[9]" is stuck at GND File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 24
+    Warning (13410): Pin "funct1[10]" is stuck at GND File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 24
+    Warning (13410): Pin "funct1[11]" is stuck at VCC File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 24
+    Warning (13410): Pin "funct1[12]" is stuck at VCC File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 24
+    Warning (13410): Pin "funct1[13]" is stuck at GND File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 24
+    Warning (13410): Pin "funct1[14]" is stuck at VCC File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 24
+    Warning (13410): Pin "funct1[15]" is stuck at GND File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 24
+    Warning (13410): Pin "funct1[16]" is stuck at GND File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 24
+    Warning (13410): Pin "funct1[17]" is stuck at VCC File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 24
+    Warning (13410): Pin "funct1[18]" is stuck at GND File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 24
+    Warning (13410): Pin "funct1[19]" is stuck at VCC File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 24
+    Warning (13410): Pin "funct1[20]" is stuck at GND File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 24
+    Warning (13410): Pin "funct1[21]" is stuck at VCC File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 24
+    Warning (13410): Pin "funct1[22]" is stuck at GND File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 24
+    Warning (13410): Pin "funct1[23]" is stuck at GND File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 24
+    Warning (13410): Pin "funct1[24]" is stuck at VCC File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 24
+    Warning (13410): Pin "funct1[25]" is stuck at GND File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 24
+    Warning (13410): Pin "funct1[26]" is stuck at GND File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 24
+    Warning (13410): Pin "funct1[27]" is stuck at GND File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 24
+    Warning (13410): Pin "funct1[28]" is stuck at GND File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 24
+    Warning (13410): Pin "funct1[29]" is stuck at GND File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 24
+    Warning (13410): Pin "funct1[30]" is stuck at GND File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 24
+    Warning (13410): Pin "funct1[31]" is stuck at GND File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 24
 Info (286030): Timing-Driven Synthesis is running
-Info (17036): Removed 3 MSB VCC or GND address nodes from RAM block "registerBank32:Banco_Regis|altsyncram:registers_rtl_0|altsyncram_8vn1:auto_generated|ALTSYNCRAM" File: /home/parallels/Documents/MIPS/db/altsyncram_8vn1.tdf Line: 128
 Info (17036): Removed 4 MSB VCC or GND address nodes from RAM block "registerBank32:Banco_Regis|altsyncram:registers_rtl_1|altsyncram_8vn1:auto_generated|ALTSYNCRAM" File: /home/parallels/Documents/MIPS/db/altsyncram_8vn1.tdf Line: 128
+Info (17036): Removed 3 MSB VCC or GND address nodes from RAM block "registerBank32:Banco_Regis|altsyncram:registers_rtl_0|altsyncram_8vn1:auto_generated|ALTSYNCRAM" File: /home/parallels/Documents/MIPS/db/altsyncram_8vn1.tdf Line: 128
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "mux_PC" File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 8
     Warning (15610): No output dependent on input pin "BEQ" File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 14
-Info (21057): Implemented 1955 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2122 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 11 input pins
-    Info (21059): Implemented 43 output pins
-    Info (21061): Implemented 1837 logic cells
+    Info (21059): Implemented 175 output pins
+    Info (21061): Implemented 1872 logic cells
     Info (21064): Implemented 64 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 21 warnings
-    Info: Peak virtual memory: 1013 megabytes
-    Info: Processing ended: Fri Nov 10 17:08:00 2017
-    Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:25
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 56 warnings
+    Info: Peak virtual memory: 1050 megabytes
+    Info: Processing ended: Sat Nov 11 14:40:41 2017
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:26
 
 

@@ -11,7 +11,7 @@ END InstructionMemory;
 ARCHITECTURE Behavioral OF InstructionMemory IS
 	TYPE ArrayMemoria IS ARRAY(0 TO 15) OF std_logic_vector(31 DOWNTO 0);
 	SIGNAL MemoriaDeInstrucao : ArrayMemoria := (
-		x"012A5820",
+		x"012A5822",
 		x"00000000",
 		x"00000000",
 		x"00000000",

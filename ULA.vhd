@@ -22,13 +22,13 @@ architecture comportamento of ULA is
 				port map (A => A, X => notA);
 				
 		Bnot : entity work.not32
-				port map (A=> B, X => notB);
+				port map (A => B, X => notB);
 		
 		muxA : entity work.mux32
-				port map (A=>A, B=> notA, SEL=>invA, X=> saidamuxA);
+				port map (A=>A, B=> notA , SEL=>invA, X=> saidamuxA);
 
 		muxB : entity work.mux32
-				port map (A=>A, B=> notB, SEL=>invB, X=> saidamuxB);
+				port map (A=>B, B=> notB, SEL=>invB, X=> saidamuxB);
 		
 		andop: entity work.and32
 				port map (A=> saidamuxA, B=> saidamuxB, X=> saidaAnd);

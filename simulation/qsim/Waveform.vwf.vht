@@ -19,7 +19,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "11/10/2017 17:09:04"
+-- Generated on "11/11/2017 14:44:46"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          FluxoDeDados
 -- 
@@ -34,10 +34,13 @@ END FluxoDeDados_vhd_vec_tst;
 ARCHITECTURE FluxoDeDados_arch OF FluxoDeDados_vhd_vec_tst IS
 -- constants                                                 
 -- signals                                                   
+SIGNAL A : STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL Address3 : STD_LOGIC_VECTOR(4 DOWNTO 0);
+SIGNAL B : STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL BEQ : STD_LOGIC;
 SIGNAL CLK : STD_LOGIC;
 SIGNAL Escrita3 : STD_LOGIC_VECTOR(31 DOWNTO 0);
+SIGNAL funct1 : STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL habEscritaMEM : STD_LOGIC;
 SIGNAL habEscritaReg : STD_LOGIC;
 SIGNAL habLeituraMEM : STD_LOGIC;
@@ -46,13 +49,18 @@ SIGNAL mux_RtIm : STD_LOGIC;
 SIGNAL Mux_RtRd : STD_LOGIC;
 SIGNAL mux_ULAMem : STD_LOGIC;
 SIGNAL OpCode : STD_LOGIC_VECTOR(5 DOWNTO 0);
+SIGNAL S : STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL ULAOPer : STD_LOGIC_VECTOR(1 DOWNTO 0);
+SIGNAL ULAOPERATIONOUT : STD_LOGIC_VECTOR(3 DOWNTO 0);
 COMPONENT FluxoDeDados
 	PORT (
+	A : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
 	Address3 : OUT STD_LOGIC_VECTOR(4 DOWNTO 0);
+	B : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
 	BEQ : IN STD_LOGIC;
 	CLK : IN STD_LOGIC;
 	Escrita3 : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+	funct1 : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
 	habEscritaMEM : IN STD_LOGIC;
 	habEscritaReg : IN STD_LOGIC;
 	habLeituraMEM : IN STD_LOGIC;
@@ -61,17 +69,22 @@ COMPONENT FluxoDeDados
 	Mux_RtRd : IN STD_LOGIC;
 	mux_ULAMem : IN STD_LOGIC;
 	OpCode : OUT STD_LOGIC_VECTOR(5 DOWNTO 0);
-	ULAOPer : IN STD_LOGIC_VECTOR(1 DOWNTO 0)
+	S : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+	ULAOPer : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+	ULAOPERATIONOUT : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
 	);
 END COMPONENT;
 BEGIN
 	i1 : FluxoDeDados
 	PORT MAP (
 -- list connections between master ports and signals
+	A => A,
 	Address3 => Address3,
+	B => B,
 	BEQ => BEQ,
 	CLK => CLK,
 	Escrita3 => Escrita3,
+	funct1 => funct1,
 	habEscritaMEM => habEscritaMEM,
 	habEscritaReg => habEscritaReg,
 	habLeituraMEM => habLeituraMEM,
@@ -80,7 +93,9 @@ BEGIN
 	Mux_RtRd => Mux_RtRd,
 	mux_ULAMem => mux_ULAMem,
 	OpCode => OpCode,
-	ULAOPer => ULAOPer
+	S => S,
+	ULAOPer => ULAOPer,
+	ULAOPERATIONOUT => ULAOPERATIONOUT
 	);
 
 -- BEQ
@@ -93,13 +108,10 @@ END PROCESS t_prcs_BEQ;
 -- CLK
 t_prcs_CLK: PROCESS
 BEGIN
-	FOR i IN 1 TO 2
-	LOOP
-		CLK <= '0';
-		WAIT FOR 200000 ps;
-		CLK <= '1';
-		WAIT FOR 200000 ps;
-	END LOOP;
+	CLK <= '0';
+	WAIT FOR 400000 ps;
+	CLK <= '1';
+	WAIT FOR 400000 ps;
 	CLK <= '0';
 WAIT;
 END PROCESS t_prcs_CLK;
