@@ -25,7 +25,7 @@ signal Memoria: ArrayMemoria := (
     X"00000000",
     X"00000000",
     X"00000000",
-    X"00000000", 
+    X"00000000",
     X"00000000", 
     X"00000000", 
     X"00000000",
@@ -51,14 +51,14 @@ signal Memoria: ArrayMemoria := (
 
 begin
 -- Leitura dos dados
-DadoLido <= Memoria(conv_integer(Endereco(6 downto 2))) when Ler = '1' else X"00000000";
+DadoLido <= Memoria(conv_integer(Endereco)) when Ler = '1' else X"00000000";
 
 -- Escrita dos dados
 process(Endereco, DadoASeEscritos,clk)
 begin
 	if (rising_edge(clk)) then 
 		if (Escrever = '1') then
-			Memoria(conv_integer(Endereco(6 downto 2))) <= DadoASeEscritos;
+			Memoria(conv_integer(Endereco)) <= DadoASeEscritos;
 		end if;
 	end if;
 end process;

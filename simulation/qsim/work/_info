@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 d/home/parallels/Documents/MIPS/simulation/qsim
 Efluxodedados
-Z1 w1510418687
+Z1 w1510609217
 Z2 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 e`^h93R^CdmMEVe0e1VU_3
 Z3 DPx10 cycloneive 21 cycloneive_components 0 22 Q;lLU[K?fTJPSa^YaZf>B3
 Z4 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
@@ -23,13 +23,13 @@ Z10 8MIPS_QuartusPrimeProject.vho
 Z11 FMIPS_QuartusPrimeProject.vho
 l0
 L80
-VGc8_?zINNSgb9emg?]TI81
-!s100 in179=57dnYM@AUAgh6Kl2
+VnX0CFFdASD6dU:>25Zbmf2
+!s100 I_91eM7_Ym]?LXgzTPnB90
 Z12 OV;C;10.5b;63
 32
-Z13 !s110 1510418687
+Z13 !s110 1510609218
 !i10b 1
-Z14 !s108 1510418687.000000
+Z14 !s108 1510609218.000000
 Z15 !s90 -work|work|MIPS_QuartusPrimeProject.vho|
 Z16 !s107 MIPS_QuartusPrimeProject.vho|
 !i113 1
@@ -44,14 +44,14 @@ R6
 R7
 R8
 R9
-DEx4 work 12 fluxodedados 0 22 Gc8_?zINNSgb9emg?]TI81
-l2988
-L292
-V1e:gNHBU5leUJQ=C7YTN41
-!s100 c?lAlRLOGWbe]Y^95_ITS1
+DEx4 work 12 fluxodedados 0 22 nX0CFFdASD6dU:>25Zbmf2
+l3421
+L433
+VYiRhWMLN=E8KneAVGTnAn3
+!s100 9VUA?JR75Wh2J>f8>]k[T0
 R12
 32
-Z19 !s110 1510418688
+R13
 !i10b 1
 R14
 R15
@@ -60,21 +60,21 @@ R16
 R17
 R18
 Efluxodedados_vhd_vec_tst
-Z20 w1510418686
+Z19 w1510609215
 R7
 R8
 R0
-Z21 8Waveform.vwf.vht
-Z22 FWaveform.vwf.vht
+Z20 8Waveform.vwf.vht
+Z21 FWaveform.vwf.vht
 l0
 L32
 V>bm0>W`g92Q?<hOn;mb5L0
 !s100 T]M3SiFgR0=EMzIeA=k_O3
 R12
 32
-R19
+Z22 !s110 1510609219
 !i10b 1
-Z23 !s108 1510418688.000000
+Z23 !s108 1510609219.000000
 Z24 !s90 -work|work|Waveform.vwf.vht|
 Z25 !s107 Waveform.vwf.vht|
 !i113 1
@@ -84,13 +84,13 @@ Afluxodedados_arch
 R7
 R8
 Z26 DEx4 work 24 fluxodedados_vhd_vec_tst 0 22 >bm0>W`g92Q?<hOn;mb5L0
-l77
+l89
 L34
-V;_>eO]=oj]H^Z?N4?nC_z3
-!s100 6oHo]==ef8;9KTmULIMIc2
+VE1nMbz6Y9[3fdjC^_XN@f3
+!s100 CK?@O@naf<f^Yoe2KA:RJ1
 R12
 32
-R19
+R22
 !i10b 1
 R23
 R24

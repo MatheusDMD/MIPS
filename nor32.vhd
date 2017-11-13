@@ -12,7 +12,7 @@ architecture behavior of nor32 is
 begin
 	process(A)
 	begin
-		if(A = "0000000000000000") then
+		if(A = X"00000000") then
 			O <= '1';
 		else
 			O<='0';

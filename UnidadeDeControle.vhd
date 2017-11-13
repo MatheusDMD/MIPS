@@ -6,11 +6,11 @@ ENTITY UnidadeDeControle IS
         OpCode		: 	IN STD_LOGIC_VECTOR(5 DOWNTO 0);
         Controle	:	OUT STD_LOGIC_VECTOR(9 DOWNTO 0));
 		  -- mux([PC+4, BEQ]/J) | mux(Rt/Rd) | HabEscritaReg | mux(Rt/imediato) | mux(ULA/mem) | BEQ | HabLeMEM | HabEscMEM | ULAop(1 downto 0)
-END ALUControl;
+END UnidadeDeControle;
 
 architecture bhv of UnidadeDeControle is
 begin
-	process(OpCode, funct)
+	process(OpCode)
 	begin
 		if(OpCode = "000000") then 	 -- TIPO R
 			Controle <= "0110000010";

@@ -18,10 +18,10 @@ architecture comportamento of ULA is
 	signal notA, notB, saidamuxA, saidamuxB, saidaAnd, saidaOr, somaSub, slt, Result: std_logic_vector(31 downto 0);
 	signal v, z: std_logic := '0';
 	begin
-		Anot : entity work.not32
+		Anot : entity work.inversor32
 				port map (A => A, X => notA);
 				
-		Bnot : entity work.not32
+		Bnot : entity work.inversor32
 				port map (A => B, X => notB);
 		
 		muxA : entity work.mux32

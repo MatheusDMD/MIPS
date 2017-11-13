@@ -14,14 +14,7 @@ ENTITY FluxoDeDados IS
 		BEQ   		    : IN STD_LOGIC;
 		habLeituraMEM	 : IN STD_LOGIC;
 		habEscritaMEM	 : IN STD_LOGIC;
-		OpCode		    : OUT STD_LOGIC_VECTOR (5 DOWNTO 0);
-		Escrita3 		 : OUT STD_LOGIC_VECTOR (31 DOWNTO 0);
-		Address3 		 : OUT STD_LOGIC_VECTOR (4 DOWNTO 0);
-		A 		 : OUT STD_LOGIC_VECTOR (31 DOWNTO 0);
-		B 		 : OUT STD_LOGIC_VECTOR (31 DOWNTO 0);
-		S 		 : OUT STD_LOGIC_VECTOR (31 DOWNTO 0);
-		ULAOPERATIONOUT : OUT STD_LOGIC_VECTOR (3 DOWNTO 0);
-		funct1 : OUT STD_LOGIC_VECTOR (31 DOWNTO 0)
+		OpCode		    : OUT STD_LOGIC_VECTOR (5 DOWNTO 0)
 	);
 END FluxoDeDados;
 ARCHITECTURE fluxo of FluxoDeDados is
@@ -33,8 +26,7 @@ ARCHITECTURE fluxo of FluxoDeDados is
 	signal z, AndBEQ: std_logic;
 begin
 	PC : entity work.registrador
-		port map (DIN=> PROXpc, DOUT =>saidaPC, CLK=> CLK); --clk, rst?
-	
+		port map (DIN=> PROXpc, DOUT =>saidaPC, CLK=> CLK);
 	Mem_Inst : entity work.InstructionMemory
 		port map (Endereco=> saidaPC, Dado=> dadoMemInst);
 		
@@ -51,29 +43,23 @@ begin
 					 DadoLidoReg2 => dadoReg2,
 					 clk=> CLK);
 	
-	--Debugging--	
-	Escrita3<=dadoEsc3;
-	Address3<=SaidaMuxRtRd;
-	
 	OpCode<= dadoMemInst(31 downto 26);
 	
-	Esten_Sinal: entity work.ext16to32 
+	Esten_Sinal: entity work.ext16to32
 		port map (A => dadoMemInst(15 downto 0), X=>saidaExtSin);
 	
 	muxAntesULA: entity work.mux32
 		port map (A => dadoReg2, B=> saidaExtSin, SEL =>mux_RtIm, X => saidaParaULA);
 	
 	fun <= dadoMemInst(5 downto 0);
-	funct1 <= dadoMemInst;
+	
 	UC_ULA : entity work.ALUControl
 		port map(ULAOp=>ULAOPer, funct=> fun, ULActrl=> ULAoperation);
 	
 	ALU : entity work.ULA 
 		port map(A=> dadoReg1,B=> saidaParaULA,invA=> ULAoperation(3),invB=> ULAoperation(2),Sel=> ULAoperation(1 downto 0),ZERO => z,RES => ULARes);
-	A <= dadoReg1;
-	B <=saidaParaULA;
-	S <= ULARes;
-	ULAOPERATIONOUT <= ULAoperation;
+	
+	
 	Mem_dados: entity work.memory
 		port map(Endereco=> ULARes,
 					DadoASeEscritos=> dadoReg2,
@@ -81,17 +67,18 @@ begin
 					Escrever => habEscritaMEM,
 					DadoLido => saidaMemDados,
 					CLK => CLK);
-					  
+	
 	muxDepoisULA: entity work.mux32
 		port map(A=> ULARes, B=> saidaMemDados, SEL => mux_ULAMem, X=> dadoEsc3);
 	
 	AndBEQ <= Z and BEQ;
-	
+		
 	quatro<="00000000000000000000000000000100";
 	
 	add4toPC: entity work.add32
 		port map (A=> saidaPC, B=> quatro, X=> PC_4);
-		
+	
+	
 	shifter26to32: entity work.shifter2_26to32
 		port map (A=> dadoMemInst(25 downto 0), X=> saidaExt2632);
 		
@@ -100,14 +87,16 @@ begin
 	
 	shifter32to32: entity work.shifter2_32to32
 		port map(A=> saidaExtSin, X=> saidaExtSin2);
-		
+	
 	AddPC4andExtSin: entity work.add32
 		port map(A=> PC_4, B=> saidaExtSin2, X=> PC4Mux);
+	
 
 	MuxBEQ: entity work.mux32
 		port map(A=> PC_4, B=> PC4Mux, SEL=> AndBEQ, X=> saidaMuxtoMux);
 		
 	MuxProxPC: entity work.mux32
 		port map(A=> saidaMuxtoMux, B=> entraMuxPc, SEL=> mux_PC,X=> PROXpc);
+	
 		
 END fluxo;

@@ -9,16 +9,17 @@ Note: if both ModelSim-Altera and ModelSim executables are available, ModelSim-A
 
 quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off MIPS_QuartusPrimeProject -c MIPS_QuartusPrimeProject --vector_source="/home/parallels/Documents/MIPS/Waveform.vwf" --testbench_file="/home/parallels/Documents/MIPS/simulation/qsim/Waveform.vwf.vht"
 
-Info: *******************************************************************Info: Running Quartus Prime EDA Netlist Writer    Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition    Info: Copyright (C) 2017  Intel Corporation. All rights reserved.    Info: Your use of Intel Corporation's design tools, logic functions     Info: and other software and tools, and its AMPP partner logic     Info: functions, and any output files from any of the foregoing     Info: (including device programming or simulation files), and any     Info: associated documentation or information are expressly subject     Info: to the terms and conditions of the Intel Program License     Info: Subscription Agreement, the Intel Quartus Prime License Agreement,    Info: the Intel MegaCore Function License Agreement, or other     Info: applicable license agreement, including, without limitation,     Info: that your use is for the sole purpose of programming logic     Info: devices manufactured by Intel and sold by Intel or its     Info: authorized distributors.  Please refer to the applicable     Info: agreement for further details.    Info: Processing started: Sat Nov 11 14:44:45 2017Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off MIPS_QuartusPrimeProject -c MIPS_QuartusPrimeProject --vector_source=/home/parallels/Documents/MIPS/Waveform.vwf --testbench_file=/home/parallels/Documents/MIPS/simulation/qsim/Waveform.vwf.vhtWarning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-rning (201005): Ignoring output pin "Escrita3[16]" in vector source file when writing test bench files
-t pin "funct1[30]" in vector source file when writing test bench files
+Info: *******************************************************************Info: Running Quartus Prime EDA Netlist Writer    Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition    Info: Copyright (C) 2017  Intel Corporation. All rights reserved.    Info: Your use of Intel Corporation's design tools, logic functions     Info: and other software and tools, and its AMPP partner logic     Info: functions, and any output files from any of the foregoing     Info: (including device programming or simulation files), and any     Info: associated documentation or information are expressly subject     Info: to the terms and conditions of the Intel Program License     Info: Subscription Agreement, the Intel Quartus Prime License Agreement,    Info: the Intel MegaCore Function License Agreement, or other     Info: applicable license agreement, including, without limitation,     Info: that your use is for the sole purpose of programming logic     Info: devices manufactured by Intel and sold by Intel or its     Info: authorized distributors.  Please refer to the applicable     Info: agreement for further details.    Info: Processing started: Mon Nov 13 19:40:14 2017Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off MIPS_QuartusPrimeProject -c MIPS_QuartusPrimeProject --vector_source=/home/parallels/Documents/MIPS/Waveform.vwf --testbench_file=/home/parallels/Documents/MIPS/simulation/qsim/Waveform.vwf.vhtWarning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+ bench files
+file when writing test bench files
+PS/simulation/qsim/Waveform.vwf.vht for simulationInfo: Quartus Prime EDA Netlist Writer was successful. 0 errors, 324 warnings    Info: Peak virtual memory: 1053 megabytes    Info: Processing ended: Mon Nov 13 19:40:15 2017    Info: Elapsed time: 00:00:01    Info: Total CPU time (on all processors): 00:00:01
 Completed successfully. 
 
 **** Generating the functional simulation netlist ****
 
 quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="/home/parallels/Documents/MIPS/simulation/qsim/" MIPS_QuartusPrimeProject -c MIPS_QuartusPrimeProject
 
-Info: *******************************************************************Info: Running Quartus Prime EDA Netlist Writer    Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition    Info: Copyright (C) 2017  Intel Corporation. All rights reserved.    Info: Your use of Intel Corporation's design tools, logic functions     Info: and other software and tools, and its AMPP partner logic     Info: functions, and any output files from any of the foregoing     Info: (including device programming or simulation files), and any     Info: associated documentation or information are expressly subject     Info: to the terms and conditions of the Intel Program License     Info: Subscription Agreement, the Intel Quartus Prime License Agreement,    Info: the Intel MegaCore Function License Agreement, or other     Info: applicable license agreement, including, without limitation,     Info: that your use is for the sole purpose of programming logic     Info: devices manufactured by Intel and sold by Intel or its     Info: authorized distributors.  Please refer to the applicable     Info: agreement for further details.    Info: Processing started: Sat Nov 11 14:44:46 2017Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=/home/parallels/Documents/MIPS/simulation/qsim/ MIPS_QuartusPrimeProject -c MIPS_QuartusPrimeProjectWarning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.Info (204019): Generated file MIPS_QuartusPrimeProject.vho in folder "/home/parallels/Documents/MIPS/simulation/qsim//" for EDA simulation toolInfo: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning    Info: Peak virtual memory: 1057 megabytes    Info: Processing ended: Sat Nov 11 14:44:47 2017    Info: Elapsed time: 00:00:01    Info: Total CPU time (on all processors): 00:00:01
+Info: *******************************************************************Info: Running Quartus Prime EDA Netlist Writer    Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition    Info: Copyright (C) 2017  Intel Corporation. All rights reserved.    Info: Your use of Intel Corporation's design tools, logic functions     Info: and other software and tools, and its AMPP partner logic     Info: functions, and any output files from any of the foregoing     Info: (including device programming or simulation files), and any     Info: associated documentation or information are expressly subject     Info: to the terms and conditions of the Intel Program License     Info: Subscription Agreement, the Intel Quartus Prime License Agreement,    Info: the Intel MegaCore Function License Agreement, or other     Info: applicable license agreement, including, without limitation,     Info: that your use is for the sole purpose of programming logic     Info: devices manufactured by Intel and sold by Intel or its     Info: authorized distributors.  Please refer to the applicable     Info: agreement for further details.    Info: Processing started: Mon Nov 13 19:40:16 2017Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=/home/parallels/Documents/MIPS/simulation/qsim/ MIPS_QuartusPrimeProject -c MIPS_QuartusPrimeProjectWarning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.Info (204019): Generated file MIPS_QuartusPrimeProject.vho in folder "/home/parallels/Documents/MIPS/simulation/qsim//" for EDA simulation toolInfo: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning    Info: Peak virtual memory: 1061 megabytes    Info: Processing ended: Mon Nov 13 19:40:17 2017    Info: Elapsed time: 00:00:01    Info: Total CPU time (on all processors): 00:00:01
 Completed successfully. 
 
 **** Generating the ModelSim .do script ****
@@ -36,22 +37,29 @@ Reading pref.tcl
 # do MIPS_QuartusPrimeProject.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:44:47 on Nov 11,2017# vcom -work work MIPS_QuartusPrimeProject.vho # -- Loading package STANDARD
-# -- Loading package TEXTIO# -- Loading package std_logic_1164# -- Loading package VITAL_Timing
-# -- Loading package VITAL_Primitives# -- Loading package cycloneive_atom_pack# -- Loading package cycloneive_components
-# -- Compiling entity hard_block# -- Compiling architecture structure of hard_block
-# -- Loading package dffeas_pack# -- Loading package altera_primitives_components# -- Compiling entity FluxoDeDados# -- Compiling architecture structure of FluxoDeDados
-# End time: 14:44:48 on Nov 11,2017, Elapsed time: 0:00:01# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:44:48 on Nov 11,2017# vcom -work work Waveform.vwf.vht # -- Loading package STANDARD
+# Start time: 19:40:18 on Nov 13,2017
+# vcom -work work MIPS_QuartusPrimeProject.vho 
+# -- Loading package STANDARD
 # -- Loading package TEXTIO
-# -- Loading package std_logic_1164# -- Compiling entity FluxoDeDados_vhd_vec_tst
-# -- Compiling architecture FluxoDeDados_arch of FluxoDeDados_vhd_vec_tst
-# End time: 14:44:48 on Nov 11,2017, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vsim -novopt -c -t 1ps -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.FluxoDeDados_vhd_vec_tst # Start time: 14:44:48 on Nov 11,2017# Loading std.standard# Loading std.textio(body)# Loading ieee.std_logic_1164(body)# Loading work.fluxodedados_vhd_vec_tst(fluxodedados_arch)# Loading ieee.vital_timing(body)# Loading ieee.vital_primitives(body)# Loading altera.dffeas_pack# Loading altera.altera_primitives_components# Loading cycloneive.cycloneive_atom_pack(body)# Loading cycloneive.cycloneive_components# Loading work.fluxodedados(structure)# Loading work.hard_block(structure)# Loading ieee.std_logic_arith(body)# Loading cycloneive.cycloneive_io_obuf(arch)# Loading cycloneive.cycloneive_io_ibuf(arch)# Loading cycloneive.cycloneive_clkctrl(vital_clkctrl)# Loading cycloneive.cycloneive_ena_reg(behave)# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)# Loading cycloneive.cycloneive_ram_block(block_arch)# Loading cycloneive.cycloneive_ram_register(reg_arch)# Loading cycloneive.cycloneive_ram_pulse_generator(pgen_arch)# Loading altera.dffeas(vital_dffeas)# ** Warning: Design size of 321182 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.# Expect performance to be adversely affected.
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives# -- Loading package cycloneive_atom_pack
+# -- Loading package cycloneive_components
+# -- Compiling entity hard_block# -- Compiling architecture structure of hard_block
+# -- Loading package dffeas_pack# -- Loading package altera_primitives_components
+# -- Compiling entity FluxoDeDados
+# -- Compiling architecture structure of FluxoDeDados
+# End time: 19:40:19 on Nov 13,2017, Elapsed time: 0:00:01# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:40:19 on Nov 13,2017# vcom -work work Waveform.vwf.vht 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity FluxoDeDados_vhd_vec_tst# -- Compiling architecture FluxoDeDados_arch of FluxoDeDados_vhd_vec_tst
+# End time: 19:40:19 on Nov 13,2017, Elapsed time: 0:00:00# Errors: 0, Warnings: 0
+# vsim -novopt -c -t 1ps -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.FluxoDeDados_vhd_vec_tst # Start time: 19:40:19 on Nov 13,2017# Loading std.standard# Loading std.textio(body)# Loading ieee.std_logic_1164(body)# Loading work.fluxodedados_vhd_vec_tst(fluxodedados_arch)# Loading ieee.vital_timing(body)# Loading ieee.vital_primitives(body)# Loading altera.dffeas_pack# Loading altera.altera_primitives_components# Loading cycloneive.cycloneive_atom_pack(body)# Loading cycloneive.cycloneive_components# Loading work.fluxodedados(structure)# Loading work.hard_block(structure)# Loading ieee.std_logic_arith(body)# Loading cycloneive.cycloneive_io_obuf(arch)# Loading cycloneive.cycloneive_io_ibuf(arch)# Loading cycloneive.cycloneive_clkctrl(vital_clkctrl)# Loading cycloneive.cycloneive_ena_reg(behave)# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)# Loading altera.dffeas(vital_dffeas)# Loading cycloneive.cycloneive_ram_block(block_arch)# Loading cycloneive.cycloneive_ram_register(reg_arch)# Loading cycloneive.cycloneive_ram_pulse_generator(pgen_arch)# ** Warning: Design size of 344988 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.# Expect performance to be adversely affected.
 # after#35
-# End time: 14:44:49 on Nov 11,2017, Elapsed time: 0:00:01# Errors: 0, Warnings: 1
+# End time: 19:40:20 on Nov 13,2017, Elapsed time: 0:00:01# Errors: 0, Warnings: 1
 Completed successfully. 
 
 **** Converting ModelSim VCD to vector waveform ****
@@ -62,7 +70,7 @@ Reading /home/parallels/Documents/MIPS/simulation/qsim/MIPS_QuartusPrimeProject.
 
 Processing channel transitions... 
 
-Writing the resulting VWF to /home/parallels/Documents/MIPS/simulation/qsim/MIPS_QuartusPrimeProject_20171111144449.sim.vwf
+Writing the resulting VWF to /home/parallels/Documents/MIPS/simulation/qsim/MIPS_QuartusPrimeProject_20171113194021.sim.vwf
 
 Finished VCD to VWF conversion.
 

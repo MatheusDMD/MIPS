@@ -1,5 +1,5 @@
 Assembler report for MIPS_QuartusPrimeProject
-Sat Nov 11 14:41:12 2017
+Mon Nov 13 20:00:19 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -38,9 +38,9 @@ agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Sat Nov 11 14:41:12 2017 ;
+; Assembler Status      ; Successful - Mon Nov 13 20:00:19 2017 ;
 ; Revision Name         ; MIPS_QuartusPrimeProject              ;
-; Top-level Entity Name ; FluxoDeDados                          ;
+; Top-level Entity Name ; MIPS                                  ;
 ; Family                ; Cyclone IV E                          ;
 ; Device                ; EP4CE115F29C7                         ;
 +-----------------------+---------------------------------------+
@@ -67,8 +67,8 @@ agreement for further details.
 +----------------+---------------------------------------+
 ; Option         ; Setting                               ;
 +----------------+---------------------------------------+
-; JTAG usercode  ; 0x006628A3                            ;
-; Checksum       ; 0x006628A3                            ;
+; JTAG usercode  ; 0x005628AD                            ;
+; Checksum       ; 0x005628AD                            ;
 +----------------+---------------------------------------+
 
 
@@ -78,15 +78,15 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Sat Nov 11 14:41:09 2017
+    Info: Processing started: Mon Nov 13 20:00:14 2017
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off MIPS_QuartusPrimeProject -c MIPS_QuartusPrimeProject
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 825 megabytes
-    Info: Processing ended: Sat Nov 11 14:41:12 2017
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Peak virtual memory: 819 megabytes
+    Info: Processing ended: Mon Nov 13 20:00:19 2017
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:04
 
 
