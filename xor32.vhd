@@ -12,7 +12,7 @@ architecture Behavioral of xor32 is
 begin
 	process(A,B)
 		begin
-			if((A xor B) = x"00000000") then
+			if(A = B) then
 				X <= '1';		
 			else
 				X <= '0';

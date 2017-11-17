@@ -16,14 +16,16 @@ ENTITY FluxoDeDados IS
 		habLeituraMEM	 : IN STD_LOGIC;
 		habEscritaMEM	 : IN STD_LOGIC;
 		enderecoDisplay : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
-		enderecoASerEscrito: OUT STD_LOGIC_VECTOR (31 DOWNTO 0);
+		ResultadoUla    : OUT STD_LOGIC_VECTOR (31 DOWNTO 0);
 		habEscritaDisplay:OUT STD_LOGIC;
 		enderecoReg1Test: OUT STD_LOGIC_VECTOR (4 DOWNTO 0);
 		enderecoReg2Test: OUT STD_LOGIC_VECTOR (4 DOWNTO 0);
+		enderecoReg3Test: OUT STD_LOGIC_VECTOR (4 DOWNTO 0);
 		instrucaoTest   : OUT STD_LOGIC_VECTOR (31 DOWNTO 0);
 		entraAULATest   : OUT STD_LOGIC_VECTOR (31 DOWNTO 0);
 		entraBULATest   : OUT STD_LOGIC_VECTOR (31 DOWNTO 0);
-		dadoASerEscrito  : OUT STD_LOGIC_VECTOR (31 DOWNTO 0);
+		dadoASerEscrito : OUT STD_LOGIC_VECTOR (31 DOWNTO 0);
+		PCdisplay	    : OUT STD_LOGIC_VECTOR (31 DOWNTO 0);
 		OpCode		    : OUT STD_LOGIC_VECTOR (5 DOWNTO 0)
 	);
 END FluxoDeDados;
@@ -37,7 +39,9 @@ ARCHITECTURE fluxo of FluxoDeDados is
 begin
 	PC : entity work.registrador
 		port map (DIN=> PROXpc, DOUT =>saidaPC, CLK=> CLK, RST=> RST_PC, ENABLE=> '1');
-		
+	
+	PCdisplay<= saidaPC;
+	
 	Mem_Inst : entity work.InstructionMemory
 		port map (Endereco=> saidaPC, Dado=> dadoMemInst);
 	
@@ -59,6 +63,7 @@ begin
 					 
 	enderecoReg1Test<= dadoMemInst(25 downto 21);
 	enderecoReg2Test<= dadoMemInst(20 downto 16);
+	enderecoReg3Test<= SaidaMuxRtRd;
 	OpCode<= dadoMemInst(31 downto 26);
 	
 	Esten_Sinal: entity work.ext16to32
@@ -86,7 +91,7 @@ begin
 					DadoLido => saidaMemDados,
 					CLK => CLK);
 					
-	enderecoASerEscrito<= ULARes;
+	ResultadoUla<= ULARes;
 	dadoASerEscrito <= dadoReg2;
 	
 	comparadorDisplay: entity work.xor32

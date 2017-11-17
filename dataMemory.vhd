@@ -51,14 +51,14 @@ signal Memoria: ArrayMemoria := (
 
 begin
 -- Leitura dos dados
-DadoLido <= Memoria(conv_integer(Endereco)) when Ler = '1' else X"00000000";
+DadoLido <= Memoria(conv_integer(Endereco(31 downto 2))) when Ler = '1' else X"00000000";
 
 -- Escrita dos dados
 process(Endereco, DadoASeEscritos,clk)
 begin
 	if (rising_edge(clk)) then 
 		if (Escrever = '1') then
-			Memoria(conv_integer(Endereco)) <= DadoASeEscritos;
+			Memoria(conv_integer(Endereco(31 downto 2))) <= DadoASeEscritos;
 		end if;
 	end if;
 end process;
