@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 d/home/parallels/Documents/MIPS/simulation/qsim
 Efluxodedados
-Z1 w1510609217
+Z1 w1510686721
 Z2 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 e`^h93R^CdmMEVe0e1VU_3
 Z3 DPx10 cycloneive 21 cycloneive_components 0 22 Q;lLU[K?fTJPSa^YaZf>B3
 Z4 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
@@ -23,13 +23,13 @@ Z10 8MIPS_QuartusPrimeProject.vho
 Z11 FMIPS_QuartusPrimeProject.vho
 l0
 L80
-VnX0CFFdASD6dU:>25Zbmf2
-!s100 I_91eM7_Ym]?LXgzTPnB90
+V]f3nm[Nkc?Se22Bk;U2340
+!s100 n`LdiiQ6SV<e84YU1BPi?2
 Z12 OV;C;10.5b;63
 32
-Z13 !s110 1510609218
+Z13 !s110 1510686722
 !i10b 1
-Z14 !s108 1510609218.000000
+Z14 !s108 1510686722.000000
 Z15 !s90 -work|work|MIPS_QuartusPrimeProject.vho|
 Z16 !s107 MIPS_QuartusPrimeProject.vho|
 !i113 1
@@ -44,11 +44,11 @@ R6
 R7
 R8
 R9
-DEx4 work 12 fluxodedados 0 22 nX0CFFdASD6dU:>25Zbmf2
-l3421
-L433
-VYiRhWMLN=E8KneAVGTnAn3
-!s100 9VUA?JR75Wh2J>f8>]k[T0
+DEx4 work 12 fluxodedados 0 22 ]f3nm[Nkc?Se22Bk;U2340
+l2991
+L293
+V[IB8bzVHB1E5RNMQz3QbM1
+!s100 GF^eSYF>96[P:9SG=]B:@2
 R12
 32
 R13
@@ -60,7 +60,7 @@ R16
 R17
 R18
 Efluxodedados_vhd_vec_tst
-Z19 w1510609215
+Z19 w1510686719
 R7
 R8
 R0
@@ -72,9 +72,9 @@ V>bm0>W`g92Q?<hOn;mb5L0
 !s100 T]M3SiFgR0=EMzIeA=k_O3
 R12
 32
-Z22 !s110 1510609219
+Z22 !s110 1510686723
 !i10b 1
-Z23 !s108 1510609219.000000
+Z23 !s108 1510686723.000000
 Z24 !s90 -work|work|Waveform.vwf.vht|
 Z25 !s107 Waveform.vwf.vht|
 !i113 1
@@ -83,11 +83,11 @@ R18
 Afluxodedados_arch
 R7
 R8
-Z26 DEx4 work 24 fluxodedados_vhd_vec_tst 0 22 >bm0>W`g92Q?<hOn;mb5L0
-l89
+DEx4 work 24 fluxodedados_vhd_vec_tst 0 22 >bm0>W`g92Q?<hOn;mb5L0
+l77
 L34
-VE1nMbz6Y9[3fdjC^_XN@f3
-!s100 CK?@O@naf<f^Yoe2KA:RJ1
+V<O:jW2cHcnA>HJf<kU[1G2
+!s100 C`4fVJmzEV4[0_iOT6i]Z2
 R12
 32
 R22
@@ -99,7 +99,7 @@ R25
 R17
 R18
 Ehard_block
-R1
+Z26 w1510854958
 R4
 R2
 R6
@@ -115,9 +115,9 @@ VB]0;STalBkCB1_B4BXQDW2
 !s100 >mXi5[`cD`bFC`UBKA<om3
 R12
 32
-R13
+Z27 !s110 1510854959
 !i10b 1
-R14
+Z28 !s108 1510854959.000000
 R15
 R16
 !i113 1
@@ -137,11 +137,101 @@ Via>5o7W??azG@W@@eFOTF0
 !s100 [5;Wd8QGQ>@2NGoJ1I]Y43
 R12
 32
-R13
+R27
 !i10b 1
-R14
+R28
 R15
 R16
+!i113 1
+R17
+R18
+Emips
+R26
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+R0
+R10
+R11
+l0
+L80
+VXh@F<QZSoan6]Y_Qh>Mgc3
+!s100 4R0Y8;^0=Z0ceHT4Q65`B0
+R12
+32
+R27
+!i10b 1
+R28
+R15
+R16
+!i113 1
+R17
+R18
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+DEx4 work 4 mips 0 22 Xh@F<QZSoan6]Y_Qh>Mgc3
+l663
+L267
+VXMKJeCAP`Oa[213Pi=X092
+!s100 :DC<8N5>Q_9QiZG``UkRV1
+R12
+32
+R27
+!i10b 1
+R28
+R15
+R16
+!i113 1
+R17
+R18
+Emips_vhd_vec_tst
+Z29 w1510854956
+R7
+R8
+R0
+R20
+R21
+l0
+L32
+V^1o__g;YWkg:5i`P8mICm3
+!s100 <M8I65P>A0UMgF43I31;A1
+R12
+32
+Z30 !s110 1510854960
+!i10b 1
+R28
+R24
+R25
+!i113 1
+R17
+R18
+Amips_arch
+R7
+R8
+Z31 DEx4 work 16 mips_vhd_vec_tst 0 22 ^1o__g;YWkg:5i`P8mICm3
+l57
+L34
+VaOWWomGPCCRfl7JVnS4Hg0
+!s100 329^OU5Xie`7NCD9ZWi2C1
+R12
+32
+R30
+!i10b 1
+R28
+R24
+R25
 !i113 1
 R17
 R18

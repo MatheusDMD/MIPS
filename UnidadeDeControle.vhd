@@ -22,6 +22,8 @@ begin
 			Controle <= "0000010001";
 		elsif(OpCode = "000010") then  -- JUMP
 			Controle <= "1000000000";
+		else 
+			Controle <= "0000000000";
 		end if;
 	end process;
 end bhv;

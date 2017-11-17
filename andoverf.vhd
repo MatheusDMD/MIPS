@@ -11,7 +11,7 @@ end andoverf;
 
 architecture Behavioral of andoverf is
 begin
-	process(A,B)
+	process(A,B,C)
 		begin
 			if((A = '1') and (B = '1') and (C ='1')) then
 				X <= '1';

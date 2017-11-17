@@ -5,6 +5,7 @@ use IEEE.NUMERIC_STD.ALL;
 ENTITY FluxoDeDados IS
 	PORT (
 		CLK				 : IN STD_LOGIC;
+		RST_PC			 : IN STD_LOGIC := '0';
 		mux_PC   		 : IN STD_LOGIC;
 		Mux_RtRd 		 : IN STD_LOGIC;
 		habEscritaReg   : IN STD_LOGIC;
@@ -14,6 +15,15 @@ ENTITY FluxoDeDados IS
 		BEQ   		    : IN STD_LOGIC;
 		habLeituraMEM	 : IN STD_LOGIC;
 		habEscritaMEM	 : IN STD_LOGIC;
+		enderecoDisplay : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
+		enderecoASerEscrito: OUT STD_LOGIC_VECTOR (31 DOWNTO 0);
+		habEscritaDisplay:OUT STD_LOGIC;
+		enderecoReg1Test: OUT STD_LOGIC_VECTOR (4 DOWNTO 0);
+		enderecoReg2Test: OUT STD_LOGIC_VECTOR (4 DOWNTO 0);
+		instrucaoTest   : OUT STD_LOGIC_VECTOR (31 DOWNTO 0);
+		entraAULATest   : OUT STD_LOGIC_VECTOR (31 DOWNTO 0);
+		entraBULATest   : OUT STD_LOGIC_VECTOR (31 DOWNTO 0);
+		dadoASerEscrito  : OUT STD_LOGIC_VECTOR (31 DOWNTO 0);
 		OpCode		    : OUT STD_LOGIC_VECTOR (5 DOWNTO 0)
 	);
 END FluxoDeDados;
@@ -26,10 +36,14 @@ ARCHITECTURE fluxo of FluxoDeDados is
 	signal z, AndBEQ: std_logic;
 begin
 	PC : entity work.registrador
-		port map (DIN=> PROXpc, DOUT =>saidaPC, CLK=> CLK);
+		port map (DIN=> PROXpc, DOUT =>saidaPC, CLK=> CLK, RST=> RST_PC, ENABLE=> '1');
+		
 	Mem_Inst : entity work.InstructionMemory
 		port map (Endereco=> saidaPC, Dado=> dadoMemInst);
-		
+	
+	
+	instrucaoTest<= dadoMemInst;
+	
 	muxRt_Rd: entity work.mux5
 		port map (A=>dadoMemInst(20 downto 16), B=>dadoMemInst(15 downto 11), SEL=> Mux_RtRd, X=> SaidaMuxRtRd);
 	
@@ -42,7 +56,9 @@ begin
 					 DadoLidoReg1 => dadoReg1,
 					 DadoLidoReg2 => dadoReg2,
 					 clk=> CLK);
-	
+					 
+	enderecoReg1Test<= dadoMemInst(25 downto 21);
+	enderecoReg2Test<= dadoMemInst(20 downto 16);
 	OpCode<= dadoMemInst(31 downto 26);
 	
 	Esten_Sinal: entity work.ext16to32
@@ -59,6 +75,8 @@ begin
 	ALU : entity work.ULA 
 		port map(A=> dadoReg1,B=> saidaParaULA,invA=> ULAoperation(3),invB=> ULAoperation(2),Sel=> ULAoperation(1 downto 0),ZERO => z,RES => ULARes);
 	
+	entraAULATest<=dadoReg1;
+	entraBULATest<=saidaParaULA;
 	
 	Mem_dados: entity work.memory
 		port map(Endereco=> ULARes,
@@ -67,6 +85,12 @@ begin
 					Escrever => habEscritaMEM,
 					DadoLido => saidaMemDados,
 					CLK => CLK);
+					
+	enderecoASerEscrito<= ULARes;
+	dadoASerEscrito <= dadoReg2;
+	
+	comparadorDisplay: entity work.xor32
+		port map (A=> ULARes, B=>enderecoDisplay, X=> habEscritaDisplay);
 	
 	muxDepoisULA: entity work.mux32
 		port map(A=> ULARes, B=> saidaMemDados, SEL => mux_ULAMem, X=> dadoEsc3);

@@ -26,7 +26,11 @@ begin
 				ULActrl <= "0001";
 			elsif(funct = "101010") then
 				ULActrl <= "0111";
+			else
+				ULActrl <= "0000";
 			end if;
+		else 
+			ULActrl <= "0000";
 		end if;
 	end process;
 end bhv;
