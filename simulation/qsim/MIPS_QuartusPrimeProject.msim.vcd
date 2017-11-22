@@ -3,7 +3,7 @@ $comment
 		vcd file MIPS_QuartusPrimeProject.msim.vcd -direction
 $end
 $date
-	Fri Nov 17 18:20:38 2017
+	Wed Nov 22 14:16:40 2017
 $end
 $version
 	ModelSim Version 10.5b
