@@ -16,17 +16,17 @@ ENTITY FluxoDeDados IS
 		habLeituraMEM	 : IN STD_LOGIC;
 		habEscritaMEM	 : IN STD_LOGIC;
 		enderecoDisplay : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
---		ResultadoUla    : OUT STD_LOGIC_VECTOR (31 DOWNTO 0);
+		ResultadoUla    : OUT STD_LOGIC_VECTOR (31 DOWNTO 0);
 		habEscritaDisplay:OUT STD_LOGIC;
---		DadoLido1		 : OUT STD_LOGIC_VECTOR (31 DOWNTO 0);
---		DadoLido2		 : OUT STD_LOGIC_VECTOR (31 DOWNTO 0);
---		enderecoReg1Test: OUT STD_LOGIC_VECTOR (4 DOWNTO 0);
---		enderecoReg2Test: OUT STD_LOGIC_VECTOR (4 DOWNTO 0);
---		enderecoReg3Test: OUT STD_LOGIC_VECTOR (4 DOWNTO 0);
---		instrucaoTest   : OUT STD_LOGIC_VECTOR (31 DOWNTO 0);
---		entraAULATest   : OUT STD_LOGIC_VECTOR (31 DOWNTO 0);
---		entraBULATest   : OUT STD_LOGIC_VECTOR (31 DOWNTO 0);
---		dadoASerEscrito : OUT STD_LOGIC_VECTOR (31 DOWNTO 0);
+		DadoLido1		 : OUT STD_LOGIC_VECTOR (31 DOWNTO 0);
+		DadoLido2		 : OUT STD_LOGIC_VECTOR (31 DOWNTO 0);
+		enderecoReg1Test: OUT STD_LOGIC_VECTOR (4 DOWNTO 0);
+		enderecoReg2Test: OUT STD_LOGIC_VECTOR (4 DOWNTO 0);
+		enderecoReg3Test: OUT STD_LOGIC_VECTOR (4 DOWNTO 0);
+		instrucaoTest   : OUT STD_LOGIC_VECTOR (31 DOWNTO 0);
+		entraAULATest   : OUT STD_LOGIC_VECTOR (31 DOWNTO 0);
+		entraBULATest   : OUT STD_LOGIC_VECTOR (31 DOWNTO 0);
+		dadoASerEscrito : OUT STD_LOGIC_VECTOR (31 DOWNTO 0);
 		A,B,I,J,L,M,N,O,Q,R,S,V,W : OUT STD_LOGIC_VECTOR (31 DOWNTO 0);
 		D,E,G  		 : OUT STD_LOGIC_VECTOR (4 DOWNTO 0);
 		C					 : OUT STD_LOGIC_VECTOR (25 DOWNTO 0);
@@ -155,7 +155,7 @@ begin
 	C<=dadoMemInst(25 downto 0);
 	
 	entraMuxPc(31 downto 28)<= PC_4(31 downto 28);
-	entraMuxPc(27 downto 0) <= saidaExt2632(27 downto 0);
+	entraMuxPc(27 downto 0) <= saidaExt2632;
 	
 	S<=entraMuxPc;
 	

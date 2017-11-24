@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MIPS_QuartusPrimeProject
-Fri Nov 24 16:22:38 2017
+Fri Nov 24 19:31:19 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -16,42 +16,43 @@ Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
   8. Registers Removed During Synthesis
   9. Removed Registers Triggering Further Register Optimizations
  10. General Register Statistics
- 11. Parameter Settings for User Entity Instance: FluxoDeDados:FD|registrador:PC
- 12. Parameter Settings for User Entity Instance: FluxoDeDados:FD|mux5:muxRt_Rd
- 13. Parameter Settings for User Entity Instance: FluxoDeDados:FD|mux32:muxAntesULA
- 14. Parameter Settings for User Entity Instance: FluxoDeDados:FD|ULA:ALU|inversor32:Anot
- 15. Parameter Settings for User Entity Instance: FluxoDeDados:FD|ULA:ALU|inversor32:Bnot
- 16. Parameter Settings for User Entity Instance: FluxoDeDados:FD|ULA:ALU|mux32:muxA
- 17. Parameter Settings for User Entity Instance: FluxoDeDados:FD|ULA:ALU|mux32:muxB
- 18. Parameter Settings for User Entity Instance: FluxoDeDados:FD|ULA:ALU|and32:andop
- 19. Parameter Settings for User Entity Instance: FluxoDeDados:FD|ULA:ALU|or32:orop
- 20. Parameter Settings for User Entity Instance: FluxoDeDados:FD|ULA:ALU|overflow:overf
- 21. Parameter Settings for User Entity Instance: FluxoDeDados:FD|ULA:ALU|mux32_4:opmux
- 22. Parameter Settings for User Entity Instance: FluxoDeDados:FD|mux32:muxDepoisULA
- 23. Parameter Settings for User Entity Instance: FluxoDeDados:FD|add32:add4toPC
- 24. Parameter Settings for User Entity Instance: FluxoDeDados:FD|shifter2_32to32:shifter32to32
- 25. Parameter Settings for User Entity Instance: FluxoDeDados:FD|add32:AddPC4andExtSin
- 26. Parameter Settings for User Entity Instance: FluxoDeDados:FD|mux32:MuxBEQ
- 27. Parameter Settings for User Entity Instance: FluxoDeDados:FD|mux32:MuxProxPC
- 28. Parameter Settings for User Entity Instance: registrador:registradosDisplay
- 29. Port Connectivity Checks: "conversorHex7Seg:display7"
- 30. Port Connectivity Checks: "conversorHex7Seg:display6"
- 31. Port Connectivity Checks: "conversorHex7Seg:display5"
- 32. Port Connectivity Checks: "conversorHex7Seg:display4"
- 33. Port Connectivity Checks: "conversorHex7Seg:display3"
- 34. Port Connectivity Checks: "conversorHex7Seg:display2"
- 35. Port Connectivity Checks: "conversorHex7Seg:display1"
- 36. Port Connectivity Checks: "conversorHex7Seg:display0"
- 37. Port Connectivity Checks: "registrador:registradosDisplay"
- 38. Port Connectivity Checks: "FluxoDeDados:FD|add32:add4toPC"
- 39. Port Connectivity Checks: "FluxoDeDados:FD|ULA:ALU|mux32_4:opmux"
- 40. Port Connectivity Checks: "FluxoDeDados:FD|registrador:PC"
- 41. Port Connectivity Checks: "FluxoDeDados:FD"
- 42. Port Connectivity Checks: "debounce:BTN_CLK"
- 43. Port Connectivity Checks: "debounce:BTN_RST"
- 44. Post-Synthesis Netlist Statistics for Top Partition
- 45. Elapsed Time Per Partition
- 46. Analysis & Synthesis Messages
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: FluxoDeDados:FD|registrador:PC
+ 13. Parameter Settings for User Entity Instance: FluxoDeDados:FD|mux5:muxRt_Rd
+ 14. Parameter Settings for User Entity Instance: FluxoDeDados:FD|mux32:muxAntesULA
+ 15. Parameter Settings for User Entity Instance: FluxoDeDados:FD|ULA:ALU|inversor32:Anot
+ 16. Parameter Settings for User Entity Instance: FluxoDeDados:FD|ULA:ALU|inversor32:Bnot
+ 17. Parameter Settings for User Entity Instance: FluxoDeDados:FD|ULA:ALU|mux32:muxA
+ 18. Parameter Settings for User Entity Instance: FluxoDeDados:FD|ULA:ALU|mux32:muxB
+ 19. Parameter Settings for User Entity Instance: FluxoDeDados:FD|ULA:ALU|and32:andop
+ 20. Parameter Settings for User Entity Instance: FluxoDeDados:FD|ULA:ALU|or32:orop
+ 21. Parameter Settings for User Entity Instance: FluxoDeDados:FD|ULA:ALU|overflow:overf
+ 22. Parameter Settings for User Entity Instance: FluxoDeDados:FD|ULA:ALU|mux32_4:opmux
+ 23. Parameter Settings for User Entity Instance: FluxoDeDados:FD|mux32:muxDepoisULA
+ 24. Parameter Settings for User Entity Instance: FluxoDeDados:FD|add32:add4toPC
+ 25. Parameter Settings for User Entity Instance: FluxoDeDados:FD|shifter2_32to32:shifter32to32
+ 26. Parameter Settings for User Entity Instance: FluxoDeDados:FD|add32:AddPC4andExtSin
+ 27. Parameter Settings for User Entity Instance: FluxoDeDados:FD|mux32:MuxBEQ
+ 28. Parameter Settings for User Entity Instance: FluxoDeDados:FD|mux32:MuxProxPC
+ 29. Parameter Settings for User Entity Instance: registrador:registradosDisplay
+ 30. Port Connectivity Checks: "conversorHex7Seg:display7"
+ 31. Port Connectivity Checks: "conversorHex7Seg:display6"
+ 32. Port Connectivity Checks: "conversorHex7Seg:display5"
+ 33. Port Connectivity Checks: "conversorHex7Seg:display4"
+ 34. Port Connectivity Checks: "conversorHex7Seg:display3"
+ 35. Port Connectivity Checks: "conversorHex7Seg:display2"
+ 36. Port Connectivity Checks: "conversorHex7Seg:display1"
+ 37. Port Connectivity Checks: "conversorHex7Seg:display0"
+ 38. Port Connectivity Checks: "registrador:registradosDisplay"
+ 39. Port Connectivity Checks: "FluxoDeDados:FD|add32:add4toPC"
+ 40. Port Connectivity Checks: "FluxoDeDados:FD|ULA:ALU|mux32_4:opmux"
+ 41. Port Connectivity Checks: "FluxoDeDados:FD|registrador:PC"
+ 42. Port Connectivity Checks: "FluxoDeDados:FD"
+ 43. Port Connectivity Checks: "debounce:BTN_CLK"
+ 44. Port Connectivity Checks: "debounce:BTN_RST"
+ 45. Post-Synthesis Netlist Statistics for Top Partition
+ 46. Elapsed Time Per Partition
+ 47. Analysis & Synthesis Messages
 
 
 
@@ -78,16 +79,16 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Nov 24 16:22:38 2017       ;
+; Analysis & Synthesis Status        ; Successful - Fri Nov 24 19:31:19 2017       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; MIPS_QuartusPrimeProject                    ;
 ; Top-level Entity Name              ; MIPS                                        ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 347                                         ;
-;     Total combinational functions  ; 347                                         ;
-;     Dedicated logic registers      ; 116                                         ;
-; Total registers                    ; 116                                         ;
-; Total pins                         ; 176                                         ;
+; Total logic elements               ; 4,292                                       ;
+;     Total combinational functions  ; 2,304                                       ;
+;     Dedicated logic registers      ; 2,132                                       ;
+; Total registers                    ; 2132                                        ;
+; Total pins                         ; 194                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -186,15 +187,20 @@ agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 2           ;
-; Maximum allowed            ; 2           ;
+; Number detected on machine ; 7           ;
+; Maximum allowed            ; 7           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 2           ;
+; Maximum used               ; 7           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
+;     Processor 2            ;   0.1%      ;
+;     Processor 3            ;   0.1%      ;
+;     Processor 4            ;   0.1%      ;
+;     Processor 5            ;   0.1%      ;
+;     Processor 6            ;   0.1%      ;
+;     Processor 7            ;   0.1%      ;
 +----------------------------+-------------+
 
 
@@ -236,30 +242,30 @@ agreement for further details.
 +---------------------------------------------+----------------------------+
 ; Resource                                    ; Usage                      ;
 +---------------------------------------------+----------------------------+
-; Estimated Total logic elements              ; 347                        ;
+; Estimated Total logic elements              ; 4,292                      ;
 ;                                             ;                            ;
-; Total combinational functions               ; 347                        ;
+; Total combinational functions               ; 2304                       ;
 ; Logic element usage by number of LUT inputs ;                            ;
-;     -- 4 input functions                    ; 132                        ;
-;     -- 3 input functions                    ; 77                         ;
-;     -- <=2 input functions                  ; 138                        ;
+;     -- 4 input functions                    ; 1976                       ;
+;     -- 3 input functions                    ; 126                        ;
+;     -- <=2 input functions                  ; 202                        ;
 ;                                             ;                            ;
 ; Logic elements by mode                      ;                            ;
-;     -- normal mode                          ; 230                        ;
-;     -- arithmetic mode                      ; 117                        ;
+;     -- normal mode                          ; 2182                       ;
+;     -- arithmetic mode                      ; 122                        ;
 ;                                             ;                            ;
-; Total registers                             ; 116                        ;
-;     -- Dedicated logic registers            ; 116                        ;
+; Total registers                             ; 2132                       ;
+;     -- Dedicated logic registers            ; 2132                       ;
 ;     -- I/O registers                        ; 0                          ;
 ;                                             ;                            ;
-; I/O pins                                    ; 176                        ;
+; I/O pins                                    ; 194                        ;
 ;                                             ;                            ;
 ; Embedded Multiplier 9-bit elements          ; 0                          ;
 ;                                             ;                            ;
 ; Maximum fan-out node                        ; debounce:BTN_CLK|output[0] ;
-; Maximum fan-out                             ; 63                         ;
-; Total fan-out                               ; 1664                       ;
-; Average fan-out                             ; 2.04                       ;
+; Maximum fan-out                             ; 2079                       ;
+; Total fan-out                               ; 15434                      ;
+; Average fan-out                             ; 3.20                       ;
 +---------------------------------------------+----------------------------+
 
 
@@ -268,22 +274,30 @@ agreement for further details.
 +-------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------+-------------------+--------------+
 ; Compilation Hierarchy Node          ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                              ; Entity Name       ; Library Name ;
 +-------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------+-------------------+--------------+
-; |MIPS                               ; 347 (0)             ; 116 (0)                   ; 0           ; 0            ; 0       ; 0         ; 176  ; 0            ; |MIPS                                            ; MIPS              ; work         ;
-;    |FluxoDeDados:FD|                ; 157 (0)             ; 38 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|FluxoDeDados:FD                            ; FluxoDeDados      ; work         ;
-;       |ALUControl:UC_ULA|           ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|FluxoDeDados:FD|ALUControl:UC_ULA          ; ALUControl        ; work         ;
-;       |InstructionMemory:Mem_Inst|  ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|FluxoDeDados:FD|InstructionMemory:Mem_Inst ; InstructionMemory ; work         ;
-;       |ULA:ALU|                     ; 97 (64)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|FluxoDeDados:FD|ULA:ALU                    ; ULA               ; work         ;
+; |MIPS                               ; 2304 (0)            ; 2132 (0)                  ; 0           ; 0            ; 0       ; 0         ; 194  ; 0            ; |MIPS                                            ; MIPS              ; work         ;
+;    |FluxoDeDados:FD|                ; 2108 (1)            ; 2054 (0)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|FluxoDeDados:FD                            ; FluxoDeDados      ; work         ;
+;       |ALUControl:UC_ULA|           ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|FluxoDeDados:FD|ALUControl:UC_ULA          ; ALUControl        ; work         ;
+;       |InstructionMemory:Mem_Inst|  ; 45 (45)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|FluxoDeDados:FD|InstructionMemory:Mem_Inst ; InstructionMemory ; work         ;
+;       |ULA:ALU|                     ; 129 (33)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|FluxoDeDados:FD|ULA:ALU                    ; ULA               ; work         ;
 ;          |inversor32:Bnot|          ; 33 (33)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|FluxoDeDados:FD|ULA:ALU|inversor32:Bnot    ; inversor32        ; work         ;
-;       |registerBank32:Banco_Regis|  ; 35 (35)             ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|FluxoDeDados:FD|registerBank32:Banco_Regis ; registerBank32    ; work         ;
-;       |registrador:PC|              ; 6 (6)               ; 6 (6)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|FluxoDeDados:FD|registrador:PC             ; registrador       ; work         ;
+;          |mux32_4:opmux|            ; 63 (63)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|FluxoDeDados:FD|ULA:ALU|mux32_4:opmux      ; mux32_4           ; work         ;
+;       |add32:AddPC4andExtSin|       ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|FluxoDeDados:FD|add32:AddPC4andExtSin      ; add32             ; work         ;
+;       |add32:add4toPC|              ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|FluxoDeDados:FD|add32:add4toPC             ; add32             ; work         ;
+;       |memory:Mem_dados|            ; 710 (710)           ; 1024 (1024)               ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|FluxoDeDados:FD|memory:Mem_dados           ; memory            ; work         ;
+;       |mux32:muxAntesULA|           ; 37 (37)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|FluxoDeDados:FD|mux32:muxAntesULA          ; mux32             ; work         ;
+;       |mux32:muxDepoisULA|          ; 65 (65)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|FluxoDeDados:FD|mux32:muxDepoisULA         ; mux32             ; work         ;
+;       |mux5:muxRt_Rd|               ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|FluxoDeDados:FD|mux5:muxRt_Rd              ; mux5              ; work         ;
+;       |registerBank32:Banco_Regis|  ; 1074 (1074)         ; 1024 (1024)               ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|FluxoDeDados:FD|registerBank32:Banco_Regis ; registerBank32    ; work         ;
+;       |registrador:PC|              ; 12 (12)             ; 6 (6)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|FluxoDeDados:FD|registrador:PC             ; registrador       ; work         ;
 ;       |xor32:comparadorDisplay|     ; 13 (13)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|FluxoDeDados:FD|xor32:comparadorDisplay    ; xor32             ; work         ;
+;    |UnidadeDeControle:UC|           ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|UnidadeDeControle:UC                       ; UnidadeDeControle ; work         ;
 ;    |conversorHex7Seg:display0|      ; 14 (14)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|conversorHex7Seg:display0                  ; conversorHex7Seg  ; work         ;
 ;    |conversorHex7Seg:display1|      ; 14 (14)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|conversorHex7Seg:display1                  ; conversorHex7Seg  ; work         ;
 ;    |conversorHex7Seg:display2|      ; 14 (14)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|conversorHex7Seg:display2                  ; conversorHex7Seg  ; work         ;
 ;    |conversorHex7Seg:display3|      ; 14 (14)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|conversorHex7Seg:display3                  ; conversorHex7Seg  ; work         ;
 ;    |conversorHex7Seg:display4|      ; 14 (14)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|conversorHex7Seg:display4                  ; conversorHex7Seg  ; work         ;
 ;    |conversorHex7Seg:display5|      ; 14 (14)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|conversorHex7Seg:display5                  ; conversorHex7Seg  ; work         ;
-;    |conversorHex7Seg:display6|      ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|conversorHex7Seg:display6                  ; conversorHex7Seg  ; work         ;
+;    |conversorHex7Seg:display6|      ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|conversorHex7Seg:display6                  ; conversorHex7Seg  ; work         ;
 ;    |conversorHex7Seg:display7|      ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|conversorHex7Seg:display7                  ; conversorHex7Seg  ; work         ;
 ;    |debounce:BTN_CLK|               ; 49 (49)             ; 27 (27)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|debounce:BTN_CLK                           ; debounce          ; work         ;
 ;    |debounce:BTN_RST|               ; 47 (47)             ; 27 (27)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|debounce:BTN_RST                           ; debounce          ; work         ;
@@ -292,1008 +306,16 @@ agreement for further details.
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                             ;
-+-----------------------------------------------------------+----------------------------------------------------+
-; Register name                                             ; Reason for Removal                                 ;
-+-----------------------------------------------------------+----------------------------------------------------+
-; FluxoDeDados:FD|registrador:PC|DOUT[0]                    ; Merged with FluxoDeDados:FD|registrador:PC|DOUT[1] ;
-; FluxoDeDados:FD|registrador:PC|DOUT[1]                    ; Stuck at GND due to stuck port data_in             ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~166  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~167  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~168  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~169  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~170  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~171  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~172  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~173  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~174  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~175  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~176  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~177  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~178  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~179  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~180  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~181  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~182  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~183  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~184  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~185  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~186  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~187  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~188  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~189  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~190  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~191  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~192  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~193  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~194  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~195  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~196  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~197  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~198  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~199  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~200  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~201  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~202  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~203  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~204  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~205  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~206  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~207  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~208  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~209  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~210  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~211  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~212  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~213  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~214  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~215  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~216  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~217  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~218  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~219  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~220  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~221  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~222  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~223  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~224  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~225  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~226  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~227  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~228  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~229  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~230  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~231  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~232  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~233  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~234  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~235  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~236  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~237  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~238  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~239  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~240  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~241  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~242  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~243  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~244  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~245  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~246  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~247  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~248  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~249  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~250  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~251  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~252  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~253  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~254  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~255  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~256  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~257  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~258  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~259  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~260  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~261  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~262  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~263  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~264  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~265  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~266  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~267  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~268  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~269  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~270  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~271  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~272  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~273  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~274  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~275  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~276  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~277  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~278  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~279  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~280  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~281  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~282  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~283  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~284  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~285  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~286  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~287  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~288  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~289  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~290  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~291  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~292  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~293  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~422  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~423  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~424  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~425  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~426  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~427  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~428  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~429  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~430  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~431  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~432  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~433  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~434  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~435  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~436  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~437  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~438  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~439  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~440  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~441  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~442  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~443  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~444  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~445  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~446  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~447  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~448  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~449  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~450  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~451  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~452  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~453  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~454  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~455  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~456  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~457  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~458  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~459  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~460  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~461  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~462  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~463  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~464  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~465  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~466  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~467  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~468  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~469  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~470  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~471  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~472  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~473  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~474  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~475  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~476  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~477  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~478  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~479  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~480  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~481  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~482  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~483  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~484  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~485  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~486  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~487  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~488  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~489  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~490  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~491  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~492  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~493  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~494  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~495  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~496  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~497  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~498  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~499  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~500  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~501  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~502  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~503  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~504  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~505  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~506  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~507  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~508  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~509  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~510  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~511  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~512  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~513  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~514  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~515  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~516  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~517  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~518  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~519  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~520  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~521  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~522  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~523  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~524  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~525  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~526  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~527  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~528  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~529  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~530  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~531  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~532  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~533  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~534  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~535  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~536  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~537  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~538  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~539  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~540  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~541  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~542  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~543  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~544  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~545  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~546  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~547  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~548  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~549  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~550  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~551  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~552  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~553  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~554  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~555  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~556  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~557  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~558  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~559  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~560  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~561  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~562  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~563  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~564  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~565  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~566  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~567  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~568  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~569  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~570  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~571  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~572  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~573  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~574  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~575  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~576  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~577  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~578  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~579  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~580  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~581  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~582  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~583  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~584  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~585  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~586  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~587  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~588  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~589  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~590  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~591  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~592  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~593  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~594  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~595  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~596  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~597  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~598  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~599  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~600  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~601  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~602  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~603  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~604  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~605  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~606  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~607  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~608  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~609  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~610  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~611  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~612  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~613  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~614  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~615  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~616  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~617  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~618  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~619  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~620  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~621  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~622  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~623  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~624  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~625  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~626  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~627  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~628  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~629  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~630  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~631  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~632  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~633  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~634  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~635  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~636  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~637  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~638  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~639  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~640  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~641  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~642  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~643  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~644  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~645  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~646  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~647  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~648  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~649  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~650  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~651  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~652  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~653  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~654  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~655  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~656  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~657  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~658  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~659  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~660  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~661  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~662  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~663  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~664  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~665  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~666  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~667  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~668  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~669  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~670  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~671  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~672  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~673  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~674  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~675  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~676  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~677  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~678  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~679  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~680  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~681  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~682  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~683  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~684  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~685  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~686  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~687  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~688  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~689  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~690  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~691  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~692  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~693  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~694  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~695  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~696  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~697  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~698  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~699  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~700  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~701  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~702  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~703  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~704  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~705  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~706  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~707  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~708  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~709  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~710  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~711  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~712  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~713  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~714  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~715  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~716  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~717  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~718  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~719  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~720  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~721  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~722  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~723  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~724  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~725  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~726  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~727  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~728  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~729  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~730  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~731  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~732  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~733  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~734  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~735  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~736  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~737  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~738  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~739  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~740  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~741  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~742  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~743  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~744  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~745  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~746  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~747  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~748  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~749  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~750  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~751  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~752  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~753  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~754  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~755  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~756  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~757  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~758  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~759  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~760  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~761  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~762  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~763  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~764  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~765  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~766  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~767  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~768  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~769  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~770  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~771  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~772  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~773  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~774  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~775  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~776  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~777  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~778  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~779  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~780  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~781  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~782  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~783  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~784  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~785  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~786  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~787  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~788  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~789  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~790  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~791  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~792  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~793  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~794  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~795  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~796  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~797  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~798  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~799  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~800  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~801  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~802  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~803  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~804  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~805  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~806  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~807  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~808  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~809  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~810  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~811  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~812  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~813  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~814  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~815  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~816  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~817  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~818  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~819  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~820  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~821  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~822  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~823  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~824  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~825  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~826  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~827  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~828  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~829  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~830  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~831  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~832  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~833  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~834  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~835  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~836  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~837  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~838  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~839  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~840  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~841  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~842  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~843  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~844  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~845  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~846  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~847  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~848  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~849  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~850  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~851  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~852  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~853  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~854  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~855  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~856  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~857  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~858  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~859  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~860  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~861  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~862  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~863  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~864  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~865  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~866  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~867  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~868  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~869  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~870  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~871  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~872  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~873  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~874  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~875  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~876  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~877  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~878  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~879  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~880  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~881  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~882  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~883  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~884  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~885  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~886  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~887  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~888  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~889  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~890  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~891  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~892  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~893  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~894  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~895  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~896  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~897  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~898  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~899  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~900  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~901  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~902  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~903  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~904  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~905  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~906  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~907  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~908  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~909  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~910  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~911  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~912  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~913  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~914  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~915  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~916  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~917  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~918  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~919  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~920  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~921  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~922  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~923  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~924  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~925  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~926  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~927  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~928  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~929  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~930  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~931  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~932  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~933  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~934  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~935  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~936  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~937  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~938  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~939  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~940  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~941  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~942  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~943  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~944  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~945  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~946  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~947  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~948  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~949  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~950  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~951  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~952  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~953  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~954  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~955  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~956  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~957  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~958  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~959  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~960  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~961  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~962  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~963  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~964  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~965  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~966  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~967  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~968  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~969  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~970  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~971  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~972  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~973  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~974  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~975  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~976  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~977  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~978  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~979  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~980  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~981  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~982  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~983  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~984  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~985  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~986  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~987  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~988  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~989  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~990  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~991  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~992  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~993  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~994  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~995  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~996  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~997  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~998  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~999  ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~1000 ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~1001 ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~1002 ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~1003 ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~1004 ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~1005 ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~1006 ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~1007 ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~1008 ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~1009 ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~1010 ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~1011 ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~1012 ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~1013 ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~1014 ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~1015 ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~1016 ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~1017 ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~1018 ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~1019 ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~1020 ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~1021 ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~1022 ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~1023 ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~1024 ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~1025 ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~1026 ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~1027 ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~1028 ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~1029 ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~1030 ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~1031 ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~1032 ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~1033 ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~1034 ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~1035 ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~1036 ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~1037 ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~1038 ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~1039 ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~1040 ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~1041 ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~1042 ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~1043 ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~1044 ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~1045 ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~1046 ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~1047 ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~1048 ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~1049 ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~1050 ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~1051 ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~1052 ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~1053 ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~1054 ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~1055 ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~1056 ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~1057 ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~1058 ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~1059 ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~1060 ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~1061 ; Lost fanout                                        ;
-; FluxoDeDados:FD|registrador:PC|DOUT[8..31]                ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~38   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~134  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~294  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~390  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~39   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~135  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~295  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~391  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~40   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~136  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~296  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~392  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~41   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~137  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~297  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~393  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~42   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~138  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~298  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~394  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~43   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~139  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~299  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~395  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~44   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~140  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~300  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~396  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~45   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~141  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~301  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~397  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~46   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~142  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~302  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~398  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~47   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~143  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~303  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~399  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~48   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~144  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~304  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~400  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~49   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~145  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~305  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~401  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~50   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~146  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~306  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~402  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~51   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~147  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~307  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~403  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~52   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~148  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~308  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~404  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~53   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~149  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~309  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~405  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~54   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~150  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~310  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~406  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~55   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~151  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~311  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~407  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~56   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~152  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~312  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~408  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~57   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~153  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~313  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~409  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~58   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~154  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~314  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~410  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~59   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~155  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~315  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~411  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~60   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~156  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~316  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~412  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~61   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~157  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~317  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~413  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~62   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~158  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~318  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~414  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~63   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~159  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~319  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~415  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~64   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~160  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~320  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~416  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~65   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~161  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~321  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~417  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~66   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~162  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~322  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~418  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~67   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~163  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~323  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~419  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~68   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~164  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~324  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~420  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~69   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~165  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~325  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~421  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~70   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~102  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~326  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~71   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~103  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~327  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~72   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~104  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~328  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~73   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~105  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~329  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~74   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~106  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~330  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~75   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~107  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~331  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~76   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~108  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~332  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~77   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~109  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~333  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~78   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~110  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~334  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~79   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~111  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~335  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~80   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~112  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~336  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~81   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~113  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~337  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~82   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~114  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~338  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~83   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~115  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~339  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~84   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~116  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~340  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~85   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~117  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~341  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~86   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~118  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~342  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~87   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~119  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~343  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~88   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~120  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~344  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~89   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~121  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~345  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~90   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~122  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~346  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~91   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~123  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~347  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~92   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~124  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~348  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~93   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~125  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~349  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~94   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~126  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~350  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~95   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~127  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~351  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~96   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~128  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~352  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~97   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~129  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~353  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~98   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~130  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~354  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~99   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~131  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~355  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~100  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~132  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~356  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~101  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~133  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~357  ; Stuck at GND due to stuck port clock_enable        ;
-; Total Number of Removed Registers = 1018                  ;                                                    ;
-+-----------------------------------------------------------+----------------------------------------------------+
++-------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                              ;
++--------------------------------------------+----------------------------------------------------+
+; Register name                              ; Reason for Removal                                 ;
++--------------------------------------------+----------------------------------------------------+
+; FluxoDeDados:FD|registrador:PC|DOUT[0]     ; Merged with FluxoDeDados:FD|registrador:PC|DOUT[1] ;
+; FluxoDeDados:FD|registrador:PC|DOUT[1]     ; Stuck at GND due to stuck port data_in             ;
+; FluxoDeDados:FD|registrador:PC|DOUT[8..31] ; Lost fanout                                        ;
+; Total Number of Removed Registers = 26     ;                                                    ;
++--------------------------------------------+----------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1311,14 +333,26 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 116   ;
+; Total registers                              ; 2132  ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Synchronous Load   ; 6     ;
 ; Number of registers using Asynchronous Clear ; 58    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 58    ;
+; Number of registers using Clock Enable       ; 2074  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
+; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |MIPS|FluxoDeDados:FD|registrador:PC|DOUT[10]     ;
+; 3:1                ; 20 bits   ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; Yes        ; |MIPS|FluxoDeDados:FD|registrador:PC|DOUT[3]      ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |MIPS|UnidadeDeControle:UC|Controle[2]            ;
+; 4:1                ; 31 bits   ; 62 LEs        ; 62 LEs               ; 0 LEs                  ; No         ; |MIPS|FluxoDeDados:FD|ULA:ALU|mux32_4:opmux|X[29] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------+
@@ -1630,6 +664,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; enderecodisplay[31..5] ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; enderecodisplay[3..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; enderecodisplay[4]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; resultadoula           ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; dadolido1              ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; dadolido2              ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; enderecoreg1test       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; enderecoreg2test       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; enderecoreg3test       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; instrucaotest          ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; entraaulatest          ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; entrabulatest          ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; dadoaserescrito        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; a[31..8]               ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; m                      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; n                      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
@@ -1669,23 +713,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 176                         ;
-; cycloneiii_ff         ; 116                         ;
-;     CLR               ; 58                          ;
-;     ENA               ; 58                          ;
-; cycloneiii_lcell_comb ; 349                         ;
-;     arith             ; 117                         ;
-;         2 data inputs ; 84                          ;
-;         3 data inputs ; 33                          ;
-;     normal            ; 232                         ;
+; boundary_port         ; 194                         ;
+; cycloneiii_ff         ; 2132                        ;
+;     CLR               ; 52                          ;
+;     CLR SLD           ; 6                           ;
+;     ENA               ; 2074                        ;
+; cycloneiii_lcell_comb ; 2308                        ;
+;     arith             ; 122                         ;
+;         2 data inputs ; 55                          ;
+;         3 data inputs ; 67                          ;
+;     normal            ; 2186                        ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 5                           ;
-;         2 data inputs ; 50                          ;
-;         3 data inputs ; 44                          ;
-;         4 data inputs ; 132                         ;
+;         1 data inputs ; 26                          ;
+;         2 data inputs ; 124                         ;
+;         3 data inputs ; 59                          ;
+;         4 data inputs ; 1976                        ;
 ;                       ;                             ;
-; Max LUT depth         ; 10.50                       ;
-; Average LUT depth     ; 5.59                        ;
+; Max LUT depth         ; 17.50                       ;
+; Average LUT depth     ; 11.09                       ;
 +-----------------------+-----------------------------+
 
 
@@ -1694,7 +739,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:04     ;
 +----------------+--------------+
 
 
@@ -1704,10 +749,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Fri Nov 24 16:22:20 2017
+    Info: Processing started: Fri Nov 24 19:31:05 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MIPS_QuartusPrimeProject -c MIPS_QuartusPrimeProject
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (20030): Parallel compilation is enabled and will use 7 of the 7 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file registrador32.vhd
     Info (12022): Found design unit 1: registrador-comportamento File: /home/parallels/Documents/MIPS/registrador32.vhd Line: 16
     Info (12023): Found entity 1: registrador File: /home/parallels/Documents/MIPS/registrador32.vhd Line: 4
@@ -1787,10 +832,26 @@ Info (12127): Elaborating entity "MIPS" for the top level hierarchy
 Info (12128): Elaborating entity "debounce" for hierarchy "debounce:BTN_RST" File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 35
 Info (12128): Elaborating entity "UnidadeDeControle" for hierarchy "UnidadeDeControle:UC" File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 43
 Info (12128): Elaborating entity "FluxoDeDados" for hierarchy "FluxoDeDados:FD" File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 46
+Warning (10541): VHDL Signal Declaration warning at FluxoDeDados.vhd(19): used implicit default value for signal "ResultadoUla" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 19
+Warning (10541): VHDL Signal Declaration warning at FluxoDeDados.vhd(21): used implicit default value for signal "DadoLido1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 21
+Warning (10541): VHDL Signal Declaration warning at FluxoDeDados.vhd(22): used implicit default value for signal "DadoLido2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 22
+Warning (10541): VHDL Signal Declaration warning at FluxoDeDados.vhd(23): used implicit default value for signal "enderecoReg1Test" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 23
+Warning (10541): VHDL Signal Declaration warning at FluxoDeDados.vhd(24): used implicit default value for signal "enderecoReg2Test" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 24
+Warning (10541): VHDL Signal Declaration warning at FluxoDeDados.vhd(25): used implicit default value for signal "enderecoReg3Test" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 25
+Warning (10541): VHDL Signal Declaration warning at FluxoDeDados.vhd(26): used implicit default value for signal "instrucaoTest" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 26
+Warning (10541): VHDL Signal Declaration warning at FluxoDeDados.vhd(27): used implicit default value for signal "entraAULATest" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 27
+Warning (10541): VHDL Signal Declaration warning at FluxoDeDados.vhd(28): used implicit default value for signal "entraBULATest" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 28
+Warning (10541): VHDL Signal Declaration warning at FluxoDeDados.vhd(29): used implicit default value for signal "dadoASerEscrito" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 29
 Info (12128): Elaborating entity "registrador" for hierarchy "FluxoDeDados:FD|registrador:PC" File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 50
 Info (12128): Elaborating entity "InstructionMemory" for hierarchy "FluxoDeDados:FD|InstructionMemory:Mem_Inst" File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 56
 Info (12128): Elaborating entity "mux5" for hierarchy "FluxoDeDados:FD|mux5:muxRt_Rd" File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 62
 Info (12128): Elaborating entity "registerBank32" for hierarchy "FluxoDeDados:FD|registerBank32:Banco_Regis" File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 70
+Warning (10492): VHDL Process Statement warning at registerBank32.vhd(65): signal "EndReg1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/parallels/Documents/MIPS/registerBank32.vhd Line: 65
+Warning (10492): VHDL Process Statement warning at registerBank32.vhd(66): signal "registers" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/parallels/Documents/MIPS/registerBank32.vhd Line: 66
+Warning (10492): VHDL Process Statement warning at registerBank32.vhd(66): signal "EndReg1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/parallels/Documents/MIPS/registerBank32.vhd Line: 66
+Warning (10492): VHDL Process Statement warning at registerBank32.vhd(71): signal "EndReg2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/parallels/Documents/MIPS/registerBank32.vhd Line: 71
+Warning (10492): VHDL Process Statement warning at registerBank32.vhd(72): signal "registers" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/parallels/Documents/MIPS/registerBank32.vhd Line: 72
+Warning (10492): VHDL Process Statement warning at registerBank32.vhd(72): signal "EndReg2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/parallels/Documents/MIPS/registerBank32.vhd Line: 72
 Info (12128): Elaborating entity "ext16to32" for hierarchy "FluxoDeDados:FD|ext16to32:Esten_Sinal" File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 91
 Info (12128): Elaborating entity "mux32" for hierarchy "FluxoDeDados:FD|mux32:muxAntesULA" File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 97
 Info (12128): Elaborating entity "ALUControl" for hierarchy "FluxoDeDados:FD|ALUControl:UC_ULA" File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 105
@@ -1808,88 +869,45 @@ Info (12128): Elaborating entity "add32" for hierarchy "FluxoDeDados:FD|add32:ad
 Info (12128): Elaborating entity "shifter2_26to32" for hierarchy "FluxoDeDados:FD|shifter2_26to32:shifter26to32" File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 152
 Info (12128): Elaborating entity "shifter2_32to32" for hierarchy "FluxoDeDados:FD|shifter2_32to32:shifter32to32" File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 162
 Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "conversorHex7Seg:display0" File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 72
-Info (276014): Found 3 instances of uninferred RAM logic
-    Info (276004): RAM logic "FluxoDeDados:FD|InstructionMemory:Mem_Inst|MemoriaDeInstrucao" is uninferred due to inappropriate RAM size File: /home/parallels/Documents/MIPS/instructionMemory.vhd Line: 13
+Info (276014): Found 2 instances of uninferred RAM logic
     Info (276007): RAM logic "FluxoDeDados:FD|registerBank32:Banco_Regis|registers" is uninferred due to asynchronous read logic File: /home/parallels/Documents/MIPS/registerBank32.vhd Line: 22
     Info (276007): RAM logic "FluxoDeDados:FD|memory:Mem_dados|Memoria" is uninferred due to asynchronous read logic File: /home/parallels/Documents/MIPS/dataMemory.vhd Line: 18
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LEDG[0]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 14
-    Warning (13410): Pin "LEDG[1]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 14
-    Warning (13410): Pin "LEDG[3]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 14
+    Warning (13410): Pin "LEDR[10]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 13
+    Warning (13410): Pin "LEDR[11]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 13
+    Warning (13410): Pin "LEDR[12]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 13
+    Warning (13410): Pin "LEDR[13]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 13
+    Warning (13410): Pin "LEDR[14]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 13
+    Warning (13410): Pin "LEDR[15]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 13
+    Warning (13410): Pin "LEDR[16]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 13
+    Warning (13410): Pin "LEDR[17]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 13
     Warning (13410): Pin "LEDG[4]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 14
-    Warning (13410): Pin "LEDG[5]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 14
     Warning (13410): Pin "LEDG[6]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 14
-    Warning (13410): Pin "LEDG[7]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 14
     Warning (13410): Pin "LEDG[8]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 14
     Warning (13410): Pin "HEX6[5]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 15
     Warning (13410): Pin "enderecoReg1Test[2]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 17
-    Warning (13410): Pin "enderecoReg1Test[4]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 17
-    Warning (13410): Pin "enderecoReg2Test[2]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 18
-    Warning (13410): Pin "enderecoReg2Test[4]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 18
-    Warning (13410): Pin "instrucaoTest[0]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 19
-    Warning (13410): Pin "instrucaoTest[1]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 19
-    Warning (13410): Pin "instrucaoTest[2]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 19
-    Warning (13410): Pin "instrucaoTest[3]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 19
-    Warning (13410): Pin "instrucaoTest[4]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 19
-    Warning (13410): Pin "instrucaoTest[6]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 19
     Warning (13410): Pin "instrucaoTest[7]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 19
     Warning (13410): Pin "instrucaoTest[8]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 19
     Warning (13410): Pin "instrucaoTest[9]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 19
     Warning (13410): Pin "instrucaoTest[10]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 19
-    Warning (13410): Pin "instrucaoTest[11]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 19
-    Warning (13410): Pin "instrucaoTest[13]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 19
     Warning (13410): Pin "instrucaoTest[15]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 19
-    Warning (13410): Pin "instrucaoTest[18]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 19
-    Warning (13410): Pin "instrucaoTest[20]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 19
     Warning (13410): Pin "instrucaoTest[23]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 19
-    Warning (13410): Pin "instrucaoTest[25]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 19
-    Warning (13410): Pin "instrucaoTest[28]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 19
     Warning (13410): Pin "instrucaoTest[30]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 19
-    Warning (13410): Pin "entraAULATest[1]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 20
-    Warning (13410): Pin "entraAULATest[2]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 20
-    Warning (13410): Pin "entraAULATest[3]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 20
-    Warning (13410): Pin "entraAULATest[5]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 20
-    Warning (13410): Pin "entraAULATest[6]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 20
-    Warning (13410): Pin "entraAULATest[7]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 20
-    Warning (13410): Pin "entraAULATest[8]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 20
-    Warning (13410): Pin "entraAULATest[9]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 20
-    Warning (13410): Pin "entraAULATest[10]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 20
-    Warning (13410): Pin "entraAULATest[11]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 20
-    Warning (13410): Pin "entraAULATest[12]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 20
-    Warning (13410): Pin "entraAULATest[13]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 20
-    Warning (13410): Pin "entraAULATest[14]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 20
-    Warning (13410): Pin "entraAULATest[15]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 20
-    Warning (13410): Pin "entraAULATest[16]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 20
-    Warning (13410): Pin "entraAULATest[17]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 20
-    Warning (13410): Pin "entraAULATest[18]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 20
-    Warning (13410): Pin "entraAULATest[19]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 20
-    Warning (13410): Pin "entraAULATest[20]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 20
-    Warning (13410): Pin "entraAULATest[21]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 20
-    Warning (13410): Pin "entraAULATest[22]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 20
-    Warning (13410): Pin "entraAULATest[23]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 20
-    Warning (13410): Pin "entraAULATest[24]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 20
-    Warning (13410): Pin "entraAULATest[25]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 20
-    Warning (13410): Pin "entraAULATest[26]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 20
-    Warning (13410): Pin "entraAULATest[27]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 20
-    Warning (13410): Pin "entraAULATest[28]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 20
-    Warning (13410): Pin "entraAULATest[29]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 20
-    Warning (13410): Pin "entraAULATest[30]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 20
-    Warning (13410): Pin "entraAULATest[31]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 20
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 792 registers lost all their fanouts during netlist optimizations.
+Info (17049): 24 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "KEY[2]" File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 9
     Warning (15610): No output dependent on input pin "KEY[3]" File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 9
-Info (21057): Implemented 571 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 4550 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
-    Info (21059): Implemented 171 output pins
-    Info (21061): Implemented 395 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 67 warnings
-    Info: Peak virtual memory: 978 megabytes
-    Info: Processing ended: Fri Nov 24 16:22:38 2017
-    Info: Elapsed time: 00:00:18
-    Info: Total CPU time (on all processors): 00:00:27
+    Info (21059): Implemented 189 output pins
+    Info (21061): Implemented 4356 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 41 warnings
+    Info: Peak virtual memory: 1029 megabytes
+    Info: Processing ended: Fri Nov 24 19:31:19 2017
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:25
 
 

@@ -10,7 +10,7 @@ PORT (
    --SW       : IN STD_LOGIC_VECTOR(17 DOWNTO 0);    --chaves liga/desliga.
 
    -- Saidas da placa (nomenclatura definida no arquivo ¨.qsf¨)
-   --LEDR            : OUT STD_LOGIC_VECTOR(17 DOWNTO 0) := (others => '0');
+   LEDR            : OUT STD_LOGIC_VECTOR(17 DOWNTO 0) := (others => '0');
    LEDG            : OUT STD_LOGIC_VECTOR(8 DOWNTO 0)  := (others => '0');
    HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, HEX6, HEX7: OUT STD_LOGIC_VECTOR(6 downto 0);
 	
@@ -38,7 +38,7 @@ begin
 	BTN_CLK : entity work.debounce
 				port map (CLK => CLOCK_50, BTN => (not KEY(1)), output => btn_clock);
 	
-	LEDG(2) <= btn_set_output(0);
+--	LEDG(2) <= btn_set_output(0);
 				
 	UC : entity work.UnidadedeControle
 				port map (OpCode=> OC, Controle =>PalavraDeControle);
@@ -47,15 +47,15 @@ begin
 			port map (CLK=> btn_clock(0), 
 						 enderecoDisplay => "00000000000000000000000000010000",
 						 RST_PC=> btn_set_output(0),
-						 mux_PC =>PalavraDeControle(0), 
-						 Mux_RtRd=>PalavraDeControle(1), 
-						 habEscritaReg=>PalavraDeControle(2), 
-						 mux_RtIm=>PalavraDeControle(3), 
-						 ULAOPer=>PalavraDeControle(9 downto 8), 
-						 mux_ULAMem=>PalavraDeControle(4), 
-						 BEQ=>PalavraDeControle(5), 
-						 habLeituraMEM=>PalavraDeControle(6), 
-						 habEscritaMEM=>PalavraDeControle(7),
+						 mux_PC =>PalavraDeControle(9), 
+						 Mux_RtRd=>PalavraDeControle(8), 
+						 habEscritaReg=>PalavraDeControle(7), 
+						 mux_RtIm=>PalavraDeControle(6), 
+						 ULAOPer=>PalavraDeControle(1 downto 0), 
+						 mux_ULAMem=>PalavraDeControle(5), 
+						 BEQ=>PalavraDeControle(4), 
+						 habLeituraMEM=>PalavraDeControle(3), 
+						 habEscritaMEM=>PalavraDeControle(2),
 						 OpCode=> OC,
 						 habEscritaDisplay=> enableDisplay,
 						 B => instrucaoTest,
@@ -92,4 +92,17 @@ begin
 		
 		display7 : entity work.conversorHex7seg
 			port map (saida7seg => HEX7, dadoHex => PCdisplay(7 DOWNTO 4));
+			
+		LEDG(7) <= enableDisplay;
+		LEDG(5 downto 0) <= OC;
+		LEDR(9) <= PalavraDeControle(9);
+		LEDR(8) <= PalavraDeControle(8);
+		LEDR(7) <= PalavraDeControle(7);
+		LEDR(6) <= PalavraDeControle(6);
+		LEDR(5) <= PalavraDeControle(5);
+		LEDR(4) <= PalavraDeControle(1);
+		LEDR(3) <= PalavraDeControle(0);
+		LEDR(2) <= PalavraDeControle(4);
+		LEDR(1) <= PalavraDeControle(3);
+		LEDR(0) <= PalavraDeControle(2);
 end bhv;

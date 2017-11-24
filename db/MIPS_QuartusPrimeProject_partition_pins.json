@@ -4,7 +4,67 @@
 			"name" : "Top",
 			"pins" : [
 				{
+					"name" : "LEDR[0]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[1]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[2]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[3]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[4]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[5]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[6]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[7]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[8]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[9]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDG[0]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDG[1]",
+					"strict" : false
+				},
+				{
 					"name" : "LEDG[2]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDG[3]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDG[5]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDG[7]",
 					"strict" : false
 				},
 				{
@@ -240,6 +300,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "enderecoReg1Test[4]",
+					"strict" : false
+				},
+				{
 					"name" : "enderecoReg2Test[0]",
 					"strict" : false
 				},
@@ -248,7 +312,35 @@
 					"strict" : false
 				},
 				{
+					"name" : "enderecoReg2Test[2]",
+					"strict" : false
+				},
+				{
 					"name" : "enderecoReg2Test[3]",
+					"strict" : false
+				},
+				{
+					"name" : "enderecoReg2Test[4]",
+					"strict" : false
+				},
+				{
+					"name" : "instrucaoTest[0]",
+					"strict" : false
+				},
+				{
+					"name" : "instrucaoTest[1]",
+					"strict" : false
+				},
+				{
+					"name" : "instrucaoTest[2]",
+					"strict" : false
+				},
+				{
+					"name" : "instrucaoTest[3]",
+					"strict" : false
+				},
+				{
+					"name" : "instrucaoTest[4]",
 					"strict" : false
 				},
 				{
@@ -256,7 +348,19 @@
 					"strict" : false
 				},
 				{
+					"name" : "instrucaoTest[6]",
+					"strict" : false
+				},
+				{
+					"name" : "instrucaoTest[11]",
+					"strict" : false
+				},
+				{
 					"name" : "instrucaoTest[12]",
+					"strict" : false
+				},
+				{
+					"name" : "instrucaoTest[13]",
 					"strict" : false
 				},
 				{
@@ -272,7 +376,15 @@
 					"strict" : false
 				},
 				{
+					"name" : "instrucaoTest[18]",
+					"strict" : false
+				},
+				{
 					"name" : "instrucaoTest[19]",
+					"strict" : false
+				},
+				{
+					"name" : "instrucaoTest[20]",
 					"strict" : false
 				},
 				{
@@ -288,11 +400,19 @@
 					"strict" : false
 				},
 				{
+					"name" : "instrucaoTest[25]",
+					"strict" : false
+				},
+				{
 					"name" : "instrucaoTest[26]",
 					"strict" : false
 				},
 				{
 					"name" : "instrucaoTest[27]",
+					"strict" : false
+				},
+				{
+					"name" : "instrucaoTest[28]",
 					"strict" : false
 				},
 				{
@@ -308,7 +428,127 @@
 					"strict" : false
 				},
 				{
+					"name" : "entraAULATest[1]",
+					"strict" : false
+				},
+				{
+					"name" : "entraAULATest[2]",
+					"strict" : false
+				},
+				{
+					"name" : "entraAULATest[3]",
+					"strict" : false
+				},
+				{
 					"name" : "entraAULATest[4]",
+					"strict" : false
+				},
+				{
+					"name" : "entraAULATest[5]",
+					"strict" : false
+				},
+				{
+					"name" : "entraAULATest[6]",
+					"strict" : false
+				},
+				{
+					"name" : "entraAULATest[7]",
+					"strict" : false
+				},
+				{
+					"name" : "entraAULATest[8]",
+					"strict" : false
+				},
+				{
+					"name" : "entraAULATest[9]",
+					"strict" : false
+				},
+				{
+					"name" : "entraAULATest[10]",
+					"strict" : false
+				},
+				{
+					"name" : "entraAULATest[11]",
+					"strict" : false
+				},
+				{
+					"name" : "entraAULATest[12]",
+					"strict" : false
+				},
+				{
+					"name" : "entraAULATest[13]",
+					"strict" : false
+				},
+				{
+					"name" : "entraAULATest[14]",
+					"strict" : false
+				},
+				{
+					"name" : "entraAULATest[15]",
+					"strict" : false
+				},
+				{
+					"name" : "entraAULATest[16]",
+					"strict" : false
+				},
+				{
+					"name" : "entraAULATest[17]",
+					"strict" : false
+				},
+				{
+					"name" : "entraAULATest[18]",
+					"strict" : false
+				},
+				{
+					"name" : "entraAULATest[19]",
+					"strict" : false
+				},
+				{
+					"name" : "entraAULATest[20]",
+					"strict" : false
+				},
+				{
+					"name" : "entraAULATest[21]",
+					"strict" : false
+				},
+				{
+					"name" : "entraAULATest[22]",
+					"strict" : false
+				},
+				{
+					"name" : "entraAULATest[23]",
+					"strict" : false
+				},
+				{
+					"name" : "entraAULATest[24]",
+					"strict" : false
+				},
+				{
+					"name" : "entraAULATest[25]",
+					"strict" : false
+				},
+				{
+					"name" : "entraAULATest[26]",
+					"strict" : false
+				},
+				{
+					"name" : "entraAULATest[27]",
+					"strict" : false
+				},
+				{
+					"name" : "entraAULATest[28]",
+					"strict" : false
+				},
+				{
+					"name" : "entraAULATest[29]",
+					"strict" : false
+				},
+				{
+					"name" : "entraAULATest[30]",
+					"strict" : false
+				},
+				{
+					"name" : "entraAULATest[31]",
 					"strict" : false
 				},
 				{

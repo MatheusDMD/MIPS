@@ -16,10 +16,10 @@ architecture behavioral of memory is
 type ArrayMemoria is array(0 to 31) of STD_LOGIC_VECTOR (31 downto 0);
 
 signal Memoria: ArrayMemoria := (
-    X"00000000",
-    X"00000000",
-    X"00000000",
-    X"00000000",
+    X"00000010",
+    X"00000001",
+    X"00000002",
+    X"00ABCDEF",
     X"00000000",
     X"00000000",
     X"00000000",

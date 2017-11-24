@@ -28,10 +28,10 @@ architecture behavioral of registerBank32 is
         "00000000000000000000000000000000",
         "00000000000000000000000000000000",
         "00000000000000000000000000000000",
-        "00000000000000000000000000000001", -- t0
-        "00000000000000000000000000000011", -- t1
-        "00000000000000000000000000000010", -- t2 
-        "00000000000000000000000000010000", -- t3
+        "00000000000000000000000000000000", -- t0
+        "00000000000000000000000000000000", -- t1
+        "00000000000000000000000000000000", -- t2 
+        "00000000000000000000000000000000", -- t3
         "00000000000000000000000000000000", -- t4
         "00000000000000000000000000000000", -- t5
         "00000000000000000000000000000000", -- t6
@@ -54,8 +54,6 @@ architecture behavioral of registerBank32 is
         "00000000000000000000000000000000"
     );
 begin
-	DadoLidoReg1 <= registers(to_integer(unsigned(EndReg1)));
-	DadoLidoReg2 <= registers(to_integer(unsigned(EndReg2)));
 	process (clk) is
 	begin
 	if (rising_edge(clk)) then
@@ -63,5 +61,18 @@ begin
 			registers(to_integer(unsigned(EndReg3))) <= DadoEscritoReg3;  -- Write
 		end if;
 	end if;
+	
+	if(not(EndReg1 = "00000")) then
+		DadoLidoReg1 <= registers(to_integer(unsigned(EndReg1)));
+	else
+			DadoLidoReg1 <= (others=>'0');
+	end if;
+	
+	if(not(EndReg2 = "00000")) then
+		DadoLidoReg2 <= registers(to_integer(unsigned(EndReg2)));
+	else
+		DadoLidoReg2 <= (others=>'0');
+	end if;
+
 end process;
 end behavioral;
