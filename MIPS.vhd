@@ -58,13 +58,13 @@ begin
 						 habEscritaMEM=>PalavraDeControle(7),
 						 OpCode=> OC,
 						 habEscritaDisplay=> enableDisplay,
-						 instrucaoTest => instrucaoTest,
-						 enderecoReg1Test=> enderecoReg1Test,
-						 enderecoReg2Test=> enderecoReg2Test,
-						 entraAULATest=> entraAULATest,
-						 entraBULATest=> entraBULATest,
-						 dadoASerEscrito=> dadoDisplay,
-						 PCdisplay => PCdisplay);
+--						 instrucaoTest => instrucaoTest,
+--						 enderecoReg1Test=> enderecoReg1Test,
+--						 enderecoReg2Test=> enderecoReg2Test,
+--						 entraAULATest=> entraAULATest,
+--						 entraBULATest=> entraBULATest,
+						 J=> dadoDisplay,
+						 A => PCdisplay);
 			
 		registradosDisplay : entity work.registrador
 			port map (DIN=> dadoDisplay, DOUT =>saidaDisplay, CLK=> btn_clock(0), ENABLE=> enableDisplay);

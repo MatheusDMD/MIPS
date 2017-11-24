@@ -19,7 +19,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "11/22/2017 14:16:36"
+-- Generated on "11/22/2017 16:28:15"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          FluxoDeDados
 -- 
@@ -37,6 +37,8 @@ ARCHITECTURE FluxoDeDados_arch OF FluxoDeDados_vhd_vec_tst IS
 SIGNAL BEQ : STD_LOGIC;
 SIGNAL CLK : STD_LOGIC;
 SIGNAL dadoASerEscrito : STD_LOGIC_VECTOR(31 DOWNTO 0);
+SIGNAL DadoLido1 : STD_LOGIC_VECTOR(31 DOWNTO 0);
+SIGNAL DadoLido2 : STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL enderecoDisplay : STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL enderecoReg1Test : STD_LOGIC_VECTOR(4 DOWNTO 0);
 SIGNAL enderecoReg2Test : STD_LOGIC_VECTOR(4 DOWNTO 0);
@@ -62,6 +64,8 @@ COMPONENT FluxoDeDados
 	BEQ : IN STD_LOGIC;
 	CLK : IN STD_LOGIC;
 	dadoASerEscrito : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+	DadoLido1 : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+	DadoLido2 : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
 	enderecoDisplay : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
 	enderecoReg1Test : OUT STD_LOGIC_VECTOR(4 DOWNTO 0);
 	enderecoReg2Test : OUT STD_LOGIC_VECTOR(4 DOWNTO 0);
@@ -91,6 +95,8 @@ BEGIN
 	BEQ => BEQ,
 	CLK => CLK,
 	dadoASerEscrito => dadoASerEscrito,
+	DadoLido1 => DadoLido1,
+	DadoLido2 => DadoLido2,
 	enderecoDisplay => enderecoDisplay,
 	enderecoReg1Test => enderecoReg1Test,
 	enderecoReg2Test => enderecoReg2Test,
@@ -117,8 +123,6 @@ BEGIN
 t_prcs_mux_PC: PROCESS
 BEGIN
 	mux_PC <= '0';
-	WAIT FOR 800000 ps;
-	mux_PC <= '1';
 WAIT;
 END PROCESS t_prcs_mux_PC;
 
@@ -146,8 +150,6 @@ BEGIN
 	mux_RtIm <= '0';
 	WAIT FOR 400000 ps;
 	mux_RtIm <= '1';
-	WAIT FOR 400000 ps;
-	mux_RtIm <= '0';
 WAIT;
 END PROCESS t_prcs_mux_RtIm;
 
@@ -178,8 +180,6 @@ BEGIN
 	habEscritaMEM <= '0';
 	WAIT FOR 400000 ps;
 	habEscritaMEM <= '1';
-	WAIT FOR 400000 ps;
-	habEscritaMEM <= '0';
 WAIT;
 END PROCESS t_prcs_habEscritaMEM;
 -- ULAOPer[1]
@@ -202,13 +202,13 @@ t_prcs_CLK: PROCESS
 BEGIN
 	CLK <= '1';
 	WAIT FOR 200000 ps;
-	FOR i IN 1 TO 2
-	LOOP
-		CLK <= '0';
-		WAIT FOR 200000 ps;
-		CLK <= '1';
-		WAIT FOR 200000 ps;
-	END LOOP;
+	CLK <= '0';
+	WAIT FOR 200000 ps;
+	CLK <= '1';
+	WAIT FOR 200000 ps;
+	CLK <= '0';
+	WAIT FOR 200000 ps;
+	CLK <= '1';
 WAIT;
 END PROCESS t_prcs_CLK;
 

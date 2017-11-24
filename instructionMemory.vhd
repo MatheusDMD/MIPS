@@ -29,5 +29,5 @@ ARCHITECTURE Behavioral OF InstructionMemory IS
 		x"00000000"
 	);
 BEGIN
-		Dado <= MemoriaDeInstrucao(conv_integer(Endereco(31 downto 2)));
+		Dado <= MemoriaDeInstrucao(conv_integer(Endereco(6 downto 2)));
 END Behavioral;
