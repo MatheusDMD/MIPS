@@ -14,11 +14,11 @@ PORT (
    LEDG            : OUT STD_LOGIC_VECTOR(8 DOWNTO 0)  := (others => '0');
    HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, HEX6, HEX7: OUT STD_LOGIC_VECTOR(6 downto 0);
 	
-	enderecoReg1Test: OUT STD_LOGIC_VECTOR (4 DOWNTO 0);
-	enderecoReg2Test: OUT STD_LOGIC_VECTOR (4 DOWNTO 0);
-	instrucaoTest   : OUT STD_LOGIC_VECTOR (31 DOWNTO 0);
-	entraAULATest   : OUT STD_LOGIC_VECTOR (31 DOWNTO 0);
-	entraBULATest   : OUT STD_LOGIC_VECTOR (31 DOWNTO 0)
+	enderecoReg1Test: OUT STD_LOGIC_VECTOR (4 DOWNTO 0):= (others => '0');
+	enderecoReg2Test: OUT STD_LOGIC_VECTOR (4 DOWNTO 0):= (others => '0');
+	instrucaoTest   : OUT STD_LOGIC_VECTOR (31 DOWNTO 0):= (others => '0');
+	entraAULATest   : OUT STD_LOGIC_VECTOR (31 DOWNTO 0):= (others => '0');
+	entraBULATest   : OUT STD_LOGIC_VECTOR (31 DOWNTO 0):= (others => '0')
 	);
 END MIPS;
 

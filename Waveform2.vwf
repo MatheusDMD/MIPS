@@ -24,6 +24,7 @@ quit -f
 
 
 
+
 </modelsim_script>
 <modelsim_script_timing>onerror {exit -code 1}
 vlib work
@@ -42,6 +43,7 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
 
 
 
@@ -6249,15 +6251,14 @@ TRANSITION_LIST("CLK")
 	{
 		REPEAT = 1;
 		LEVEL 0 FOR 20.0;
-		LEVEL 1 FOR 180.0;
-		LEVEL 0 FOR 200.0;
-		LEVEL 1 FOR 200.0;
+		LEVEL 1 FOR 100.0;
 		NODE
 		{
-			REPEAT = 1;
-			LEVEL 0 FOR 200.0;
-			LEVEL 1 FOR 200.0;
+			REPEAT = 4;
+			LEVEL 0 FOR 100.0;
+			LEVEL 1 FOR 100.0;
 		}
+		LEVEL 0 FOR 80.0;
 	}
 }
 
@@ -6698,9 +6699,9 @@ TRANSITION_LIST("habEscritaMEM")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 400.0;
-		LEVEL 1 FOR 400.0;
-		LEVEL 0 FOR 200.0;
+		LEVEL 0 FOR 420.0;
+		LEVEL 1 FOR 200.0;
+		LEVEL 0 FOR 380.0;
 	}
 }
 
@@ -6709,8 +6710,10 @@ TRANSITION_LIST("habEscritaReg")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 400.0;
-		LEVEL 0 FOR 600.0;
+		LEVEL 0 FOR 220.0;
+		LEVEL 1 FOR 200.0;
+		LEVEL 0 FOR 400.0;
+		LEVEL 1 FOR 180.0;
 	}
 }
 
@@ -7880,7 +7883,9 @@ TRANSITION_LIST("mux_PC")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 620.0;
+		LEVEL 1 FOR 200.0;
+		LEVEL 0 FOR 180.0;
 	}
 }
 
@@ -7889,9 +7894,9 @@ TRANSITION_LIST("mux_RtIm")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 400.0;
-		LEVEL 1 FOR 400.0;
-		LEVEL 0 FOR 200.0;
+		LEVEL 0 FOR 420.0;
+		LEVEL 1 FOR 200.0;
+		LEVEL 0 FOR 380.0;
 	}
 }
 
@@ -7900,8 +7905,10 @@ TRANSITION_LIST("Mux_RtRd")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 400.0;
-		LEVEL 0 FOR 600.0;
+		LEVEL 0 FOR 220.0;
+		LEVEL 1 FOR 200.0;
+		LEVEL 0 FOR 400.0;
+		LEVEL 1 FOR 180.0;
 	}
 }
 
@@ -7910,9 +7917,9 @@ TRANSITION_LIST("mux_ULAMem")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 400.0;
-		LEVEL 1 FOR 400.0;
-		LEVEL 0 FOR 200.0;
+		LEVEL 0 FOR 420.0;
+		LEVEL 1 FOR 200.0;
+		LEVEL 0 FOR 380.0;
 	}
 }
 
@@ -9434,8 +9441,10 @@ TRANSITION_LIST("ULAOPer[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 400.0;
-		LEVEL 0 FOR 600.0;
+		LEVEL 0 FOR 220.0;
+		LEVEL 1 FOR 200.0;
+		LEVEL 0 FOR 400.0;
+		LEVEL 1 FOR 180.0;
 	}
 }
 

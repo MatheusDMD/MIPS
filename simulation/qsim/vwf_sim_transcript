@@ -7,18 +7,19 @@ Note: if both ModelSim-Altera and ModelSim executables are available, ModelSim-A
 
 **** Generating the ModelSim Testbench ****
 
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off MIPS_QuartusPrimeProject -c MIPS_QuartusPrimeProject --vector_source="/home/parallels/Documents/MIPS/Waveform.vwf" --testbench_file="/home/parallels/Documents/MIPS/simulation/qsim/Waveform.vwf.vht"
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off MIPS_QuartusPrimeProject -c MIPS_QuartusPrimeProject --vector_source="/home/parallels/Documents/MIPS/Waveform2.vwf" --testbench_file="/home/parallels/Documents/MIPS/simulation/qsim/Waveform2.vwf.vht"
 
-Info: *******************************************************************Info: Running Quartus Prime EDA Netlist Writer    Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition    Info: Copyright (C) 2017  Intel Corporation. All rights reserved.    Info: Your use of Intel Corporation's design tools, logic functions     Info: and other software and tools, and its AMPP partner logic     Info: functions, and any output files from any of the foregoing     Info: (including device programming or simulation files), and any     Info: associated documentation or information are expressly subject     Info: to the terms and conditions of the Intel Program License     Info: Subscription Agreement, the Intel Quartus Prime License Agreement,    Info: the Intel MegaCore Function License Agreement, or other     Info: applicable license agreement, including, without limitation,     Info: that your use is for the sole purpose of programming logic     Info: devices manufactured by Intel and sold by Intel or its     Info: authorized distributors.  Please refer to the applicable     Info: agreement for further details.    Info: Processing started: Fri Nov 24 16:13:53 2017Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off MIPS_QuartusPrimeProject -c MIPS_QuartusPrimeProject --vector_source=/home/parallels/Documents/MIPS/Waveform.vwf --testbench_file=/home/parallels/Documents/MIPS/simulation/qsim/Waveform.vwf.vhtWarning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-or source file when writing test bench files
-5): Ignoring output pin "LEDG[7]" in vector source file when writing test bench files
+Info: *******************************************************************Info: Running Quartus Prime EDA Netlist Writer    Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition    Info: Copyright (C) 2017  Intel Corporation. All rights reserved.    Info: Your use of Intel Corporation's design tools, logic functions     Info: and other software and tools, and its AMPP partner logic     Info: functions, and any output files from any of the foregoing     Info: (including device programming or simulation files), and any     Info: associated documentation or information are expressly subject     Info: to the terms and conditions of the Intel Program License     Info: Subscription Agreement, the Intel Quartus Prime License Agreement,    Info: the Intel MegaCore Function License Agreement, or other     Info: applicable license agreement, including, without limitation,     Info: that your use is for the sole purpose of programming logic     Info: devices manufactured by Intel and sold by Intel or its     Info: authorized distributors.  Please refer to the applicable     Info: agreement for further details.    Info: Processing started: Fri Nov 24 16:51:24 2017Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off MIPS_QuartusPrimeProject -c MIPS_QuartusPrimeProject --vector_source=/home/parallels/Documents/MIPS/Waveform2.vwf --testbench_file=/home/parallels/Documents/MIPS/simulation/qsim/Waveform2.vwf.vhtWarning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+[8]" in vector source file when writing test bench files
+tor source file when writing test bench files
+oring output pin "OpCode[1]" in vector source file when writing test bench files
 Completed successfully. 
 
-**** Generating the functional simulation netlist ****
+**** Generating the timing simulation netlist ****
 
-quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="/home/parallels/Documents/MIPS/simulation/qsim/" MIPS_QuartusPrimeProject -c MIPS_QuartusPrimeProject
+quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=vhdl --output_directory="/home/parallels/Documents/MIPS/simulation/qsim/" MIPS_QuartusPrimeProject -c MIPS_QuartusPrimeProject
 
-Info: *******************************************************************Info: Running Quartus Prime EDA Netlist Writer    Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition    Info: Copyright (C) 2017  Intel Corporation. All rights reserved.    Info: Your use of Intel Corporation's design tools, logic functions     Info: and other software and tools, and its AMPP partner logic     Info: functions, and any output files from any of the foregoing     Info: (including device programming or simulation files), and any     Info: associated documentation or information are expressly subject     Info: to the terms and conditions of the Intel Program License     Info: Subscription Agreement, the Intel Quartus Prime License Agreement,    Info: the Intel MegaCore Function License Agreement, or other     Info: applicable license agreement, including, without limitation,     Info: that your use is for the sole purpose of programming logic     Info: devices manufactured by Intel and sold by Intel or its     Info: authorized distributors.  Please refer to the applicable     Info: agreement for further details.    Info: Processing started: Fri Nov 24 16:13:54 2017Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=/home/parallels/Documents/MIPS/simulation/qsim/ MIPS_QuartusPrimeProject -c MIPS_QuartusPrimeProjectWarning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.Info (204019): Generated file MIPS_QuartusPrimeProject.vho in folder "/home/parallels/Documents/MIPS/simulation/qsim//" for EDA simulation toolInfo: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning    Info: Peak virtual memory: 1053 megabytes    Info: Processing ended: Fri Nov 24 16:13:55 2017    Info: Elapsed time: 00:00:01    Info: Total CPU time (on all processors): 00:00:01
+Info: *******************************************************************Info: Running Quartus Prime EDA Netlist Writer    Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition    Info: Copyright (C) 2017  Intel Corporation. All rights reserved.    Info: Your use of Intel Corporation's design tools, logic functions     Info: and other software and tools, and its AMPP partner logic     Info: functions, and any output files from any of the foregoing     Info: (including device programming or simulation files), and any     Info: associated documentation or information are expressly subject     Info: to the terms and conditions of the Intel Program License     Info: Subscription Agreement, the Intel Quartus Prime License Agreement,    Info: the Intel MegaCore Function License Agreement, or other     Info: applicable license agreement, including, without limitation,     Info: that your use is for the sole purpose of programming logic     Info: devices manufactured by Intel and sold by Intel or its     Info: authorized distributors.  Please refer to the applicable     Info: agreement for further details.    Info: Processing started: Fri Nov 24 16:51:26 2017Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=vhdl --output_directory=/home/parallels/Documents/MIPS/simulation/qsim/ MIPS_QuartusPrimeProject -c MIPS_QuartusPrimeProjectWarning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.Info (204019): Generated file MIPS_QuartusPrimeProject_7_1200mv_85c_slow.vho in folder "/home/parallels/Documents/MIPS/simulation/qsim//" for EDA simulation toolInfo (204019): Generated file MIPS_QuartusPrimeProject_7_1200mv_0c_slow.vho in folder "/home/parallels/Documents/MIPS/simulation/qsim//" for EDA simulation toolInfo (204019): Generated file MIPS_QuartusPrimeProject_min_1200mv_0c_fast.vho in folder "/home/parallels/Documents/MIPS/simulation/qsim//" for EDA simulation toolInfo (204019): Generated file MIPS_QuartusPrimeProject.vho in folder "/home/parallels/Documents/MIPS/simulation/qsim//" for EDA simulation toolInfo (204019): Generated file MIPS_QuartusPrimeProject_7_1200mv_85c_vhd_slow.sdo in folder "/home/parallels/Documents/MIPS/simulation/qsim//" for EDA simulation toolInfo (204019): Generated file MIPS_QuartusPrimeProject_7_1200mv_0c_vhd_slow.sdo in folder "/home/parallels/Documents/MIPS/simulation/qsim//" for EDA simulation toolInfo (204019): Generated file MIPS_QuartusPrimeProject_min_1200mv_0c_vhd_fast.sdo in folder "/home/parallels/Documents/MIPS/simulation/qsim//" for EDA simulation toolInfo (204019): Generated file MIPS_QuartusPrimeProject_vhd.sdo in folder "/home/parallels/Documents/MIPS/simulation/qsim//" for EDA simulation toolInfo: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning    Info: Peak virtual memory: 1086 megabytes    Info: Processing ended: Fri Nov 24 16:51:29 2017    Info: Elapsed time: 00:00:03    Info: Total CPU time (on all processors): 00:00:03
 Completed successfully. 
 
 **** Generating the ModelSim .do script ****
@@ -36,391 +37,32 @@ Reading pref.tcl
 # do MIPS_QuartusPrimeProject.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:13:55 on Nov 24,2017
-# vcom -work work MIPS_QuartusPrimeProject.vho 
+# Start time: 16:51:30 on Nov 24,2017# vcom -work work MIPS_QuartusPrimeProject.vho 
 # -- Loading package STANDARD
-# -- Loading package TEXTIO# -- Loading package std_logic_1164# -- Loading package VITAL_Timing
-# -- Loading package VITAL_Primitives
-# -- Loading package cycloneive_atom_pack# -- Loading package cycloneive_components
-# -- Compiling entity hard_block
+# -- Loading package TEXTIO# -- Loading package std_logic_1164# -- Loading package VITAL_Timing# -- Loading package VITAL_Primitives# -- Loading package cycloneive_atom_pack# -- Loading package cycloneive_components# -- Compiling entity hard_block
 # -- Compiling architecture structure of hard_block
-# -- Loading package dffeas_pack
-# -- Loading package altera_primitives_components
-# -- Compiling entity MIPS# -- Compiling architecture structure of MIPS
-# End time: 16:13:55 on Nov 24,2017, Elapsed time: 0:00:00# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:13:55 on Nov 24,2017# vcom -work work Waveform.vwf.vht 
+# -- Loading package dffeas_pack# -- Loading package altera_primitives_components# -- Compiling entity FluxoDeDados# -- Compiling architecture structure of FluxoDeDados
+# End time: 16:51:31 on Nov 24,2017, Elapsed time: 0:00:01# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016# Start time: 16:51:31 on Nov 24,2017# vcom -work work Waveform2.vwf.vht 
 # -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164# -- Compiling entity MIPS_vhd_vec_tst
-# -- Compiling architecture MIPS_arch of MIPS_vhd_vec_tst
-# End time: 16:13:55 on Nov 24,2017, Elapsed time: 0:00:00# Errors: 0, Warnings: 0
-# vsim -novopt -c -t 1ps -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.FluxoDeDados_vhd_vec_tst # Start time: 16:13:55 on Nov 24,2017# Loading std.standard# Loading std.textio(body)# Loading ieee.std_logic_1164(body)# Loading work.fluxodedados_vhd_vec_tst(fluxodedados_arch)# Loading ieee.vital_timing(body)# Loading ieee.vital_primitives(body)# Loading altera.dffeas_pack# Loading altera.altera_primitives_components# Loading cycloneive.cycloneive_atom_pack(body)# Loading cycloneive.cycloneive_components# Loading work.fluxodedados(structure)# Loading work.hard_block(structure)# Loading ieee.std_logic_arith(body)# Loading cycloneive.cycloneive_io_obuf(arch)# Loading cycloneive.cycloneive_io_ibuf(arch)# Loading cycloneive.cycloneive_clkctrl(vital_clkctrl)# Loading cycloneive.cycloneive_ena_reg(behave)# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)# Loading altera.dffeas(vital_dffeas)# ** Warning: Design size of 401445 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.# Expect performance to be adversely affected.
+# -- Loading package TEXTIO# -- Loading package std_logic_1164
+# -- Compiling entity FluxoDeDados_vhd_vec_tst# -- Compiling architecture FluxoDeDados_arch of FluxoDeDados_vhd_vec_tst
+# End time: 16:51:31 on Nov 24,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -novopt -c -t 1ps -sdfmax FluxoDeDados_vhd_vec_tst/i1=MIPS_QuartusPrimeProject_vhd.sdo -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.FluxoDeDados_vhd_vec_tst # Start time: 16:51:31 on Nov 24,2017# Loading std.standard# Loading std.textio(body)# Loading ieee.std_logic_1164(body)# Loading work.fluxodedados_vhd_vec_tst(fluxodedados_arch)# SDF 10.5b Compiler 2016.10 Oct  5 2016# Loading ieee.vital_timing(body)# Loading ieee.vital_primitives(body)# Loading altera.dffeas_pack# Loading altera.altera_primitives_components# Loading cycloneive.cycloneive_atom_pack(body)# Loading cycloneive.cycloneive_components# Loading work.fluxodedados(structure)# Loading work.hard_block(structure)# Loading ieee.std_logic_arith(body)# Loading cycloneive.cycloneive_io_obuf(arch)# Loading cycloneive.cycloneive_io_ibuf(arch)# Loading cycloneive.cycloneive_clkctrl(vital_clkctrl)# Loading cycloneive.cycloneive_ena_reg(behave)# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)# Loading altera.dffeas(vital_dffeas)# Loading instances from MIPS_QuartusPrimeProject_vhd.sdo# Loading timing data from MIPS_QuartusPrimeProject_vhd.sdo# ** Warning: Design size of 423159 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.# Expect performance to be adversely affected.# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.#    Time: 0 ps  Iteration: 0  Instance: /fluxodedados_vhd_vec_tst File: Waveform2.vwf.vht
 # after#35
-# End time: 16:13:57 on Nov 24,2017, Elapsed time: 0:00:02# Errors: 0, Warnings: 1
+# End time: 16:51:34 on Nov 24,2017, Elapsed time: 0:00:03# Errors: 0, Warnings: 1
 Completed successfully. 
 
 **** Converting ModelSim VCD to vector waveform ****
 
-Reading /home/parallels/Documents/MIPS/Waveform.vwf...
+Reading /home/parallels/Documents/MIPS/Waveform2.vwf...
 
 Reading /home/parallels/Documents/MIPS/simulation/qsim/MIPS_QuartusPrimeProject.msim.vcd...
 
 Processing channel transitions... 
 
-Warning: CLOCK_50 - signal not found in VCD.
-
-Warning: enderecoReg1Test[4] - signal not found in VCD.
-
-Warning: enderecoReg1Test[3] - signal not found in VCD.
-
-Warning: enderecoReg1Test[2] - signal not found in VCD.
-
-Warning: enderecoReg1Test[1] - signal not found in VCD.
-
-Warning: enderecoReg1Test[0] - signal not found in VCD.
-
-Warning: enderecoReg2Test[4] - signal not found in VCD.
-
-Warning: enderecoReg2Test[3] - signal not found in VCD.
-
-Warning: enderecoReg2Test[2] - signal not found in VCD.
-
-Warning: enderecoReg2Test[1] - signal not found in VCD.
-
-Warning: enderecoReg2Test[0] - signal not found in VCD.
-
-Warning: entraAULATest[31] - signal not found in VCD.
-
-Warning: entraAULATest[30] - signal not found in VCD.
-
-Warning: entraAULATest[29] - signal not found in VCD.
-
-Warning: entraAULATest[28] - signal not found in VCD.
-
-Warning: entraAULATest[27] - signal not found in VCD.
-
-Warning: entraAULATest[26] - signal not found in VCD.
-
-Warning: entraAULATest[25] - signal not found in VCD.
-
-Warning: entraAULATest[24] - signal not found in VCD.
-
-Warning: entraAULATest[23] - signal not found in VCD.
-
-Warning: entraAULATest[22] - signal not found in VCD.
-
-Warning: entraAULATest[21] - signal not found in VCD.
-
-Warning: entraAULATest[20] - signal not found in VCD.
-
-Warning: entraAULATest[19] - signal not found in VCD.
-
-Warning: entraAULATest[18] - signal not found in VCD.
-
-Warning: entraAULATest[17] - signal not found in VCD.
-
-Warning: entraAULATest[16] - signal not found in VCD.
-
-Warning: entraAULATest[15] - signal not found in VCD.
-
-Warning: entraAULATest[14] - signal not found in VCD.
-
-Warning: entraAULATest[13] - signal not found in VCD.
-
-Warning: entraAULATest[12] - signal not found in VCD.
-
-Warning: entraAULATest[11] - signal not found in VCD.
-
-Warning: entraAULATest[10] - signal not found in VCD.
-
-Warning: entraAULATest[9] - signal not found in VCD.
-
-Warning: entraAULATest[8] - signal not found in VCD.
-
-Warning: entraAULATest[7] - signal not found in VCD.
-
-Warning: entraAULATest[6] - signal not found in VCD.
-
-Warning: entraAULATest[5] - signal not found in VCD.
-
-Warning: entraAULATest[4] - signal not found in VCD.
-
-Warning: entraAULATest[3] - signal not found in VCD.
-
-Warning: entraAULATest[2] - signal not found in VCD.
-
-Warning: entraAULATest[1] - signal not found in VCD.
-
-Warning: entraAULATest[0] - signal not found in VCD.
-
-Warning: entraBULATest[31] - signal not found in VCD.
-
-Warning: entraBULATest[30] - signal not found in VCD.
-
-Warning: entraBULATest[29] - signal not found in VCD.
-
-Warning: entraBULATest[28] - signal not found in VCD.
-
-Warning: entraBULATest[27] - signal not found in VCD.
-
-Warning: entraBULATest[26] - signal not found in VCD.
-
-Warning: entraBULATest[25] - signal not found in VCD.
-
-Warning: entraBULATest[24] - signal not found in VCD.
-
-Warning: entraBULATest[23] - signal not found in VCD.
-
-Warning: entraBULATest[22] - signal not found in VCD.
-
-Warning: entraBULATest[21] - signal not found in VCD.
-
-Warning: entraBULATest[20] - signal not found in VCD.
-
-Warning: entraBULATest[19] - signal not found in VCD.
-
-Warning: entraBULATest[18] - signal not found in VCD.
-
-Warning: entraBULATest[17] - signal not found in VCD.
-
-Warning: entraBULATest[16] - signal not found in VCD.
-
-Warning: entraBULATest[15] - signal not found in VCD.
-
-Warning: entraBULATest[14] - signal not found in VCD.
-
-Warning: entraBULATest[13] - signal not found in VCD.
-
-Warning: entraBULATest[12] - signal not found in VCD.
-
-Warning: entraBULATest[11] - signal not found in VCD.
-
-Warning: entraBULATest[10] - signal not found in VCD.
-
-Warning: entraBULATest[9] - signal not found in VCD.
-
-Warning: entraBULATest[8] - signal not found in VCD.
-
-Warning: entraBULATest[7] - signal not found in VCD.
-
-Warning: entraBULATest[6] - signal not found in VCD.
-
-Warning: entraBULATest[5] - signal not found in VCD.
-
-Warning: entraBULATest[4] - signal not found in VCD.
-
-Warning: entraBULATest[3] - signal not found in VCD.
-
-Warning: entraBULATest[2] - signal not found in VCD.
-
-Warning: entraBULATest[1] - signal not found in VCD.
-
-Warning: entraBULATest[0] - signal not found in VCD.
-
-Warning: HEX0[6] - signal not found in VCD.
-
-Warning: HEX0[5] - signal not found in VCD.
-
-Warning: HEX0[4] - signal not found in VCD.
-
-Warning: HEX0[3] - signal not found in VCD.
-
-Warning: HEX0[2] - signal not found in VCD.
-
-Warning: HEX0[1] - signal not found in VCD.
-
-Warning: HEX0[0] - signal not found in VCD.
-
-Warning: HEX1[6] - signal not found in VCD.
-
-Warning: HEX1[5] - signal not found in VCD.
-
-Warning: HEX1[4] - signal not found in VCD.
-
-Warning: HEX1[3] - signal not found in VCD.
-
-Warning: HEX1[2] - signal not found in VCD.
-
-Warning: HEX1[1] - signal not found in VCD.
-
-Warning: HEX1[0] - signal not found in VCD.
-
-Warning: HEX2[6] - signal not found in VCD.
-
-Warning: HEX2[5] - signal not found in VCD.
-
-Warning: HEX2[4] - signal not found in VCD.
-
-Warning: HEX2[3] - signal not found in VCD.
-
-Warning: HEX2[2] - signal not found in VCD.
-
-Warning: HEX2[1] - signal not found in VCD.
-
-Warning: HEX2[0] - signal not found in VCD.
-
-Warning: HEX3[6] - signal not found in VCD.
-
-Warning: HEX3[5] - signal not found in VCD.
-
-Warning: HEX3[4] - signal not found in VCD.
-
-Warning: HEX3[3] - signal not found in VCD.
-
-Warning: HEX3[2] - signal not found in VCD.
-
-Warning: HEX3[1] - signal not found in VCD.
-
-Warning: HEX3[0] - signal not found in VCD.
-
-Warning: HEX4[6] - signal not found in VCD.
-
-Warning: HEX4[5] - signal not found in VCD.
-
-Warning: HEX4[4] - signal not found in VCD.
-
-Warning: HEX4[3] - signal not found in VCD.
-
-Warning: HEX4[2] - signal not found in VCD.
-
-Warning: HEX4[1] - signal not found in VCD.
-
-Warning: HEX4[0] - signal not found in VCD.
-
-Warning: HEX5[6] - signal not found in VCD.
-
-Warning: HEX5[5] - signal not found in VCD.
-
-Warning: HEX5[4] - signal not found in VCD.
-
-Warning: HEX5[3] - signal not found in VCD.
-
-Warning: HEX5[2] - signal not found in VCD.
-
-Warning: HEX5[1] - signal not found in VCD.
-
-Warning: HEX5[0] - signal not found in VCD.
-
-Warning: HEX6[6] - signal not found in VCD.
-
-Warning: HEX6[5] - signal not found in VCD.
-
-Warning: HEX6[4] - signal not found in VCD.
-
-Warning: HEX6[3] - signal not found in VCD.
-
-Warning: HEX6[2] - signal not found in VCD.
-
-Warning: HEX6[1] - signal not found in VCD.
-
-Warning: HEX6[0] - signal not found in VCD.
-
-Warning: HEX7[6] - signal not found in VCD.
-
-Warning: HEX7[5] - signal not found in VCD.
-
-Warning: HEX7[4] - signal not found in VCD.
-
-Warning: HEX7[3] - signal not found in VCD.
-
-Warning: HEX7[2] - signal not found in VCD.
-
-Warning: HEX7[1] - signal not found in VCD.
-
-Warning: HEX7[0] - signal not found in VCD.
-
-Warning: instrucaoTest[31] - signal not found in VCD.
-
-Warning: instrucaoTest[30] - signal not found in VCD.
-
-Warning: instrucaoTest[29] - signal not found in VCD.
-
-Warning: instrucaoTest[28] - signal not found in VCD.
-
-Warning: instrucaoTest[27] - signal not found in VCD.
-
-Warning: instrucaoTest[26] - signal not found in VCD.
-
-Warning: instrucaoTest[25] - signal not found in VCD.
-
-Warning: instrucaoTest[24] - signal not found in VCD.
-
-Warning: instrucaoTest[23] - signal not found in VCD.
-
-Warning: instrucaoTest[22] - signal not found in VCD.
-
-Warning: instrucaoTest[21] - signal not found in VCD.
-
-Warning: instrucaoTest[20] - signal not found in VCD.
-
-Warning: instrucaoTest[19] - signal not found in VCD.
-
-Warning: instrucaoTest[18] - signal not found in VCD.
-
-Warning: instrucaoTest[17] - signal not found in VCD.
-
-Warning: instrucaoTest[16] - signal not found in VCD.
-
-Warning: instrucaoTest[15] - signal not found in VCD.
-
-Warning: instrucaoTest[14] - signal not found in VCD.
-
-Warning: instrucaoTest[13] - signal not found in VCD.
-
-Warning: instrucaoTest[12] - signal not found in VCD.
-
-Warning: instrucaoTest[11] - signal not found in VCD.
-
-Warning: instrucaoTest[10] - signal not found in VCD.
-
-Warning: instrucaoTest[9] - signal not found in VCD.
-
-Warning: instrucaoTest[8] - signal not found in VCD.
-
-Warning: instrucaoTest[7] - signal not found in VCD.
-
-Warning: instrucaoTest[6] - signal not found in VCD.
-
-Warning: instrucaoTest[5] - signal not found in VCD.
-
-Warning: instrucaoTest[4] - signal not found in VCD.
-
-Warning: instrucaoTest[3] - signal not found in VCD.
-
-Warning: instrucaoTest[2] - signal not found in VCD.
-
-Warning: instrucaoTest[1] - signal not found in VCD.
-
-Warning: instrucaoTest[0] - signal not found in VCD.
-
-Warning: KEY[3] - signal not found in VCD.
-
-Warning: KEY[2] - signal not found in VCD.
-
-Warning: KEY[1] - signal not found in VCD.
-
-Warning: KEY[0] - signal not found in VCD.
-
-Warning: LEDG[8] - signal not found in VCD.
-
-Warning: LEDG[7] - signal not found in VCD.
-
-Warning: LEDG[6] - signal not found in VCD.
-
-Warning: LEDG[5] - signal not found in VCD.
-
-Warning: LEDG[4] - signal not found in VCD.
-
-Warning: LEDG[3] - signal not found in VCD.
-
-Warning: LEDG[2] - signal not found in VCD.
-
-Warning: LEDG[1] - signal not found in VCD.
-
-Warning: LEDG[0] - signal not found in VCD.
-
-Writing the resulting VWF to /home/parallels/Documents/MIPS/simulation/qsim/MIPS_QuartusPrimeProject_20171124161357.sim.vwf
+Writing the resulting VWF to /home/parallels/Documents/MIPS/simulation/qsim/MIPS_QuartusPrimeProject_20171124165134.sim.vwf
 
 Finished VCD to VWF conversion.
 
