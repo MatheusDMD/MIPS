@@ -1,7 +1,7 @@
 # do MIPS_QuartusPrimeProject.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:59:48 on Nov 24,2017
+# Start time: 16:13:55 on Nov 24,2017
 # vcom -work work MIPS_QuartusPrimeProject.vho 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -14,22 +14,22 @@
 # -- Compiling architecture structure of hard_block
 # -- Loading package dffeas_pack
 # -- Loading package altera_primitives_components
-# -- Compiling entity FluxoDeDados
-# -- Compiling architecture structure of FluxoDeDados
-# End time: 15:59:49 on Nov 24,2017, Elapsed time: 0:00:01
+# -- Compiling entity MIPS
+# -- Compiling architecture structure of MIPS
+# End time: 16:13:55 on Nov 24,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:59:49 on Nov 24,2017
-# vcom -work work Waveform2.vwf.vht 
+# Start time: 16:13:55 on Nov 24,2017
+# vcom -work work Waveform.vwf.vht 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity FluxoDeDados_vhd_vec_tst
-# -- Compiling architecture FluxoDeDados_arch of FluxoDeDados_vhd_vec_tst
-# End time: 15:59:49 on Nov 24,2017, Elapsed time: 0:00:00
+# -- Compiling entity MIPS_vhd_vec_tst
+# -- Compiling architecture MIPS_arch of MIPS_vhd_vec_tst
+# End time: 16:13:55 on Nov 24,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -novopt -c -t 1ps -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.FluxoDeDados_vhd_vec_tst 
-# Start time: 15:59:49 on Nov 24,2017
+# Start time: 16:13:55 on Nov 24,2017
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -52,5 +52,5 @@
 # ** Warning: Design size of 401445 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
 # Expect performance to be adversely affected.
 # after#35
-# End time: 15:59:51 on Nov 24,2017, Elapsed time: 0:00:02
+# End time: 16:13:57 on Nov 24,2017, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 1
