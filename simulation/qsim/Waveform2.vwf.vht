@@ -19,7 +19,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "11/24/2017 15:59:45"
+-- Generated on "11/24/2017 20:26:00"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          FluxoDeDados
 -- 
@@ -147,14 +147,16 @@ BEGIN
 t_prcs_mux_PC: PROCESS
 BEGIN
 	mux_PC <= '0';
+	WAIT FOR 600000 ps;
+	mux_PC <= '1';
+	WAIT FOR 310000 ps;
+	mux_PC <= '0';
 WAIT;
 END PROCESS t_prcs_mux_PC;
 
 -- Mux_RtRd
 t_prcs_Mux_RtRd: PROCESS
 BEGIN
-	Mux_RtRd <= '1';
-	WAIT FOR 400000 ps;
 	Mux_RtRd <= '0';
 WAIT;
 END PROCESS t_prcs_Mux_RtRd;
@@ -162,8 +164,6 @@ END PROCESS t_prcs_Mux_RtRd;
 -- habEscritaReg
 t_prcs_habEscritaReg: PROCESS
 BEGIN
-	habEscritaReg <= '1';
-	WAIT FOR 400000 ps;
 	habEscritaReg <= '0';
 WAIT;
 END PROCESS t_prcs_habEscritaReg;
@@ -172,20 +172,12 @@ END PROCESS t_prcs_habEscritaReg;
 t_prcs_mux_RtIm: PROCESS
 BEGIN
 	mux_RtIm <= '0';
-	WAIT FOR 400000 ps;
-	mux_RtIm <= '1';
-	WAIT FOR 400000 ps;
-	mux_RtIm <= '0';
 WAIT;
 END PROCESS t_prcs_mux_RtIm;
 
 -- mux_ULAMem
 t_prcs_mux_ULAMem: PROCESS
 BEGIN
-	mux_ULAMem <= '0';
-	WAIT FOR 400000 ps;
-	mux_ULAMem <= '1';
-	WAIT FOR 400000 ps;
 	mux_ULAMem <= '0';
 WAIT;
 END PROCESS t_prcs_mux_ULAMem;
@@ -208,17 +200,11 @@ END PROCESS t_prcs_habLeituraMEM;
 t_prcs_habEscritaMEM: PROCESS
 BEGIN
 	habEscritaMEM <= '0';
-	WAIT FOR 400000 ps;
-	habEscritaMEM <= '1';
-	WAIT FOR 400000 ps;
-	habEscritaMEM <= '0';
 WAIT;
 END PROCESS t_prcs_habEscritaMEM;
 -- ULAOPer[1]
 t_prcs_ULAOPer_1: PROCESS
 BEGIN
-	ULAOPer(1) <= '1';
-	WAIT FOR 400000 ps;
 	ULAOPer(1) <= '0';
 WAIT;
 END PROCESS t_prcs_ULAOPer_1;
@@ -232,16 +218,17 @@ END PROCESS t_prcs_ULAOPer_0;
 -- CLK
 t_prcs_CLK: PROCESS
 BEGIN
-	CLK <= '0';
-	WAIT FOR 20000 ps;
 	CLK <= '1';
-	WAIT FOR 180000 ps;
+	WAIT FOR 150000 ps;
+	FOR i IN 1 TO 2
+	LOOP
+		CLK <= '0';
+		WAIT FOR 150000 ps;
+		CLK <= '1';
+		WAIT FOR 150000 ps;
+	END LOOP;
 	CLK <= '0';
-	WAIT FOR 200000 ps;
-	CLK <= '1';
-	WAIT FOR 200000 ps;
-	CLK <= '0';
-	WAIT FOR 200000 ps;
+	WAIT FOR 150000 ps;
 	CLK <= '1';
 WAIT;
 END PROCESS t_prcs_CLK;
@@ -249,8 +236,6 @@ END PROCESS t_prcs_CLK;
 -- RST_PC
 t_prcs_RST_PC: PROCESS
 BEGIN
-	RST_PC <= '1';
-	WAIT FOR 20000 ps;
 	RST_PC <= '0';
 WAIT;
 END PROCESS t_prcs_RST_PC;

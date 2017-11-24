@@ -31,7 +31,7 @@ ARCHITECTURE Behavioral OF InstructionMemory IS
 		x"08000044", --j 0x0044
 		x"8C0F000C", --lw t7, 0x000C(zero)
 		x"AE0F0000", --sw t7, 0x0000(s0)
-		x"08000010", --j 0x0050
+		x"08000014", --j 0x0014
 		x"00000000",
 		x"00000000",
 		x"00000000",

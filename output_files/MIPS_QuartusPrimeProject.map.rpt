@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MIPS_QuartusPrimeProject
-Fri Nov 24 19:31:19 2017
+Fri Nov 24 20:45:56 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -79,7 +79,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Nov 24 19:31:19 2017       ;
+; Analysis & Synthesis Status        ; Successful - Fri Nov 24 20:45:56 2017       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; MIPS_QuartusPrimeProject                    ;
 ; Top-level Entity Name              ; MIPS                                        ;
@@ -664,16 +664,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; enderecodisplay[31..5] ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; enderecodisplay[3..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; enderecodisplay[4]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; resultadoula           ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; dadolido1              ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; dadolido2              ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; enderecoreg1test       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; enderecoreg2test       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; enderecoreg3test       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; instrucaotest          ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; entraaulatest          ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; entrabulatest          ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; dadoaserescrito        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; a[31..8]               ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; m                      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; n                      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
@@ -749,7 +739,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Fri Nov 24 19:31:05 2017
+    Info: Processing started: Fri Nov 24 20:45:42 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MIPS_QuartusPrimeProject -c MIPS_QuartusPrimeProject
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 7 of the 7 processors detected
@@ -832,16 +822,6 @@ Info (12127): Elaborating entity "MIPS" for the top level hierarchy
 Info (12128): Elaborating entity "debounce" for hierarchy "debounce:BTN_RST" File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 35
 Info (12128): Elaborating entity "UnidadeDeControle" for hierarchy "UnidadeDeControle:UC" File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 43
 Info (12128): Elaborating entity "FluxoDeDados" for hierarchy "FluxoDeDados:FD" File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 46
-Warning (10541): VHDL Signal Declaration warning at FluxoDeDados.vhd(19): used implicit default value for signal "ResultadoUla" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 19
-Warning (10541): VHDL Signal Declaration warning at FluxoDeDados.vhd(21): used implicit default value for signal "DadoLido1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 21
-Warning (10541): VHDL Signal Declaration warning at FluxoDeDados.vhd(22): used implicit default value for signal "DadoLido2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 22
-Warning (10541): VHDL Signal Declaration warning at FluxoDeDados.vhd(23): used implicit default value for signal "enderecoReg1Test" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 23
-Warning (10541): VHDL Signal Declaration warning at FluxoDeDados.vhd(24): used implicit default value for signal "enderecoReg2Test" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 24
-Warning (10541): VHDL Signal Declaration warning at FluxoDeDados.vhd(25): used implicit default value for signal "enderecoReg3Test" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 25
-Warning (10541): VHDL Signal Declaration warning at FluxoDeDados.vhd(26): used implicit default value for signal "instrucaoTest" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 26
-Warning (10541): VHDL Signal Declaration warning at FluxoDeDados.vhd(27): used implicit default value for signal "entraAULATest" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 27
-Warning (10541): VHDL Signal Declaration warning at FluxoDeDados.vhd(28): used implicit default value for signal "entraBULATest" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 28
-Warning (10541): VHDL Signal Declaration warning at FluxoDeDados.vhd(29): used implicit default value for signal "dadoASerEscrito" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 29
 Info (12128): Elaborating entity "registrador" for hierarchy "FluxoDeDados:FD|registrador:PC" File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 50
 Info (12128): Elaborating entity "InstructionMemory" for hierarchy "FluxoDeDados:FD|InstructionMemory:Mem_Inst" File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 56
 Info (12128): Elaborating entity "mux5" for hierarchy "FluxoDeDados:FD|mux5:muxRt_Rd" File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 62
@@ -904,10 +884,10 @@ Info (21057): Implemented 4550 device resources after synthesis - the final reso
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 189 output pins
     Info (21061): Implemented 4356 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 41 warnings
-    Info: Peak virtual memory: 1029 megabytes
-    Info: Processing ended: Fri Nov 24 19:31:19 2017
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 31 warnings
+    Info: Peak virtual memory: 1028 megabytes
+    Info: Processing ended: Fri Nov 24 20:45:56 2017
     Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:25
+    Info: Total CPU time (on all processors): 00:00:26
 
 

@@ -3,27 +3,27 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'debounce:BTN_CLK|output[0]'
-Slack : -15.955
-TNS   : -28980.031
+Slack : -16.383
+TNS   : -29890.980
 
 Type  : Slow 1200mV 85C Model Setup 'CLOCK_50'
-Slack : -4.346
-TNS   : -114.173
+Slack : -3.862
+TNS   : -103.878
 
 Type  : Slow 1200mV 85C Model Hold 'CLOCK_50'
 Slack : 0.442
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'debounce:BTN_CLK|output[0]'
-Slack : 1.588
+Slack : 1.191
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Recovery 'debounce:BTN_CLK|output[0]'
-Slack : -0.883
-TNS   : -5.283
+Slack : -1.050
+TNS   : -6.282
 
 Type  : Slow 1200mV 85C Model Removal 'debounce:BTN_CLK|output[0]'
-Slack : 1.215
+Slack : 1.355
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
@@ -35,27 +35,27 @@ Slack : -1.285
 TNS   : -2670.230
 
 Type  : Slow 1200mV 0C Model Setup 'debounce:BTN_CLK|output[0]'
-Slack : -14.637
-TNS   : -26526.722
+Slack : -14.990
+TNS   : -27216.590
 
 Type  : Slow 1200mV 0C Model Setup 'CLOCK_50'
-Slack : -3.927
-TNS   : -97.774
+Slack : -3.482
+TNS   : -88.437
 
 Type  : Slow 1200mV 0C Model Hold 'CLOCK_50'
 Slack : 0.401
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'debounce:BTN_CLK|output[0]'
-Slack : 1.445
+Slack : 1.084
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Recovery 'debounce:BTN_CLK|output[0]'
-Slack : -0.696
-TNS   : -4.173
+Slack : -0.841
+TNS   : -5.023
 
 Type  : Slow 1200mV 0C Model Removal 'debounce:BTN_CLK|output[0]'
-Slack : 1.129
+Slack : 1.263
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
@@ -67,32 +67,32 @@ Slack : -1.285
 TNS   : -2670.230
 
 Type  : Fast 1200mV 0C Model Setup 'debounce:BTN_CLK|output[0]'
-Slack : -7.577
-TNS   : -13463.682
+Slack : -7.710
+TNS   : -14036.166
 
 Type  : Fast 1200mV 0C Model Setup 'CLOCK_50'
-Slack : -1.628
-TNS   : -28.519
+Slack : -1.386
+TNS   : -24.034
 
 Type  : Fast 1200mV 0C Model Hold 'CLOCK_50'
-Slack : 0.200
+Slack : 0.201
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'debounce:BTN_CLK|output[0]'
-Slack : 0.745
+Slack : 0.540
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Recovery 'debounce:BTN_CLK|output[0]'
-Slack : 0.061
-TNS   : 0.000
+Slack : -0.046
+TNS   : -0.264
 
 Type  : Fast 1200mV 0C Model Removal 'debounce:BTN_CLK|output[0]'
-Slack : 0.479
+Slack : 0.574
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -3.000
-TNS   : -72.690
+TNS   : -72.689
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'debounce:BTN_CLK|output[0]'
 Slack : -1.000
