@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MIPS_QuartusPrimeProject
-Fri Nov 24 16:12:02 2017
+Fri Nov 24 16:22:38 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -78,13 +78,13 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Nov 24 16:12:02 2017       ;
+; Analysis & Synthesis Status        ; Successful - Fri Nov 24 16:22:38 2017       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; MIPS_QuartusPrimeProject                    ;
 ; Top-level Entity Name              ; MIPS                                        ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 345                                         ;
-;     Total combinational functions  ; 345                                         ;
+; Total logic elements               ; 347                                         ;
+;     Total combinational functions  ; 347                                         ;
 ;     Dedicated logic registers      ; 116                                         ;
 ; Total registers                    ; 116                                         ;
 ; Total pins                         ; 176                                         ;
@@ -236,16 +236,16 @@ agreement for further details.
 +---------------------------------------------+----------------------------+
 ; Resource                                    ; Usage                      ;
 +---------------------------------------------+----------------------------+
-; Estimated Total logic elements              ; 345                        ;
+; Estimated Total logic elements              ; 347                        ;
 ;                                             ;                            ;
-; Total combinational functions               ; 345                        ;
+; Total combinational functions               ; 347                        ;
 ; Logic element usage by number of LUT inputs ;                            ;
-;     -- 4 input functions                    ; 98                         ;
-;     -- 3 input functions                    ; 78                         ;
-;     -- <=2 input functions                  ; 169                        ;
+;     -- 4 input functions                    ; 132                        ;
+;     -- 3 input functions                    ; 77                         ;
+;     -- <=2 input functions                  ; 138                        ;
 ;                                             ;                            ;
 ; Logic elements by mode                      ;                            ;
-;     -- normal mode                          ; 228                        ;
+;     -- normal mode                          ; 230                        ;
 ;     -- arithmetic mode                      ; 117                        ;
 ;                                             ;                            ;
 ; Total registers                             ; 116                        ;
@@ -258,8 +258,8 @@ agreement for further details.
 ;                                             ;                            ;
 ; Maximum fan-out node                        ; debounce:BTN_CLK|output[0] ;
 ; Maximum fan-out                             ; 63                         ;
-; Total fan-out                               ; 1540                       ;
-; Average fan-out                             ; 1.89                       ;
+; Total fan-out                               ; 1664                       ;
+; Average fan-out                             ; 2.04                       ;
 +---------------------------------------------+----------------------------+
 
 
@@ -268,10 +268,10 @@ agreement for further details.
 +-------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------+-------------------+--------------+
 ; Compilation Hierarchy Node          ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                              ; Entity Name       ; Library Name ;
 +-------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------+-------------------+--------------+
-; |MIPS                               ; 345 (0)             ; 116 (0)                   ; 0           ; 0            ; 0       ; 0         ; 176  ; 0            ; |MIPS                                            ; MIPS              ; work         ;
-;    |FluxoDeDados:FD|                ; 155 (0)             ; 38 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|FluxoDeDados:FD                            ; FluxoDeDados      ; work         ;
+; |MIPS                               ; 347 (0)             ; 116 (0)                   ; 0           ; 0            ; 0       ; 0         ; 176  ; 0            ; |MIPS                                            ; MIPS              ; work         ;
+;    |FluxoDeDados:FD|                ; 157 (0)             ; 38 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|FluxoDeDados:FD                            ; FluxoDeDados      ; work         ;
 ;       |ALUControl:UC_ULA|           ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|FluxoDeDados:FD|ALUControl:UC_ULA          ; ALUControl        ; work         ;
-;       |InstructionMemory:Mem_Inst|  ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|FluxoDeDados:FD|InstructionMemory:Mem_Inst ; InstructionMemory ; work         ;
+;       |InstructionMemory:Mem_Inst|  ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|FluxoDeDados:FD|InstructionMemory:Mem_Inst ; InstructionMemory ; work         ;
 ;       |ULA:ALU|                     ; 97 (64)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|FluxoDeDados:FD|ULA:ALU                    ; ULA               ; work         ;
 ;          |inversor32:Bnot|          ; 33 (33)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|FluxoDeDados:FD|ULA:ALU|inversor32:Bnot    ; inversor32        ; work         ;
 ;       |registerBank32:Banco_Regis|  ; 35 (35)             ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|FluxoDeDados:FD|registerBank32:Banco_Regis ; registerBank32    ; work         ;
@@ -1068,230 +1068,230 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~1060 ; Lost fanout                                        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~1061 ; Lost fanout                                        ;
 ; FluxoDeDados:FD|registrador:PC|DOUT[8..31]                ; Lost fanout                                        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~71   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~103  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~39   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~135  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~327  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~295  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~391  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~70   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~102  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~38   ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~134  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~326  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~294  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~390  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~72   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~104  ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~39   ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~135  ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~295  ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~391  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~40   ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~136  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~328  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~296  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~392  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~73   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~105  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~41   ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~137  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~329  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~297  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~393  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~74   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~106  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~42   ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~138  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~330  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~298  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~394  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~75   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~107  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~43   ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~139  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~331  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~299  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~395  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~76   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~108  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~44   ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~140  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~332  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~300  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~396  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~77   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~109  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~45   ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~141  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~333  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~301  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~397  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~78   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~110  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~46   ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~142  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~334  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~302  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~398  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~79   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~111  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~47   ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~143  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~335  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~303  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~399  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~80   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~112  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~48   ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~144  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~336  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~304  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~400  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~81   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~113  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~49   ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~145  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~337  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~305  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~401  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~82   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~114  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~50   ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~146  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~338  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~306  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~402  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~83   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~115  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~51   ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~147  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~339  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~307  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~403  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~84   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~116  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~52   ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~148  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~340  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~308  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~404  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~85   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~117  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~53   ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~149  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~341  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~309  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~405  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~86   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~118  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~54   ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~150  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~342  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~310  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~406  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~87   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~119  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~55   ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~151  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~343  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~311  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~407  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~88   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~120  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~56   ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~152  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~344  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~312  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~408  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~89   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~121  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~57   ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~153  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~345  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~313  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~409  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~90   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~122  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~58   ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~154  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~346  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~314  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~410  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~91   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~123  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~59   ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~155  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~347  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~315  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~411  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~92   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~124  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~60   ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~156  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~348  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~316  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~412  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~93   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~125  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~61   ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~157  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~349  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~317  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~413  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~94   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~126  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~62   ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~158  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~350  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~318  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~414  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~95   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~127  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~63   ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~159  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~351  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~319  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~415  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~96   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~128  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~64   ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~160  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~352  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~320  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~416  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~97   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~129  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~65   ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~161  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~353  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~321  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~417  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~98   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~130  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~66   ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~162  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~354  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~322  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~418  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~99   ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~131  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~67   ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~163  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~355  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~323  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~419  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~100  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~132  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~68   ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~164  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~356  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~324  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~420  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~101  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~133  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~69   ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~165  ; Stuck at GND due to stuck port clock_enable        ;
-; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~357  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~325  ; Stuck at GND due to stuck port clock_enable        ;
 ; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~421  ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~70   ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~102  ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~326  ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~71   ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~103  ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~327  ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~72   ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~104  ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~328  ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~73   ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~105  ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~329  ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~74   ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~106  ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~330  ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~75   ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~107  ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~331  ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~76   ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~108  ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~332  ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~77   ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~109  ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~333  ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~78   ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~110  ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~334  ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~79   ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~111  ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~335  ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~80   ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~112  ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~336  ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~81   ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~113  ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~337  ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~82   ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~114  ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~338  ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~83   ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~115  ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~339  ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~84   ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~116  ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~340  ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~85   ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~117  ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~341  ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~86   ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~118  ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~342  ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~87   ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~119  ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~343  ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~88   ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~120  ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~344  ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~89   ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~121  ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~345  ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~90   ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~122  ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~346  ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~91   ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~123  ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~347  ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~92   ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~124  ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~348  ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~93   ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~125  ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~349  ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~94   ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~126  ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~350  ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~95   ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~127  ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~351  ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~96   ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~128  ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~352  ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~97   ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~129  ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~353  ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~98   ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~130  ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~354  ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~99   ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~131  ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~355  ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~100  ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~132  ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~356  ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~101  ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~133  ; Stuck at GND due to stuck port clock_enable        ;
+; FluxoDeDados:FD|registerBank32:Banco_Regis|registers~357  ; Stuck at GND due to stuck port clock_enable        ;
 ; Total Number of Removed Registers = 1018                  ;                                                    ;
 +-----------------------------------------------------------+----------------------------------------------------+
 
@@ -1631,9 +1631,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; enderecodisplay[3..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; enderecodisplay[4]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; a[31..8]               ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; b                      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; i                      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; l                      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; m                      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; n                      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; o                      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
@@ -1642,8 +1639,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; s                      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; v                      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; w                      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; d                      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; e                      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; g                      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; c                      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; y                      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
@@ -1678,19 +1673,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; cycloneiii_ff         ; 116                         ;
 ;     CLR               ; 58                          ;
 ;     ENA               ; 58                          ;
-; cycloneiii_lcell_comb ; 347                         ;
+; cycloneiii_lcell_comb ; 349                         ;
 ;     arith             ; 117                         ;
 ;         2 data inputs ; 84                          ;
 ;         3 data inputs ; 33                          ;
-;     normal            ; 230                         ;
+;     normal            ; 232                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 5                           ;
-;         2 data inputs ; 81                          ;
-;         3 data inputs ; 45                          ;
-;         4 data inputs ; 98                          ;
+;         2 data inputs ; 50                          ;
+;         3 data inputs ; 44                          ;
+;         4 data inputs ; 132                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 10.70                       ;
-; Average LUT depth     ; 5.57                        ;
+; Max LUT depth         ; 10.50                       ;
+; Average LUT depth     ; 5.59                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1709,7 +1704,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Fri Nov 24 16:11:42 2017
+    Info: Processing started: Fri Nov 24 16:22:20 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MIPS_QuartusPrimeProject -c MIPS_QuartusPrimeProject
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -1789,11 +1784,6 @@ Info (12021): Found 2 design units, including 1 entities, in source file MIPS.vh
     Info (12022): Found design unit 1: MIPS-bhv File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 25
     Info (12023): Found entity 1: MIPS File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 4
 Info (12127): Elaborating entity "MIPS" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at MIPS.vhd(17): used implicit default value for signal "enderecoReg1Test" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 17
-Warning (10541): VHDL Signal Declaration warning at MIPS.vhd(18): used implicit default value for signal "enderecoReg2Test" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 18
-Warning (10541): VHDL Signal Declaration warning at MIPS.vhd(19): used implicit default value for signal "instrucaoTest" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 19
-Warning (10541): VHDL Signal Declaration warning at MIPS.vhd(20): used implicit default value for signal "entraAULATest" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 20
-Warning (10541): VHDL Signal Declaration warning at MIPS.vhd(21): used implicit default value for signal "entraBULATest" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 21
 Info (12128): Elaborating entity "debounce" for hierarchy "debounce:BTN_RST" File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 35
 Info (12128): Elaborating entity "UnidadeDeControle" for hierarchy "UnidadeDeControle:UC" File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 43
 Info (12128): Elaborating entity "FluxoDeDados" for hierarchy "FluxoDeDados:FD" File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 46
@@ -1819,8 +1809,8 @@ Info (12128): Elaborating entity "shifter2_26to32" for hierarchy "FluxoDeDados:F
 Info (12128): Elaborating entity "shifter2_32to32" for hierarchy "FluxoDeDados:FD|shifter2_32to32:shifter32to32" File: /home/parallels/Documents/MIPS/FluxoDeDados.vhd Line: 162
 Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "conversorHex7Seg:display0" File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 72
 Info (276014): Found 3 instances of uninferred RAM logic
-    Info (276007): RAM logic "FluxoDeDados:FD|registerBank32:Banco_Regis|registers" is uninferred due to asynchronous read logic File: /home/parallels/Documents/MIPS/registerBank32.vhd Line: 22
     Info (276004): RAM logic "FluxoDeDados:FD|InstructionMemory:Mem_Inst|MemoriaDeInstrucao" is uninferred due to inappropriate RAM size File: /home/parallels/Documents/MIPS/instructionMemory.vhd Line: 13
+    Info (276007): RAM logic "FluxoDeDados:FD|registerBank32:Banco_Regis|registers" is uninferred due to asynchronous read logic File: /home/parallels/Documents/MIPS/registerBank32.vhd Line: 22
     Info (276007): RAM logic "FluxoDeDados:FD|memory:Mem_dados|Memoria" is uninferred due to asynchronous read logic File: /home/parallels/Documents/MIPS/dataMemory.vhd Line: 18
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LEDG[0]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 14
@@ -1832,53 +1822,32 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LEDG[7]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 14
     Warning (13410): Pin "LEDG[8]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 14
     Warning (13410): Pin "HEX6[5]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 15
-    Warning (13410): Pin "enderecoReg1Test[0]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 17
-    Warning (13410): Pin "enderecoReg1Test[1]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 17
     Warning (13410): Pin "enderecoReg1Test[2]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 17
-    Warning (13410): Pin "enderecoReg1Test[3]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 17
     Warning (13410): Pin "enderecoReg1Test[4]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 17
-    Warning (13410): Pin "enderecoReg2Test[0]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 18
-    Warning (13410): Pin "enderecoReg2Test[1]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 18
     Warning (13410): Pin "enderecoReg2Test[2]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 18
-    Warning (13410): Pin "enderecoReg2Test[3]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 18
     Warning (13410): Pin "enderecoReg2Test[4]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 18
     Warning (13410): Pin "instrucaoTest[0]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 19
     Warning (13410): Pin "instrucaoTest[1]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 19
     Warning (13410): Pin "instrucaoTest[2]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 19
     Warning (13410): Pin "instrucaoTest[3]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 19
     Warning (13410): Pin "instrucaoTest[4]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 19
-    Warning (13410): Pin "instrucaoTest[5]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 19
     Warning (13410): Pin "instrucaoTest[6]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 19
     Warning (13410): Pin "instrucaoTest[7]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 19
     Warning (13410): Pin "instrucaoTest[8]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 19
     Warning (13410): Pin "instrucaoTest[9]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 19
     Warning (13410): Pin "instrucaoTest[10]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 19
     Warning (13410): Pin "instrucaoTest[11]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 19
-    Warning (13410): Pin "instrucaoTest[12]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 19
     Warning (13410): Pin "instrucaoTest[13]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 19
-    Warning (13410): Pin "instrucaoTest[14]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 19
     Warning (13410): Pin "instrucaoTest[15]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 19
-    Warning (13410): Pin "instrucaoTest[16]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 19
-    Warning (13410): Pin "instrucaoTest[17]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 19
     Warning (13410): Pin "instrucaoTest[18]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 19
-    Warning (13410): Pin "instrucaoTest[19]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 19
     Warning (13410): Pin "instrucaoTest[20]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 19
-    Warning (13410): Pin "instrucaoTest[21]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 19
-    Warning (13410): Pin "instrucaoTest[22]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 19
     Warning (13410): Pin "instrucaoTest[23]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 19
-    Warning (13410): Pin "instrucaoTest[24]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 19
     Warning (13410): Pin "instrucaoTest[25]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 19
-    Warning (13410): Pin "instrucaoTest[26]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 19
-    Warning (13410): Pin "instrucaoTest[27]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 19
     Warning (13410): Pin "instrucaoTest[28]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 19
-    Warning (13410): Pin "instrucaoTest[29]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 19
     Warning (13410): Pin "instrucaoTest[30]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 19
-    Warning (13410): Pin "instrucaoTest[31]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 19
-    Warning (13410): Pin "entraAULATest[0]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 20
     Warning (13410): Pin "entraAULATest[1]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 20
     Warning (13410): Pin "entraAULATest[2]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 20
     Warning (13410): Pin "entraAULATest[3]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 20
-    Warning (13410): Pin "entraAULATest[4]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 20
     Warning (13410): Pin "entraAULATest[5]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 20
     Warning (13410): Pin "entraAULATest[6]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 20
     Warning (13410): Pin "entraAULATest[7]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 20
@@ -1906,38 +1875,6 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "entraAULATest[29]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 20
     Warning (13410): Pin "entraAULATest[30]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 20
     Warning (13410): Pin "entraAULATest[31]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 20
-    Warning (13410): Pin "entraBULATest[0]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 21
-    Warning (13410): Pin "entraBULATest[1]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 21
-    Warning (13410): Pin "entraBULATest[2]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 21
-    Warning (13410): Pin "entraBULATest[3]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 21
-    Warning (13410): Pin "entraBULATest[4]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 21
-    Warning (13410): Pin "entraBULATest[5]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 21
-    Warning (13410): Pin "entraBULATest[6]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 21
-    Warning (13410): Pin "entraBULATest[7]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 21
-    Warning (13410): Pin "entraBULATest[8]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 21
-    Warning (13410): Pin "entraBULATest[9]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 21
-    Warning (13410): Pin "entraBULATest[10]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 21
-    Warning (13410): Pin "entraBULATest[11]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 21
-    Warning (13410): Pin "entraBULATest[12]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 21
-    Warning (13410): Pin "entraBULATest[13]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 21
-    Warning (13410): Pin "entraBULATest[14]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 21
-    Warning (13410): Pin "entraBULATest[15]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 21
-    Warning (13410): Pin "entraBULATest[16]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 21
-    Warning (13410): Pin "entraBULATest[17]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 21
-    Warning (13410): Pin "entraBULATest[18]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 21
-    Warning (13410): Pin "entraBULATest[19]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 21
-    Warning (13410): Pin "entraBULATest[20]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 21
-    Warning (13410): Pin "entraBULATest[21]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 21
-    Warning (13410): Pin "entraBULATest[22]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 21
-    Warning (13410): Pin "entraBULATest[23]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 21
-    Warning (13410): Pin "entraBULATest[24]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 21
-    Warning (13410): Pin "entraBULATest[25]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 21
-    Warning (13410): Pin "entraBULATest[26]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 21
-    Warning (13410): Pin "entraBULATest[27]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 21
-    Warning (13410): Pin "entraBULATest[28]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 21
-    Warning (13410): Pin "entraBULATest[29]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 21
-    Warning (13410): Pin "entraBULATest[30]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 21
-    Warning (13410): Pin "entraBULATest[31]" is stuck at GND File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 21
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 792 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
@@ -1945,14 +1882,14 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "KEY[2]" File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 9
     Warning (15610): No output dependent on input pin "KEY[3]" File: /home/parallels/Documents/MIPS/MIPS.vhd Line: 9
-Info (21057): Implemented 567 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 571 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 171 output pins
-    Info (21061): Implemented 391 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 125 warnings
-    Info: Peak virtual memory: 972 megabytes
-    Info: Processing ended: Fri Nov 24 16:12:02 2017
-    Info: Elapsed time: 00:00:20
-    Info: Total CPU time (on all processors): 00:00:28
+    Info (21061): Implemented 395 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 67 warnings
+    Info: Peak virtual memory: 978 megabytes
+    Info: Processing ended: Fri Nov 24 16:22:38 2017
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:00:27
 
 

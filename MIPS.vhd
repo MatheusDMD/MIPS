@@ -58,11 +58,11 @@ begin
 						 habEscritaMEM=>PalavraDeControle(7),
 						 OpCode=> OC,
 						 habEscritaDisplay=> enableDisplay,
---						 instrucaoTest => instrucaoTest,
---						 enderecoReg1Test=> enderecoReg1Test,
---						 enderecoReg2Test=> enderecoReg2Test,
---						 entraAULATest=> entraAULATest,
---						 entraBULATest=> entraBULATest,
+						 B => instrucaoTest,
+						 D=> enderecoReg1Test,
+						 E=> enderecoReg2Test,
+						 I=> entraAULATest,
+						 L=> entraBULATest,
 						 J=> dadoDisplay,
 						 A => PCdisplay);
 			
