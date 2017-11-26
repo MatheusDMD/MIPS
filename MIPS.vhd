@@ -105,4 +105,5 @@ begin
 		LEDR(2) <= PalavraDeControle(4);
 		LEDR(1) <= PalavraDeControle(3);
 		LEDR(0) <= PalavraDeControle(2);
+--		oi
 end bhv;
