@@ -10,12 +10,12 @@ The concept was to develop a MIPS architecture processor in VHDL, that would run
 
 With the goal of learning computer design by doing, we implemented a instruction-set of 9 instructions, that run in a pipeline.
 
-<!-- ### Diagram -->
+### Diagram
 
-<!-- ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "MIPS pipeline Diagram") -->
+![alt text](https://github.com/MatheusDMD/MIPS/blob/pipeline/images/pipeline.jpeg "MIPS pipeline Diagram")
 
-<!-- in black: the Dataflow -->
-<!-- in red: the Control unit -->
+in black: the Dataflow
+in red: the Control unit
 
 ### Implementation
 
