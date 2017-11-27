@@ -12,17 +12,26 @@ With the goal of learning computer design by doing, we implemented a instruction
 
 ### Diagram
 
-![alt text](https://github.com/MatheusDMD/MIPS/blob/pipeline/images/pipeline.jpeg "MIPS pipeline Diagram")
+![alt text](./images/pipeline.jpeg "MIPS pipeline Diagram")
 
-in black: the Dataflow
-in red: the Control unit
+*in black:* the Dataflow
+*in red:* the Control unit
 
 ### Implementation
 
-*Top Level Entity:* [MIPS](./MIPS.vhd)
+**Top Level Entity:** [MIPS](./MIPS.vhd)
 Handles the interaction between the [Dataflow](./FluxoDeDados.vhd) and [ControlUnit](./UnidadeDeControle.vhd)
 
+**Program:** [Instruction Program](./program.txt)
+
 ### Limitations
+
+The current implementation of the processor doesn't handle Hazards.
+Meaning that any instruction conflict needs to be solved with *nops* in the compiler.
+
+### Board Layout
+
+![alt text](./images/board.jpeg "Altera board layout")
 
 ## implemented instruction-set
 
