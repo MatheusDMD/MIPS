@@ -50,10 +50,12 @@ signal Memoria: ArrayMemoria := (
     X"00000000");
 
 begin
--- Leitura dos dados
+-- data read:
+-- independent from clock
 DadoLido <= Memoria(conv_integer(Endereco(31 downto 2))) when Ler = '1' else X"00000000";
 
--- Escrita dos dados
+-- data write:
+-- requires clock rising_edge to store value on addrr
 process(Endereco, DadoASeEscritos,clk)
 begin
 	if (rising_edge(clk)) then 

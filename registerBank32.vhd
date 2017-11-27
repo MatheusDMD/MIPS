@@ -18,7 +18,10 @@ end registerBank32;
 
 architecture behavioral of registerBank32 is
 	
-	type registerFile is array(0 to 31) of std_logic_vector(31 downto 0);
+    type registerFile is array(0 to 31) of std_logic_vector(31 downto 0);
+    
+    -- register bank:
+    -- hard coded so that values could be add in compilation time
 	signal registers : registerFile := (
         "00000000000000000000000000000000", -- $zero
         "00000000000000000000000000000000", -- mem 1
@@ -53,25 +56,34 @@ architecture behavioral of registerBank32 is
         "00000000000000000000000000000000", -- mem 30
         "00000000000000000000000000000000"
     );
+
 begin
 	process (clk, EndReg1, registers, EndReg2) is
-	begin
+    begin
+        
+    -- register write:
+    -- only active with clock and the control point EnableWrite
 	if (rising_edge(clk)) then
 		if habEscritaReg = '1' then
-			registers(to_integer(unsigned(EndReg3))) <= DadoEscritoReg3;  -- Write
+			registers(to_integer(unsigned(EndReg3))) <= DadoEscritoReg3;
 		end if;
 	end if;
-	
+    
+    -- register default value:
+    -- just like the original MIPS design, it blocks the use of addrr 0, returning always the value 0. 
 	if(not(EndReg1 = "00000")) then
 		DadoLidoReg1 <= registers(to_integer(unsigned(EndReg1)));
-	else
-			DadoLidoReg1 <= (others=>'0');
-	end if;
-	
+    else
+    -- register value assignment:
+    -- doesn't require clock to read stored value
+		DadoLidoReg1 <= (others=>'0');
+    end if;
+    
+    -- same to the SecondAddrr
 	if(not(EndReg2 = "00000")) then
 		DadoLidoReg2 <= registers(to_integer(unsigned(EndReg2)));
-	else
-		DadoLidoReg2 <= (others=>'0');
+    else
+        DadoLidoReg2 <= (others=>'0');
 	end if;
 
 end process;
