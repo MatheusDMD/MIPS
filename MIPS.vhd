@@ -12,13 +12,7 @@ PORT (
    -- Saidas da placa (nomenclatura definida no arquivo ¨.qsf¨)
    LEDR            : OUT STD_LOGIC_VECTOR(17 DOWNTO 0) := (others => '0');
    LEDG            : OUT STD_LOGIC_VECTOR(8 DOWNTO 0)  := (others => '0');
-   HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, HEX6, HEX7: OUT STD_LOGIC_VECTOR(6 downto 0);
-	
-	enderecoReg1Test: OUT STD_LOGIC_VECTOR (4 DOWNTO 0);
-	enderecoReg2Test: OUT STD_LOGIC_VECTOR (4 DOWNTO 0);
-	instrucaoTest   : OUT STD_LOGIC_VECTOR (31 DOWNTO 0);
-	entraAULATest   : OUT STD_LOGIC_VECTOR (31 DOWNTO 0);
-	entraBULATest   : OUT STD_LOGIC_VECTOR (31 DOWNTO 0)
+   HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, HEX6, HEX7: OUT STD_LOGIC_VECTOR(6 downto 0)
 	);
 END MIPS;
 
@@ -57,14 +51,9 @@ begin
 						 habLeituraMEM=>PalavraDeControle(3), 
 						 habEscritaMEM=>PalavraDeControle(2),
 						 OpCode=> OC,
+						 dadoDisplay => dadoDisplay,
 						 habEscritaDisplay=> enableDisplay,
-						 B => instrucaoTest,
-						 D=> enderecoReg1Test,
-						 E=> enderecoReg2Test,
-						 I=> entraAULATest,
-						 L=> entraBULATest,
-						 J=> dadoDisplay,
-						 A => PCdisplay);
+						 PCdisplay=> PCdisplay);
 			
 		registradosDisplay : entity work.registrador
 			port map (DIN=> dadoDisplay, DOUT =>saidaDisplay, CLK=> btn_clock(0), ENABLE=> enableDisplay);
@@ -99,11 +88,11 @@ begin
 		LEDR(8) <= PalavraDeControle(8);
 		LEDR(7) <= PalavraDeControle(7);
 		LEDR(6) <= PalavraDeControle(6);
-		LEDR(5) <= PalavraDeControle(5);
-		LEDR(4) <= PalavraDeControle(1);
-		LEDR(3) <= PalavraDeControle(0);
+		LEDR(5) <= PalavraDeControle(1);
+		LEDR(4) <= PalavraDeControle(0);
+		LEDR(3) <= PalavraDeControle(5);
 		LEDR(2) <= PalavraDeControle(4);
 		LEDR(1) <= PalavraDeControle(3);
 		LEDR(0) <= PalavraDeControle(2);
---		oi
+
 end bhv;

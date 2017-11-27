@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 d/home/parallels/Documents/MIPS/simulation/qsim
 Efluxodedados
-Z1 w1511562361
+Z1 w1511741751
 Z2 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 e`^h93R^CdmMEVe0e1VU_3
 Z3 DPx10 cycloneive 21 cycloneive_components 0 22 Q;lLU[K?fTJPSa^YaZf>B3
 Z4 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
@@ -23,13 +23,13 @@ Z10 8MIPS_QuartusPrimeProject.vho
 Z11 FMIPS_QuartusPrimeProject.vho
 l0
 L80
-VgQ@=KVkhg@MdX40]>hNMP0
-!s100 F6C4`<@B<c7TS49ZH11zJ0
+VT?i8@8Z6]6AzV^6m3Yg;41
+!s100 gak^M_[`<:Zh:0M:_]5aS3
 Z12 OV;C;10.5b;63
 32
-Z13 !s110 1511562362
+Z13 !s110 1511741753
 !i10b 1
-Z14 !s108 1511562362.000000
+Z14 !s108 1511741753.000000
 Z15 !s90 -work|work|MIPS_QuartusPrimeProject.vho|
 Z16 !s107 MIPS_QuartusPrimeProject.vho|
 !i113 1
@@ -44,11 +44,11 @@ R6
 R7
 R8
 R9
-DEx4 work 12 fluxodedados 0 22 gQ@=KVkhg@MdX40]>hNMP0
-l1454
-L634
-VhYSAHXa4kTOURYeJ>@IC:1
-!s100 B3=_G[@I>FDmA3[`oK0080
+DEx4 work 12 fluxodedados 0 22 T?i8@8Z6]6AzV^6m3Yg;41
+l3585
+L186
+Vl>cbJMzjmbi[M=H[c76@l0
+!s100 lb?4hZhFQzW9olYBb328U0
 R12
 32
 R13
@@ -60,41 +60,41 @@ R16
 R17
 R18
 Efluxodedados_vhd_vec_tst
-Z19 w1511562360
+Z19 w1511741748
 R7
 R8
 R0
-Z20 8Waveform2.vwf.vht
-Z21 FWaveform2.vwf.vht
+Z20 8Waveform5.vwf.vht
+Z21 FWaveform5.vwf.vht
 l0
 L32
 V>bm0>W`g92Q?<hOn;mb5L0
 !s100 T]M3SiFgR0=EMzIeA=k_O3
 R12
 32
-R13
+Z22 !s110 1511741754
 !i10b 1
-R14
-Z22 !s90 -work|work|Waveform2.vwf.vht|
-Z23 !s107 Waveform2.vwf.vht|
+Z23 !s108 1511741754.000000
+Z24 !s90 -work|work|Waveform5.vwf.vht|
+Z25 !s107 Waveform5.vwf.vht|
 !i113 1
 R17
 R18
 Afluxodedados_arch
 R7
 R8
-Z24 DEx4 work 24 fluxodedados_vhd_vec_tst 0 22 >bm0>W`g92Q?<hOn;mb5L0
-l107
+Z26 DEx4 work 24 fluxodedados_vhd_vec_tst 0 22 >bm0>W`g92Q?<hOn;mb5L0
+l71
 L34
-Z25 Vg_H;jBS8lFNk1bXCF=zi^3
-Z26 !s100 C0;z>]?zC:]Z<lK^lI:lj2
+V`EXI6[e2JSF?051I2b`_20
+!s100 8mn?ccKL8TczM^^ZTZOAn1
 R12
 32
-R13
-!i10b 1
-R14
 R22
+!i10b 1
 R23
+R24
+R25
 !i113 1
 R17
 R18
@@ -291,8 +291,8 @@ Z38 w1511545240
 R7
 R8
 R0
-R20
-R21
+Z39 8Waveform2.vwf.vht
+Z40 FWaveform2.vwf.vht
 l0
 L32
 VghhY7GLA?68P1LJ=NUJT:0
@@ -302,8 +302,8 @@ R12
 R36
 !i10b 1
 R37
-R22
-R23
+Z41 !s90 -work|work|Waveform2.vwf.vht|
+Z42 !s107 Waveform2.vwf.vht|
 !i113 1
 R17
 R18
@@ -320,8 +320,8 @@ R12
 R36
 !i10b 1
 R37
-R22
-R23
+R41
+R42
 !i113 1
 R17
 R18
