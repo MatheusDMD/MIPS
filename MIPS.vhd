@@ -7,7 +7,7 @@ PORT (
 	-- Entradas (nomenclatura definida no arquivo ¨.qsf¨)
    CLOCK_50 : IN STD_LOGIC;
    KEY      : IN STD_LOGIC_VECTOR(3 DOWNTO 0);    --chaves de contato momentaneo.
-   --SW       : IN STD_LOGIC_VECTOR(17 DOWNTO 0);    --chaves liga/desliga.
+   SW       : IN STD_LOGIC_VECTOR(17 DOWNTO 0);    --chaves liga/desliga.
 
    -- Saidas da placa (nomenclatura definida no arquivo ¨.qsf¨)
    LEDR            : OUT STD_LOGIC_VECTOR(17 DOWNTO 0) := (others => '0');
@@ -23,6 +23,7 @@ architecture bhv of MIPS is
 	--signal endDisp : std_logic_vector(31 downto 0) := x"0000000F";
 	signal dadoDisplay, saidaDisplay, PCdisplay: std_logic_vector(31 downto 0) := (others=> '0'); 
 	signal enableDisplay: std_logic := '0';
+	signal CLK : std_logic;
 
 begin
 
@@ -38,7 +39,7 @@ begin
 				port map (OpCode=> OC, Controle =>PalavraDeControle);
 	
 	FD : entity work.FluxoDeDados
-			port map (CLK=> btn_clock(0), 
+			port map (CLK=> CLK, 
 						 enderecoDisplay => "00000000000000000000000000010000",
 						 RST_PC=> btn_set_output(0),
 						 mux_PC =>PalavraDeControle(9), 
@@ -56,25 +57,25 @@ begin
 						 PCdisplay=> PCdisplay);
 			
 		registradosDisplay : entity work.registrador
-			port map (DIN=> dadoDisplay, DOUT =>saidaDisplay, CLK=> btn_clock(0), ENABLE=> enableDisplay);
+			port map (DIN=> dadoDisplay, DOUT =>saidaDisplay, CLK=> CLK, ENABLE=> enableDisplay);
 			
 		display0 : entity work.conversorHex7seg
-				port map (saida7seg => HEX0, dadoHex => saidaDisplay(3 DOWNTO 0), apaga => btn_set_output(0));
+				port map (saida7seg => HEX0, dadoHex => saidaDisplay(3 DOWNTO 0));
 		
 		display1 : entity work.conversorHex7seg
-				port map (saida7seg => HEX1, dadoHex => saidaDisplay(7 DOWNTO 4), apaga => btn_set_output(0));
+				port map (saida7seg => HEX1, dadoHex => saidaDisplay(7 DOWNTO 4));
 				
 		display2 : entity work.conversorHex7seg
-				port map (saida7seg => HEX2, dadoHex => saidaDisplay(11 DOWNTO 8), apaga => btn_set_output(0));
+				port map (saida7seg => HEX2, dadoHex => saidaDisplay(11 DOWNTO 8));
 		
 		display3 : entity work.conversorHex7seg
-				port map (saida7seg => HEX3, dadoHex => saidaDisplay(15 DOWNTO 12), apaga => btn_set_output(0));
+				port map (saida7seg => HEX3, dadoHex => saidaDisplay(15 DOWNTO 12));
 				
 		display4 : entity work.conversorHex7seg
-				port map (saida7seg => HEX4, dadoHex => saidaDisplay(19 DOWNTO 16), apaga => btn_set_output(0));
+				port map (saida7seg => HEX4, dadoHex => saidaDisplay(19 DOWNTO 16));
 		
 		display5 : entity work.conversorHex7seg
-				port map (saida7seg => HEX5, dadoHex => saidaDisplay(23 DOWNTO 20), apaga => btn_set_output(0));
+				port map (saida7seg => HEX5, dadoHex => saidaDisplay(23 DOWNTO 20));
 		
 		display6 : entity work.conversorHex7seg
 				port map (saida7seg => HEX6, dadoHex => PCdisplay(3 DOWNTO 0));
@@ -95,4 +96,13 @@ begin
 		LEDR(1) <= PalavraDeControle(3);
 		LEDR(0) <= PalavraDeControle(2);
 
+		process(CLK,SW)
+			begin
+				if(SW(17) = '0') then
+					CLK <= btn_clock(0);
+				else
+					CLK <= CLOCK_50;
+				end if;
+			end process;
+			
 end bhv;
