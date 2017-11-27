@@ -93,7 +93,7 @@ begin
 		port map(A=> saidaP2(41 downto 10), X=> saidaShift);
 		
 	AddPC4andExtSin: entity work.add32
-		port map(A=> saidaP2(63 downto 32), B=> saidaShift, X=> PC4Mux);
+		port map(A=> saidaP2(137 downto 106), B=> saidaShift, X=> PC4Mux);
 		
 	muxAntesULA: entity work.mux32
 		port map (A => saidaP2(73 downto 42), B=> saidaP2(41 downto 10), SEL =>saidaP2(138), X => saidaParaULA);
