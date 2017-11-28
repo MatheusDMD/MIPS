@@ -18,7 +18,7 @@ An available Single-cycled version of the MIPS Processor can be found in the [md
 
 ### Diagram
 
-![alt text](./images/pipeline.jpeg "MIPS pipeline Diagram")
+![alt text](./images/pipeline2.jpeg "MIPS pipeline Diagram")
 
 **in black:** the Dataflow
 **in red:** the Control unit
