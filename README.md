@@ -14,6 +14,8 @@ With the goal of learning computer design by doing, we implemented a instruction
 
 An available Single-cycled version of the MIPS Processor can be found in the [md-working](https://github.com/MatheusDMD/MIPS/tree/md-working) branch.
 
+### Pipeline Implementation
+
 ### Diagram
 
 ![alt text](./images/pipeline.jpeg "MIPS pipeline Diagram")
