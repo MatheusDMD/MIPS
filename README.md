@@ -10,6 +10,10 @@ The concept was to develop a MIPS architecture processor in VHDL, that would run
 
 With the goal of learning computer design by doing, we implemented a instruction-set of 9 instructions, that run in a pipeline.
 
+### Single-Cycle Implementation
+
+An available Single-cycled version of the MIPS Processor can be found in the [md-working](https://github.com/MatheusDMD/MIPS/tree/md-working) branch.
+
 ### Diagram
 
 ![alt text](./images/pipeline.jpeg "MIPS pipeline Diagram")
