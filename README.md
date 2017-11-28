@@ -14,8 +14,8 @@ With the goal of learning computer design by doing, we implemented a instruction
 
 ![alt text](./images/pipeline.jpeg "MIPS pipeline Diagram")
 
-*in black:* the Dataflow
-*in red:* the Control unit
+**in black:** the Dataflow
+**in red:** the Control unit
 
 ### Implementation
 
@@ -37,7 +37,7 @@ This images shows the usage of the board functionalities.
 
 ## Implemented instruction-set
 
-Our MIPS instruction set counts with the following instructions:
+This version of MIPS instruction set counts with the following instructions:
 
 #### R-Type
 - ADD
@@ -56,6 +56,10 @@ Our MIPS instruction set counts with the following instructions:
 
 ## Next-Steps
 
-- *Hazard prevention*
-- Modular Code
-- Refactor using 'generic'
+- **Hazard prevention**
+- Refactor components using 'generic'
+
+## Authors
+
+- [Gabi Almeida](https://github.com/gabicfa)
+- [Matheus Marotzke](https://github.com/MatheusDMD/)
