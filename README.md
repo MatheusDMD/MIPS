@@ -31,9 +31,11 @@ Meaning that any instruction conflict needs to be solved with *nops* in the comp
 
 ### Board Layout
 
+This images shows the usage of the board functionalities.
+
 ![alt text](./images/board.jpeg "Altera board layout")
 
-## implemented instruction-set
+## Implemented instruction-set
 
 Our MIPS instruction set counts with the following instructions:
 
